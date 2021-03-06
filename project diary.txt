@@ -1,0 +1,20 @@
+LT2216 Project
+
+1. Made prototype game in Python
+	2021-02
+	>>original py codes here: 
+	https://tinyurl.com/lt2216-project-python
+	or
+	https://colab.research.google.com/drive/1bq3bfzkPgbhNcrE9Yo1bPU8daKgNJiub#scrollTo=K5VYmV3YuTqO
+
+
+2. Rewrote protopype game in TypeScript
+	2021-03-03
+	>>original ts codes here:
+	https://tinyurl.com/lt2216-project
+	
+
+3. Incorporate Step2 with React (& xstate?) to make a web app with voice interface
+
+	-dependencies: underscore, javascript-lemmatizer, react
+	
