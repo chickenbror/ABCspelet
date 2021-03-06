@@ -1,20 +1,40 @@
 LT2216 Project
 
-1. Made prototype game in Python
-	2021-02
+Collaborators:
+	Hsien-hao Calvin Liao
+	Eirini Tsakiri
+	
+	
+
+
+(1) state clearly at the beginning of the project who will do what
+
+
+(2) keep a project diary of who does what and when
+
+==DONE==
+1. Discussed and came up with game concept
+	(2021-02-02, Eirini & Calvin)
+
+
+2. Made prototype game in Python 
+	(2021-02-11, Calvin)
 	>>original py codes here: 
 	https://tinyurl.com/lt2216-project-python
 	or
 	https://colab.research.google.com/drive/1bq3bfzkPgbhNcrE9Yo1bPU8daKgNJiub#scrollTo=K5VYmV3YuTqO
 
 
-2. Rewrote protopype game in TypeScript
-	2021-03-03
+3. Rewrote protopype game in TypeScript
+	(2021-03-03, Calvin)
 	>>original ts codes here:
 	https://tinyurl.com/lt2216-project
 	
-
-3. Incorporate Step2 with React (& xstate?) to make a web app with voice interface
+==TO DO==
+4. Incorporate Step2 with React (& xstate?) to make a web app with voice interface
 
 	-dependencies: underscore, javascript-lemmatizer, react
-	
+
+5. Test/debug/improvement
+
+6. Add more 'questions' to game to make it playable
