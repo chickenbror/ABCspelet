@@ -31,7 +31,7 @@ Collaborators:
 	https://tinyurl.com/lt2216-project
 	
 ==TO DO==
-4. Incorporate Step2 with React (& xstate?) to make a web app with voice interface
+4. Incorporate Step3 with React (& xstate?) to make a web app with voice interface
 
 	-dependencies: underscore, javascript-lemmatizer, react
 
