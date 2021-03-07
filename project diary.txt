@@ -38,3 +38,7 @@ Collaborators:
 5. Test/debug/improvement
 
 6. Add more 'questions' to game to make it playable
+
+7. Make prettier
+	-prompt and recognised texts on screen?
+	-Confetti effect when winning?
