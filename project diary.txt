@@ -21,8 +21,7 @@ Collaborators:
 	(2021-02-11, Calvin)
 	>>original py codes here: 
 	https://tinyurl.com/lt2216-project-python
-	or
-	https://colab.research.google.com/drive/1bq3bfzkPgbhNcrE9Yo1bPU8daKgNJiub#scrollTo=K5VYmV3YuTqO
+	
 
 
 3. Rewrote protopype game in TypeScript
@@ -43,3 +42,23 @@ Collaborators:
 7. Make it prettier
 	-Display prompts and recognised texts on screen
 	-Confetti effect when winning
+
+
+
+//Presentation 2021-03-23//
+present ~5 mins:
+	play 30sec of radio snippet to explain "what does the game do"
+		difference-- no time limit on our game due to ASR latency etc
+		the game flowchart
+	platform-- xstate, react, lemmatiser (natural.js nlp instead of NLTK cuz we aren't using Python)
+	challenges: lemmatiser overfits (eg philippines>>philippine); solution: match both original and lemmatised inputs
+	"which parts of the course was most useful? how did we apply them?" ...the labs (forced us to do hands-on)??
+	"how can the game be developed in the future?" 
+		...shorter latency? fuzzy match? sound effect? other speechRecog APIs (to be workable in other browsers)?
+		use ML to generate questions (categories+things)?
+
+live demo ~5 mins:
+	(show tinyurl & qr code if anyone wants to try)
+	play one round of game
+	try saying other keywords: pass, hint, restart, repeat the letter
+
