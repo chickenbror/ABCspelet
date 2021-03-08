@@ -31,14 +31,15 @@ Collaborators:
 	https://tinyurl.com/lt2216-project
 	
 ==TO DO==
-4. Incorporate Step3 with React (& xstate?) to make a web app with voice interface
+4. Incorporate Step3 with React & Xstate from Lab2/4 to make a web app with voice interface
+	(2021-03-07, Calvin)
+	-dependencies: Natural (to singularise speech-recognised words)
 
-	-dependencies: underscore, javascript-lemmatizer, react
-
-5. Test/debug/improvement
+5. Test/debug/improvement feedback
+	(2021-03-08, Eirini)
 
 6. Add more 'questions' to game to make it playable
 
-7. Make prettier
-	-prompt and recognised texts on screen?
-	-Confetti effect when winning?
+7. Make it prettier
+	-Display prompts and recognised texts on screen
+	-Confetti effect when winning
