@@ -6,6 +6,11 @@ import { useMachine, asEffect } from "@xstate/react";
 import { inspect } from "@xstate/inspect";
 import { dmMachine } from './dmGame';
 
+import Confetti from 'react-confetti'
+
+
+
+
 
 
 // inspect({
@@ -21,7 +26,7 @@ const machine = Machine<SDSContext, any, SDSEvent>({
     type: 'parallel',
     states: {
         dm: {
-            ...dmMachine
+            ...dmMachine  //dmGame
         },
         asrtts: {
             initial: 'idle',
@@ -113,7 +118,10 @@ const ReactiveButton = (props: Props): JSX.Element => {
     }
 }
 
-function App() {
+export default function App() {
+    
+
+
     const { speak, cancel, speaking } = useSpeechSynthesis({
         onEnd: () => {
             send('ENDSPEECH');
@@ -152,11 +160,30 @@ function App() {
             }) 
         }
     });
+    const { tally } = current.context;
+    const { recResult } = current.context;
+    
+    const { ttsAgenda } = current.context;
+
+
 
 
     return (
         <div className="App">
+            
             <ReactiveButton state={current} onClick={() => send('CLICK')} />
+            
+            <div className='confetti'>
+
+                <Confetti recycle={false} numberOfPieces={500} 
+                width={window.innerWidth} height={window.innerHeight+200} />
+
+                <h2> Score: <strong>{tally}</strong> </h2>
+                <h2><code> Saying:  <strong>{ttsAgenda}</strong> </code></h2>
+                <h3>You said: <strong>{recResult}</strong> </h3>
+                
+            </div>
+            
         </div>
         
     )
@@ -164,18 +191,8 @@ function App() {
 
 
 
-/* RASA API
- *  */
-const proxyurl = "https://cors-anywhere.herokuapp.com/";
-const rasaurl = 'https://guess-the-intent.herokuapp.com/model/parse'
-const nluRequest = (text: string) =>
-    fetch(new Request(proxyurl + rasaurl, {
-        method: 'POST',
-        headers: { 'Origin': 'http://maraev.me' }, // only required with proxy
-        body: `{"text": "${text}"}`
-        })
-        )
-        .then(data => data.json());
+
+
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(

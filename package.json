@@ -10,12 +10,17 @@
     "@types/webspeechapi": "0.0.29",
     "@xstate/inspect": "^0.4.1",
     "@xstate/react": "1.0.1",
+    "fs": "0.0.1-security",
     "natural": "^4.0.0",
     "node-sass": "^4.14.1",
     "react": "17.0.1",
+    "react-confetti": "^6.0.1",
     "react-dom": "17.0.1",
     "react-scripts": "4.0.0",
     "react-speech-kit": "^3.0.1",
+    "react-use": "^17.1.1",
+    "wink-eng-lite-model": "https://github.com/winkjs/wink-eng-lite-model/releases/download/1.1.0/wink-eng-lite-model-1.1.0.tgz",
+    "wink-nlp": "^1.2.0",
     "xstate": "4.13.0"
   },
   "devDependencies": {
