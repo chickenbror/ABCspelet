@@ -6,7 +6,9 @@ import { useMachine, asEffect } from "@xstate/react";
 import { inspect } from "@xstate/inspect";
 import { dmMachine } from './dmGame';
 
-import Confetti from 'react-confetti'
+// import Confetti from 'react-confetti'
+
+import Confetti from 'react-dom-confetti';
 
 
 
@@ -160,12 +162,28 @@ export default function App() {
             }) 
         }
     });
+    const { confettiSwitch } = current.context;
+    const { scoreStr } = current.context;
     const { tally } = current.context;
     const { recResult } = current.context;
-    
     const { ttsAgenda } = current.context;
-
-
+    // let scoreDisplay= (!tally)? '':'Score: ' //Only show it when tally!=undefined
+    
+    // Config for confetti, triggered when context.confettiSwitch===true
+    const config = {
+        angle: 90,
+        spread: 360,
+        startVelocity: 80,
+        elementCount: 350,
+        dragFriction: 0.12,
+        duration: 5000,
+        stagger: 1,
+        width: "7px",
+        height: "7px",
+        perspective: "210px",
+        colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
+      };
+      
 
 
     return (
@@ -175,12 +193,16 @@ export default function App() {
             
             <div className='confetti'>
 
-                <Confetti recycle={false} numberOfPieces={500} 
-                width={window.innerWidth} height={window.innerHeight+200} />
+                {/* <Confetti recycle={false} numberOfPieces={500} 
+                width={window.innerWidth} height={window.innerHeight+200} /> */}
+                
+                <Confetti active={ confettiSwitch } config={ config }/>
+                
 
-                <h2> Score: <strong>{tally}</strong> </h2>
-                <h2><code> Saying:  <strong>{ttsAgenda}</strong> </code></h2>
-                <h3>You said: <strong>{recResult}</strong> </h3>
+                <h2> {scoreStr} <strong>{tally}</strong> </h2>
+                {/* <h2> {scoreDisplay} {tally}</h2> */}
+                <h2><code> 😼  <strong>{ttsAgenda}</strong> </code></h2>
+                <h3> 😅 <strong>{recResult}</strong> </h3>
                 
             </div>
             

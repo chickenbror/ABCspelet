@@ -136,7 +136,11 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
         },
         stop: {
             entry: say("Ok bye!"),
-            always: 'init'
+            on: { ENDSPEECH: {
+                actions: assign((context) => { return { tally: undefined, scoreStr:"", recResult:'',confettiSwitch:false } }),
+                target:"init",
+                } 
+            }
         },
         //Start new game: initiate new game object & reset tally counter
         start: {
@@ -144,7 +148,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
             on: { ENDSPEECH: {
                 actions: assign((context) => { 
                     let qs=makeNewQuestions();
-                    return { letter: qs.letter, questions: qs.ques, tally: 0 } }),
+                    return { letter: qs.letter, questions: qs.ques, tally: 0, scoreStr:"Score: ", confettiSwitch:false } }),
                 target:"sayletter",
                 } 
             } 
@@ -155,7 +159,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
             on: { ENDSPEECH: {
                     actions: assign((context) => { 
                         let qs=makeNewQuestions();
-                        return { letter: qs.letter, questions: qs.ques, tally:0} }),
+                        return { letter: qs.letter, questions: qs.ques, tally:0, recResult:'', confettiSwitch:false} }),
                     target:"sayletter",
                     } 
             } 
@@ -216,7 +220,8 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
         },
 
         winning: {
-            entry: say("Winner winner chicken dinner"), //Confetti effect?
+            entry: [say("Winner winner chicken dinner"), assign((context) => { return { confettiSwitch:true, recResult:'' } })], 
+            //Confetti effect?
             on: {ENDSPEECH:{target:'playagain'}}
         },
         playagain: {

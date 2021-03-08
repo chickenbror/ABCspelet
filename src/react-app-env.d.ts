@@ -10,6 +10,8 @@ interface SDSContext {
     tally: number;
     letter: string;
     questions: any;
+    scoreStr: string;
+    confettiSwitch: boolean
 }
 
 type SDSEvent =

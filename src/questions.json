@@ -48,8 +48,8 @@
             "cabbage"]
     },
     { "category": "a family member",
-        "answers": ["dad", "mom", "mother", "father", "sister", "brother", "auntie", "aunt", "uncle", "cousin", "niece", "nephew",
-            "grandfather", "grandmother", "grandma", "grandpa", "granny", "nanna", "pappa", "mamma", "mommy"]
+        "answers": ["dad", "mom", "mum", "mother", "father", "sister", "brother", "auntie", "aunt", "uncle", "cousin", "niece", "nephew",
+            "grandfather", "grandmother", "grandma", "grandpa", "granny", "nanna", "pappa","papa", "mama", "mamma", "mommy"]
     },
     { "category": "a continent",
         "answers": ["america", "australia", "north america", "south america", "africa", "asia", "europe", "antarctica"]
