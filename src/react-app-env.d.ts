@@ -10,13 +10,13 @@ interface SDSContext {
     tally: number;
     letter: string;
     questions: any;
-    scoreStr: string;
+    
     confettiSwitch: boolean
 }
 
 type SDSEvent =
     | { type: 'CLICK' }
-    | { type: 'TIMEOUT' }
+    | { type: 'UNCLICK' }
     | { type: 'RECOGNISED' }
     | { type: 'ASRRESULT', value: string }
     | { type: 'ENDSPEECH' }

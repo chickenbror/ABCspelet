@@ -11,25 +11,25 @@
     justify-content: center;
     align-items: center;
     background: transparent url("./catpic_withPrompts.jpg") no-repeat center top fixed;
-    background-size: contain;
+    background-size: auto 100%;
   
 }
 
 .glow-on-hover {
-    width: 220px;
-    height: 50px;
+    width: 200px;
+    height: 40px;
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 10px;
+    border-radius: 20px; //Rounded corners
     content: '';
     background: linear-gradient(45deg,  #db0f2ab7, #f7a50eda, #fffb00, #49cf6b, #00c3ff, #2f00ff, #7a00ff, #ff00aa,);
     top: -2px;
     left:-2px;
     background-size: 400%;
-    opacity: 1;
-    color: #fff;
-    font-size: 2rem;
+    opacity: 0.85;
+    color: #fff;   //Button text colour
+    font-size: 1.8rem;
     border: none;
     outline: none;
 }
@@ -56,4 +56,35 @@
 
 canvas {
   display: block;
+}
+
+// body {
+//   background-color: transparent;
+//   color: white;
+//   padding: 40px;
+//   font-family: Arial;
+//   text-align: center;
+// }
+
+code {
+  // background-image: linear-gradient(0deg, rgb(0, 0, 0), rgb(43, 32, 8));
+ 
+  // background-clip: text;
+  color: rgb(81, 255, 0);
+  text-shadow: 2px 2px 10px  #c4a300;
+  font: 1em sans-serif;
+  // -webkit-text-fill-color: rgb(0, 0, 0);
+  // -webkit-text-stroke-color: #ece7e7;
+  // -webkit-text-stroke-width: 0.9px; 
+  // font-size: 25px;
+}
+
+h1 {
+  background-image: linear-gradient(60deg, rgb(251, 255, 0), rgb(255, 44, 72));
+  background-clip: text;
+  font-size: 40px;
+  text-shadow: 5px 5px 20px  #f8e99d;
+  // -webkit-text-fill-color: rgb(0, 0, 0);
+  // -webkit-text-stroke-color: #131212;
+  // -webkit-text-stroke-width: 0.9px; 
 }

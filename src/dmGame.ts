@@ -1,7 +1,7 @@
 import { MachineConfig, actions, Action, assign, send } from "xstate";
 
 //Instantiate a new obj for each new round of game
-import { makeNewQuestions, randomChoice } from './game'
+import { makeNewQuestions, randomChoice } from './game_codes/game'
 // let qs=makeNewQuestions()
 // console.log(qs.letter)
 // console.log(qs.ques)
@@ -9,11 +9,23 @@ import { makeNewQuestions, randomChoice } from './game'
 //Using "Natural" NLP library
 const natural = require('natural'),
 nounInflector = new natural.NounInflector();
-let singular = nounInflector.singularize('those tomatoes');
-console.log(singular); //>>those tomato
+// let singular = nounInflector.singularize('those tomatoes');
+// console.log(singular); //>>those tomato
 
 
+const clearRecResult: Action<SDSContext, SDSEvent> = assign((context) => { return { recResult:''} })
+const clearTTSAgenda: Action<SDSContext, SDSEvent> = assign((context) => { return { ttsAgenda:''} })
+const resetTally: Action<SDSContext, SDSEvent> = assign((context) => { return { tally:undefined} })
+const clearLetter: Action<SDSContext, SDSEvent> = assign((context) => { return { letter:undefined} })
 
+const confettiOn: Action<SDSContext, SDSEvent> = assign((context) => { return { confettiSwitch:true} })
+const confettiOff: Action<SDSContext, SDSEvent> = assign((context) => { return { confettiSwitch:false} })
+
+//Initiate a questions object & assign values to context.letter/questions/tally
+const newGameRound: Action<SDSContext, SDSEvent> = assign((context) => { 
+    let qs=makeNewQuestions();
+    return { letter: qs.letter, questions: qs.ques, tally:0, confettiSwitch:false} 
+})
 
 
 //Say the current random letter and a 'spelling/phonetic' alphabet
@@ -68,6 +80,8 @@ function sharedRecognitions() {
     return [
         { target: 'stop', cond: (context:SDSContext) => sayKeyword(context.recResult) === 'stop' },
         { target: 'restart', cond: (context:SDSContext) => sayKeyword(context.recResult) === 'restart' },
+        //for testing 
+        { target: 'winning', cond: (context:SDSContext) => sayKeyword(context.recResult) === 'shortcut' },
         { target: ".nomatch" }
         ]
 }
@@ -105,6 +119,7 @@ function sayKeyword(reply: string){
     let whatletter=['letter','repeat']
     let stop=['stop','end the game','shut down']
     let restart=['restart','start again', 'reboot']
+    let shortcut=['short cut', 'shortcut'] //for testing
 
     reply=reply.toLowerCase()
     if(exists(reply, yes)){ return 'yes' }
@@ -114,6 +129,7 @@ function sayKeyword(reply: string){
     if(exists(reply, whatletter)){ return 'whatletter' }
     if(exists(reply, stop)){ return 'stop' }
     if(exists(reply, restart)){ return 'restart' }
+    if(exists(reply, shortcut)){ return 'shortcut' } //for testing
 }
 
 /*
@@ -123,8 +139,6 @@ Swear words are censored so won't match. Unless change them to f*** in the JSON
 ? Confetti effect in winning state
 ! Need to lemmatize userinput. Use js-lemmatizer, Natural, and/or Wink libraries 
 */
-
-
 
 export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
     initial: 'init',
@@ -137,7 +151,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
         stop: {
             entry: say("Ok bye!"),
             on: { ENDSPEECH: {
-                actions: assign((context) => { return { tally: undefined, scoreStr:"", recResult:'',confettiSwitch:false } }),
+                actions: [resetTally,clearLetter,clearTTSAgenda,clearRecResult,confettiOff],
                 target:"init",
                 } 
             }
@@ -146,9 +160,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
         start: {
             entry: say("Starting the game "),
             on: { ENDSPEECH: {
-                actions: assign((context) => { 
-                    let qs=makeNewQuestions();
-                    return { letter: qs.letter, questions: qs.ques, tally: 0, scoreStr:"Score: ", confettiSwitch:false } }),
+                actions: [newGameRound, clearTTSAgenda, clearRecResult],
                 target:"sayletter",
                 } 
             } 
@@ -157,9 +169,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
             entry: say("Ok, starting over"),
             // always: 'sayletter'
             on: { ENDSPEECH: {
-                    actions: assign((context) => { 
-                        let qs=makeNewQuestions();
-                        return { letter: qs.letter, questions: qs.ques, tally:0, recResult:'', confettiSwitch:false} }),
+                    actions: [newGameRound, clearTTSAgenda, clearRecResult],
                     target:"sayletter",
                     } 
             } 
@@ -170,13 +180,13 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
             on: {ENDSPEECH:'askQues' }
         },
 
-        //Ask questions 1~5
+        //Ask 5 (or more if skipping) questions 
         askQues: {
             on: {
                 RECOGNISED: [
                     
-                    // //If answer matches answers, tally+=1, shift question[0]
-                    // TODO: lower and lemmatize recResult
+                    // ? Clear recResult after recognition or not...?
+                    // If answer matches answers, tally+=1, shift question[0]
                     {cond: (context:SDSContext) => answerMatches(context.recResult, context),
                      actions: assign((context:SDSContext) => { 
                         context.questions.shift()
@@ -187,7 +197,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
                     {cond: (context:SDSContext) => sayKeyword(context.recResult)==='pass',
                      actions: assign((context:SDSContext) => { 
                         let skipped=context.questions.shift();
-                        context.questions.push(skipped)
+                        context.questions.push(skipped);
                         return { } }),
                      target:"checkscore"  },
 
@@ -219,12 +229,13 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
             ]
         },
 
+                    //? reset/clear tally here or not...? 
         winning: {
-            entry: [say("Winner winner chicken dinner"), assign((context) => { return { confettiSwitch:true, recResult:'' } })], 
-            //Confetti effect?
+            entry: [ say("Winner winner chicken dinner"), confettiOn, clearLetter, clearRecResult, clearTTSAgenda ], 
             on: {ENDSPEECH:{target:'playagain'}}
         },
         playagain: {
+            entry: [ resetTally, confettiOff ],
             on: {
                 RECOGNISED: [
                      //Play again? restart:stop
