@@ -1,4 +1,4 @@
-import "./styles.scss";
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Machine, assign, send, State } from "xstate";
@@ -10,6 +10,7 @@ import { dmMachine } from './dmGame';
 //Animation effects
 import Confetti from 'react-dom-confetti';
 import TextLoop from "react-text-loop";
+import { useWindupString } from "windups";
 
 
 
@@ -87,11 +88,12 @@ const machine = Machine<SDSContext, any, SDSEvent>({
     });
 
 
-//The big button in the centre
+//COMPONENT: Big button in the middle, with changing texts
 interface Props extends React.HTMLAttributes<HTMLElement> {
     state: State<SDSContext, any, any, any>;
+    speakingText:string; //Display of ttsAgenda value
 }
-const ReactiveButton = (props: Props): JSX.Element => {
+const ReactiveButton = (props: Props,): JSX.Element => {
     switch (true) {
         case props.state.matches({ asrtts: 'recognising' }):
             return (
@@ -99,24 +101,20 @@ const ReactiveButton = (props: Props): JSX.Element => {
                     style={{ animation: "glowing 20s linear"}} {...props}>
                     {/* Listening... */}
 
-                    <TextLoop mask={true} springConfig={{ stiffness: 160, damping: 8 }} className='keywordPrompts'>
-                        <div>Listening...</div>
-                        <div>Say "hint"</div>
-                        <div>Say "pass"</div>
-                        <div>Say "clue"</div>
-                        <div>Say "skip"</div>
-                        <div>Say "stop"</div>
-                        <div>Say "restart"</div>
-                        <div>Say "repeat"</div>
+                    <TextLoop mask={true} interval={5000} springConfig={{ stiffness: 170, damping: 8 }} >
+                        <div><code>{props.speakingText}</code></div>
+                        <div><code>...or say Hint, Pass, Restart, Stop </code></div>
                     </TextLoop>
 
                 </button>
             );
         case props.state.matches({ asrtts: 'speaking' }):
+            const [spokentext] = useWindupString(props.speakingText); // adds char-by-char animation
             return (
                 <button type="button" className="glow-on-hover"
                     style={{ animation: "bordering 1s infinite" }} {...props}>
-                    Speaking...
+                    {/* Speaking... */}
+                    <code>{spokentext}</code>
                 </button>
             );
         default:
@@ -128,7 +126,7 @@ const ReactiveButton = (props: Props): JSX.Element => {
     }
 }
 
-// React webpage elements 
+// //MAIN CONTAINER: React webpage elements & VOI
 export default function App() {
     
     //Voice interface events (& console logs)
@@ -173,10 +171,9 @@ export default function App() {
     const { recResult } = current.context;
     const { ttsAgenda } = current.context;
     const { letter } = current.context;
-
     
     // Config for confetti 
-    const config = {
+    const confettiConfig = {
         angle: 90,
         spread: 360,
         startVelocity: 80,
@@ -203,44 +200,64 @@ export default function App() {
         }
     }
 
-    //JSX codes
+    //JSX codes & various components
+    //TODO: how to position components in desired places??
     return (
         <div className="App">
-            
-            <ReactiveButton state={current} onClick={() => {handleClick()}} /> 
-            
-            <div className='confetti'>
-                <Confetti active={ confettiSwitch } config={ config }/>
-            </div>    
+            <div>
 
-            
-            <div className='subtitles'>    
+                <ReactiveButton speakingText={'😼 '+ttsAgenda} 
+                 state={current} onClick={() => {handleClick()}} /> 
                 
-                <h1>{letter? letter.toUpperCase():''}</h1>
-                {/* Shows socre and hearts when tally>=1 */}
-                <h2><strong>{tally? 'Score: '+tally : '' }</strong> </h2>
-                <h2> <strong>{tally? '💛'.repeat(tally) : '' }</strong> </h2>
-                
-                <Subtitles voiceout={ttsAgenda} voicein={recResult}/>
+                <Confetti active={ confettiSwitch } config={ confettiConfig }/>
+                 
             </div>
-            
-            
+
+            <div className='YourSubtitles'>    
+                            
+            <YourLetter letter={letter}/>
+            <Scoreboard tally={tally}/>
+
+            <YourSubtitles voiceIn={recResult}/>
+            </div>
         
-            
         </div>
-        
     )
 };
 
-//Displaying output/input of voice interface (ie, ttsAgenga & recResult)
-const Subtitles=(props:any) =>{
+//COMPONENT: Displaying input of voice interface (ie, recResult)
+const YourSubtitles=(props:any) =>{
+
+    // Player's speech-- only displays when recResult!=undefined 
+    const voiceIn = props.voiceIn? '😅 '+props.voiceIn : ''
+
     return(
         <div>
-            {/* Sys subtitles-- only display when ttsAgenda!=undefined */}
-            <h2>{props.voiceout? '😼 ':'' }<code> {props.voiceout? props.voiceout:'' } </code></h2> 
+            <h3> {voiceIn} </h3> 
+        </div>
+    )
+}
+//COMPONENT: Current score (number & hearts)
+const Scoreboard=(props:any) =>{
+    // Shows score and hearts when tally>=1 
+    const tally = props.tally
+    const scoreText = tally? 'Score: '+tally : '' 
+    const hearts = tally? '💛'.repeat(tally) : '' 
+    return(
+        <div>
+        <h2><strong>{scoreText}</strong> </h2>
+        <h2> <strong>{hearts}</strong> </h2>
+        </div>
+    )
+}
 
-            {/* Player subtitles-- only display when recResult!=undefined */}
-            <h3> {props.voicein? '😅 '+props.voicein : '' } </h3> 
+//COMPONENT: Capital letter of the game
+const YourLetter=(props:any) =>{
+    // Shows the letter of the current game round 
+    const letter = props.letter
+    return(
+        <div>
+        <h1>{letter? letter.toUpperCase():''}</h1>
         </div>
     )
 }
