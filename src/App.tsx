@@ -11,7 +11,13 @@ import { dmMachine } from './dmGame';
 import Confetti from 'react-dom-confetti';
 import TextLoop from "react-text-loop";
 import { useWindupString, WindupChildren } from "windups";
-import HeadShake from 'react-reveal/HeadShake';
+// import HeadShake from 'react-reveal/HeadShake';
+const HeadShake = require('react-reveal/HeadShake'); //?import shows error in TS, so use require() here instead
+const RubberBand = require('react-reveal/RubberBand');
+
+
+//Browser detection 
+import {BrowserView,isChromium,isChrome, browserName, CustomView, isEdge } from "react-device-detect";
 
 
 
@@ -21,6 +27,7 @@ import HeadShake from 'react-reveal/HeadShake';
 
 // State machines: ASR-TTS (voice interface) & dmGame
 import { useSpeechSynthesis, useSpeechRecognition } from 'react-speech-kit';
+
 const machine = Machine<SDSContext, any, SDSEvent>({
     id: 'root',
     type: 'parallel',
@@ -167,7 +174,7 @@ export default function App() {
 
     // dmMachine context to display on webpage
     const { confettiSwitch } = current.context; //triggers confetti when true
-
+    const { playingNow } = current.context;
     const { tally } = current.context;
     const { recResult } = current.context;
     const { ttsAgenda } = current.context;
@@ -190,35 +197,53 @@ export default function App() {
     
     let clicked=0;
     const handleClick = () =>{ 
-        if(clicked===0){
-            console.log("clicked")
-            send('CLICK')
-            clicked=1
-        }else{
-            console.log("unclicked")
-            send('UNCLICK')
-            clicked=0
-        }
+        if(clicked===0){ console.log("clicked"); send('CLICK'); clicked=1 }
+        else{ console.log("unclicked"); send('UNCLICK'); clicked=0 }
     }
 
     //JSX codes & various components
     //TODO: how to position components in desired places??
+    
+    // Alt page: Show if not using Chrome or Edge
+    if(!isChrome && !isEdge)
+    return (
+        <div className='OtherBrowsers'>
+            
+        <HeadShake>
+            <div className='Box'>   
+                <h1>Speech Recognition Not Supported :( </h1>
+                <p>I won't be able to hear you on this browser.</p>
+                <p>Please try Chrome or Edge. :-)</p>
+            </div>
+        </HeadShake>
+
+        </div>
+      )
+
+    //Show if using Chrome or Edge
     return (
         <div className="App">
-            
+                
 
-                <div className="Score"> <Scoreboard tally={tally}/> </div>
+                {/* <div className="Score"> 
+                    <Scoreboard tally={tally}/> 
+                </div> */}
 
-                {/* <div className="Letter"> <YourLetter letter={letter}/> </div> */}
-
+                <div className="GlowLetter">
+                     <YourLetter letter={playingNow? letter:''}/> 
+                     <HeartBar percentage={100 * tally/5}/>
+                </div>
+                
+                <RubberBand>
                 <div className="Button"> 
                     <ReactiveButton speakingText={'😼 '+ttsAgenda} 
                     state={current} onClick={() => {handleClick()}} /> 
                     <Confetti active={ confettiSwitch } config={ confettiConfig }/> 
                 </div>
-                
+                </RubberBand>
+
                 <div className="Subtitles"> <YourSubtitles voiceIn={recResult}/> </div>
-            
+                
             
         </div>
     )
@@ -240,14 +265,14 @@ const YourSubtitles=(props:any) =>{
 const Scoreboard=(props:any) =>{
     // Shows score and hearts when tally>=1 
     const tally = props.tally
-    const scoreNum = tally? tally : '' 
+    // const scoreNum = tally? tally : '' 
     const hearts = tally? '💛'.repeat(tally) : '' 
     return(
         <div>
-        
             {/* <h1>{scoreNum}</h1> */}
-        
+            <RubberBand>
             <h2> {hearts}</h2>
+            </RubberBand>
 
         </div>
     )
@@ -258,11 +283,35 @@ const YourLetter=(props:any) =>{
     // Shows the letter of the current game round 
     const letter = props.letter
     return(
-        <div>
-        <HeadShake> <h1>{letter? letter.toUpperCase():''}</h1> </HeadShake>
-        </div>
-        
+        <div> 
+            {letter? letter.toUpperCase():''}
+        </div> 
     )
 }
 
 
+const HeartBar = (props:any) => {
+    const percentage = props.percentage? props.percentage : 0
+    const y = 24 - (24 * percentage) / 100;
+    return (
+      <div className="ProgressBarH">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="50"
+          viewBox="0 0 24 24"
+        >
+          <defs>
+            <clipPath id="cut-off-bottom">
+              <rect x="0" y={y} width="24" height="24" />
+            </clipPath>
+          </defs>
+          <path
+            style={{ fill: "orangered" }}
+            d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"
+            clipPath="url(#cut-off-bottom)"
+          />
+        </svg>
+      </div>
+    );
+  };

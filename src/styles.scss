@@ -1,7 +1,6 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-    height: 100vh;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -10,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: transparent url("./catpic_withPrompts.jpg") no-repeat center top fixed;
+    background: white url("./catpic_withPrompts.jpg") no-repeat center top fixed;
     background-size: auto 100%;
   
 }
@@ -76,14 +75,27 @@ code {
 }
 
 h1 {
-  color: #21DBC6;
-  // color: #333333;
-  // background: #FFFFFF;
-  text-shadow: 2px 2px 5px #FFFFFF, 5px 4px 5px rgba(0, 0, 0, 0.6);
+  color:orange;
+  text-shadow: 2px 2px 10px #ffffffa2, 5px 4px 20px rgba(0, 0, 0, 0.6);
   font-size: x-large;
 }
 
-//syntax: .divClassName { ... }
+h2{
+  font-size: 2em;
+}
+
+
+p{
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: italic;
+  text-shadow: 2px 0 20px bisque,
+}
+
+
 span{
   color: #ffffff;
   text-shadow: 2px 2px 10px  blanchedalmond;
@@ -91,5 +103,66 @@ span{
   font-style: italic;
   font-size: 1.2rem;
   background: rgba(0, 0, 0, 0.6);
-  width: 105%;
+  height: 105%;
+  width: 115%;
+}
+
+//syntax: .divClassName { ... }
+.OtherBrowsers {
+  font-family: sans-serif;
+  text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white url("./cat_sad.jpg") no-repeat left top fixed;
+    background-size: contain;
+  
+}
+
+.Box{
+  width: auto;
+  height: auto;
+  padding: 1em;
+  border-radius: 12px;
+  // border: 2px solid rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Subtitles{
+  width: 300px;
+  height: auto;
+  padding-top: 1.5em;
+}
+
+.Score{
+  width: auto;
+  height: auto;
+  margin: 1.5em;
+  // border: 2px solid rgb(0, 0, 0);
+}
+
+.GlowLetter{
+  margin-bottom: 1.5rem;
+  font-size: 80px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
