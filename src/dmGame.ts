@@ -234,11 +234,11 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
 
                     //? reset/clear tally here or not...? 
         winning: {
-            entry: [ say("Winner winner chicken dinner"), resetTally,confettiOn,clearLetter,gameOff,clearTTSAgenda ], 
+            entry: [ say("Winner winner chicken dinner"), confettiOn, clearTTSAgenda ], 
             on: {ENDSPEECH:{target:'playagain'}}
         },
         playagain: {
-            entry: [ clearRecResult, confettiOff ],
+            entry: [ clearRecResult, confettiOff, resetTally, clearLetter, gameOff,],
             on: {
                 RECOGNISED: [
                      //Play again? restart:stop
