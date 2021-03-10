@@ -29,19 +29,28 @@ Collaborators:
 	>>original ts codes here:
 	https://tinyurl.com/lt2216-project
 	
-==TO DO==
+
 4. Incorporate Step3 with React & Xstate from Lab2/4 to make a web app with voice interface
 	(2021-03-07, Calvin)
-	-dependencies: Natural (to singularise speech-recognised words)
+	--dependencies: Natural (to singularise speech-recognised words)
 
 5. Test/debug/improvement feedback
 	(2021-03-08, Eirini)
 
-6. Add more 'questions' to game to make it playable
-
-7. Make it prettier
+6. Added React components & updated CSS
 	-Display prompts and recognised texts on screen
 	-Confetti effect when winning
+	-Text animation
+	
+	--dependencies: react-dom-confetti, react-text-loop, windups, react-reveal
+
+
+==TO DO==
+7. Add more 'questions' to game to make it playable
+
+8. Make it prettier
+	-Where to place different components? (button, score, subtitles etc)
+	-How to adjust layout
 
 
 
@@ -55,7 +64,7 @@ present ~5 mins:
 	"which parts of the course was most useful? how did we apply them?" ...the labs (forced us to do hands-on)??
 	"how can the game be developed in the future?" 
 		...shorter latency? fuzzy match? sound effect? other speechRecog APIs (to be workable in other browsers)?
-		use ML to generate questions (categories+things)?
+		use web crawler to generate questions (categories+things) from eg Wikipedia articles?
 
 live demo ~5 mins:
 	(show tinyurl & qr code if anyone wants to try)
