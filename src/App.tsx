@@ -167,7 +167,7 @@ export default function App() {
 
     // dmMachine context to display on webpage
     const { confettiSwitch } = current.context; //triggers confetti when true
-    const { scoreChange } = current.context;
+
     const { tally } = current.context;
     const { recResult } = current.context;
     const { ttsAgenda } = current.context;
