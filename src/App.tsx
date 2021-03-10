@@ -262,12 +262,4 @@ const YourLetter=(props:any) =>{
     )
 }
 
-// func = Element(props.Parameter) >> jsx tag = <Element Parameter={ pass value here }/>
-// function Myelement(props){
-//     return(
-//         <div>
-//             haha i can pass {props.something} which replaces the placeholder here
-//         </div>
-//     )
-// }
 
