@@ -21,9 +21,6 @@ const clearLetter: Action<SDSContext, SDSEvent> = assign((context) => { return {
 const confettiOn: Action<SDSContext, SDSEvent> = assign((context) => { return { confettiSwitch:true} })
 const confettiOff: Action<SDSContext, SDSEvent> = assign((context) => { return { confettiSwitch:false} })
 
-const gameOn: Action<SDSContext, SDSEvent> = assign((context) => { return { playingNow:true} })
-const gameOff: Action<SDSContext, SDSEvent> = assign((context) => { return { playingNow:false} })
-
 //Initiate a questions object & assign values to context.letter/questions/tally
 const newGameRound: Action<SDSContext, SDSEvent> = assign((context) => { 
     let qs=makeNewQuestions();
@@ -163,7 +160,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
         start: {
             entry: say("Starting the game "),
             on: { ENDSPEECH: {
-                actions: [newGameRound, gameOn, clearTTSAgenda, clearRecResult],
+                actions: [newGameRound, clearTTSAgenda, clearRecResult],
                 target:"sayletter",
                 } 
             } 
@@ -234,11 +231,11 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
 
                     //? reset/clear tally here or not...? 
         winning: {
-            entry: [ say("Winner winner chicken dinner"), confettiOn, clearLetter, gameOff, clearTTSAgenda ], 
+            entry: [ say("Winner winner chicken dinner"), confettiOn, clearLetter, clearRecResult, clearTTSAgenda ], 
             on: {ENDSPEECH:{target:'playagain'}}
         },
         playagain: {
-            entry: [ resetTally, clearRecResult, confettiOff ],
+            entry: [ resetTally, confettiOff ],
             on: {
                 RECOGNISED: [
                      //Play again? restart:stop

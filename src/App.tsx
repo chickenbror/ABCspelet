@@ -10,8 +10,7 @@ import { dmMachine } from './dmGame';
 //Animation effects
 import Confetti from 'react-dom-confetti';
 import TextLoop from "react-text-loop";
-import { useWindupString, WindupChildren } from "windups";
-import HeadShake from 'react-reveal/HeadShake';
+import { useWindupString } from "windups";
 
 
 
@@ -50,6 +49,7 @@ const machine = Machine<SDSContext, any, SDSEvent>({
                                 assign((_context, event) => { return { recResult: event.value } })],
                             target: '.match'
                         },
+                        // TIMEOUT:"..recStop", //mic off so that say() can work
                         RECOGNISED: 'idle'
                     },
                     states: {
@@ -120,7 +120,7 @@ const ReactiveButton = (props: Props,): JSX.Element => {
         default:
             return (
                 <button type="button" className="glow-on-hover" {...props}>
-                    <HeadShake>Play game!</HeadShake>
+                    Play game!
                 </button >
             );
     }
@@ -167,7 +167,6 @@ export default function App() {
 
     // dmMachine context to display on webpage
     const { confettiSwitch } = current.context; //triggers confetti when true
-    const { scoreChange } = current.context;
     const { tally } = current.context;
     const { recResult } = current.context;
     const { ttsAgenda } = current.context;
@@ -205,21 +204,23 @@ export default function App() {
     //TODO: how to position components in desired places??
     return (
         <div className="App">
-            
+            <div>
 
-                <div className="Score"> <Scoreboard tally={tally}/> </div>
-
-                {/* <div className="Letter"> <YourLetter letter={letter}/> </div> */}
-
-                <div className="Button"> 
-                    <ReactiveButton speakingText={'😼 '+ttsAgenda} 
-                    state={current} onClick={() => {handleClick()}} /> 
-                    <Confetti active={ confettiSwitch } config={ confettiConfig }/> 
-                </div>
+                <ReactiveButton speakingText={'😼 '+ttsAgenda} 
+                 state={current} onClick={() => {handleClick()}} /> 
                 
-                <div className="Subtitles"> <YourSubtitles voiceIn={recResult}/> </div>
-            
-            
+                <Confetti active={ confettiSwitch } config={ confettiConfig }/>
+                 
+            </div>
+
+            <div className='YourSubtitles'>    
+                            
+            <YourLetter letter={letter}/>
+            <Scoreboard tally={tally}/>
+
+            <YourSubtitles voiceIn={recResult}/>
+            </div>
+        
         </div>
     )
 };
@@ -228,11 +229,11 @@ export default function App() {
 const YourSubtitles=(props:any) =>{
 
     // Player's speech-- only displays when recResult!=undefined 
-    const subtitlesText = props.voiceIn? '😅 '+props.voiceIn : ''
-    const [textAnimated] = useWindupString(subtitlesText, {pace: (char) => 3,});
+    const voiceIn = props.voiceIn? '😅 '+props.voiceIn : ''
+
     return(
         <div>
-            <span> {textAnimated} </span>
+            <h3> {voiceIn} </h3> 
         </div>
     )
 }
@@ -240,15 +241,12 @@ const YourSubtitles=(props:any) =>{
 const Scoreboard=(props:any) =>{
     // Shows score and hearts when tally>=1 
     const tally = props.tally
-    const scoreNum = tally? tally : '' 
+    const scoreText = tally? 'Score: '+tally : '' 
     const hearts = tally? '💛'.repeat(tally) : '' 
     return(
         <div>
-        
-            {/* <h1>{scoreNum}</h1> */}
-        
-            <h2> {hearts}</h2>
-
+        <h2><strong>{scoreText}</strong> </h2>
+        <h2> <strong>{hearts}</strong> </h2>
         </div>
     )
 }
@@ -259,9 +257,8 @@ const YourLetter=(props:any) =>{
     const letter = props.letter
     return(
         <div>
-        <HeadShake> <h1>{letter? letter.toUpperCase():''}</h1> </HeadShake>
+        <h1>{letter? letter.toUpperCase():''}</h1>
         </div>
-        
     )
 }
 

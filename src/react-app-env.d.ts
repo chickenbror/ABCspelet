@@ -12,7 +12,6 @@ interface SDSContext {
     questions: any;
     
     confettiSwitch: boolean
-    playingNow: boolean
 }
 
 type SDSEvent =
