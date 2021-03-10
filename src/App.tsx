@@ -17,7 +17,7 @@ const RubberBand = require('react-reveal/RubberBand');
 
 
 //Browser detection 
-import {BrowserView,isChromium,isChrome, browserName, CustomView, isEdge } from "react-device-detect";
+import { isSafari,isChrome, isEdge, isMobile} from "react-device-detect";
 
 
 
@@ -204,19 +204,30 @@ export default function App() {
     //JSX codes & various components
     //TODO: how to position components in desired places??
     
-    // Alt page: Show if not using Chrome or Edge
-    if(!isChrome && !isEdge)
+    // Alt pages: Show if not using Chrome or Edge
+    if(isSafari||isMobile)
     return (
-        <div className='OtherBrowsers'>
-            
-        <HeadShake>
+        <div className='Safari'>  
+            <HeadShake>
             <div className='Box'>   
                 <h1>Speech Recognition Not Supported :( </h1>
                 <p>I won't be able to hear you on this browser.</p>
                 <p>Please try Chrome or Edge. :-)</p>
             </div>
-        </HeadShake>
+            </HeadShake>
+        </div>
+      )
 
+    if(!isChrome && !isEdge)
+    return (
+        <div className='OtherBrowsers'>  
+            <HeadShake>
+            <div className='Box'>   
+                <h1>Speech Recognition Not Supported :( </h1>
+                <p>I won't be able to hear you on this browser.</p>
+                <p>Please try Chrome or Edge. :-)</p>
+            </div>
+            </HeadShake>
         </div>
       )
 

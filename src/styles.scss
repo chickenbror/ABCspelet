@@ -121,7 +121,20 @@ span{
     align-items: center;
     background: white url("./cat_sad.jpg") no-repeat left top fixed;
     background-size: contain;
-  
+}
+
+.Safari {
+  font-family: sans-serif;
+  text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: orange 
 }
 
 .Box{
