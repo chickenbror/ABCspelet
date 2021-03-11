@@ -1,9 +1,9 @@
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+
+//XState library & Game DM-machine
 import { Machine, assign, send, State } from "xstate";
 import { useMachine, asEffect } from "@xstate/react";
-
 import { dmMachine } from './dmGame';
 
 
@@ -11,14 +11,13 @@ import { dmMachine } from './dmGame';
 import Confetti from 'react-dom-confetti';
 import TextLoop from "react-text-loop";
 import { useWindupString, WindupChildren } from "windups";
-// import HeadShake from 'react-reveal/HeadShake';
+        // import HeadShake from 'react-reveal/HeadShake';
 const HeadShake = require('react-reveal/HeadShake'); //?import shows error in TS, so use require() here instead
 const RubberBand = require('react-reveal/RubberBand');
 
 
 //Browser detection 
 import { isSafari,isChrome, isEdge, isMobile} from "react-device-detect";
-
 
 
 // import { inspect } from "@xstate/inspect";
@@ -172,7 +171,7 @@ export default function App() {
         }
     });
 
-    // dmMachine context to display on webpage
+    // dmMachine-context / React-states, to display on webpage or turn components on/off
     const { confettiSwitch } = current.context; //triggers confetti when true
     const { playingNow } = current.context;
     const { tally } = current.context;
@@ -201,23 +200,9 @@ export default function App() {
         else{ console.log("unclicked"); send('UNCLICK'); clicked=0 }
     }
 
-    //JSX codes & various components
-    //TODO: how to position components in desired places??
+    //>>>JSX codes & various components
     
-    // Alt pages: Show if not using Chrome or Edge
-    if(isSafari||isMobile)
-    return (
-        <div className='Safari'>  
-            <HeadShake>
-            <div className='Box'>   
-                <h1>Speech Recognition Not Supported :( </h1>
-                <p>I won't be able to hear you on this browser.</p>
-                <p>Please try Chrome or Edge. :-)</p>
-            </div>
-            </HeadShake>
-        </div>
-      )
-
+    // Alt page: Show if not using Chrome or Edge
     if(!isChrome && !isEdge)
     return (
         <div className='OtherBrowsers'>  
@@ -235,25 +220,24 @@ export default function App() {
     return (
         <div className="App">
                 
-
-                {/* <div className="Score"> 
-                    <Scoreboard tally={tally}/> 
-                </div> */}
-
-                <div className="GlowLetter">
-                     <YourLetter letter={playingNow? letter:''}/> 
-                     <HeartBar percentage={100 * tally/5}/>
+                <div className="LetterAndHeart">
+                    <div className="GlowLetter"> <YourLetter letter={letter}/> </div>
+                    <div className="Heart"> 
+                        {playingNow? <HeartBar percentage={100*tally/5} /> : null }
+                    </div> 
                 </div>
                 
                 <RubberBand>
                 <div className="Button"> 
-                    <ReactiveButton speakingText={'😼 '+ttsAgenda} 
+                    <ReactiveButton speakingText={playingNow?'😼 '+ttsAgenda:'😻 '+ttsAgenda} 
                     state={current} onClick={() => {handleClick()}} /> 
                     <Confetti active={ confettiSwitch } config={ confettiConfig }/> 
                 </div>
                 </RubberBand>
 
-                <div className="Subtitles"> <YourSubtitles voiceIn={recResult}/> </div>
+                <div className="Subtitles"> 
+                    <YourSubtitles voiceIn={recResult} tally={tally}/>
+                </div>
                 
             
         </div>
@@ -262,9 +246,13 @@ export default function App() {
 
 //COMPONENT: Displaying input of voice interface (ie, recResult)
 const YourSubtitles=(props:any) =>{
-
     // Player's speech-- only displays when recResult!=undefined 
-    const subtitlesText = props.voiceIn? '😅 '+props.voiceIn : ''
+
+    //Prefix face changes based on score of the game
+    const  emojis=['😗','🙂','😀','😄','😁','🥳']
+    let emoji=props.tally? emojis[props.tally]:'🙃'
+
+    const subtitlesText = props.voiceIn? emoji+' '+props.voiceIn : ''
     const [textAnimated] = useWindupString(subtitlesText, {pace: (char) => 3,});
     return(
         <div>
@@ -272,22 +260,23 @@ const YourSubtitles=(props:any) =>{
         </div>
     )
 }
-//COMPONENT: Current score (number & hearts)
-const Scoreboard=(props:any) =>{
-    // Shows score and hearts when tally>=1 
-    const tally = props.tally
-    // const scoreNum = tally? tally : '' 
-    const hearts = tally? '💛'.repeat(tally) : '' 
-    return(
-        <div>
-            {/* <h1>{scoreNum}</h1> */}
-            <RubberBand>
-            <h2> {hearts}</h2>
-            </RubberBand>
 
-        </div>
-    )
-}
+//COMPONENT: Current score (number & hearts)
+// const Scoreboard=(props:any) =>{
+//     // Shows score and hearts when tally>=1 
+//     const tally = props.tally
+//     // const scoreNum = tally? tally : '' 
+//     const hearts = tally? '💛'.repeat(tally) : '' 
+//     return(
+//         <div>
+//             {/* <h1>{scoreNum}</h1> */}
+//             <RubberBand>
+//             <h2> {hearts}</h2>
+//             </RubberBand>
+
+//         </div>
+//     )
+// }
 
 //COMPONENT: Capital letter of the game
 const YourLetter=(props:any) =>{
@@ -300,7 +289,7 @@ const YourLetter=(props:any) =>{
     )
 }
 
-
+//COMPONENT: Grey heart to be filled with pink, based on percentage
 const HeartBar = (props:any) => {
     const percentage = props.percentage? props.percentage : 0
     const y = 24 - (24 * percentage) / 100;
@@ -316,12 +305,32 @@ const HeartBar = (props:any) => {
             <clipPath id="cut-off-bottom">
               <rect x="0" y={y} width="24" height="24" />
             </clipPath>
+          
+            <linearGradient id="grey-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#cfccce" stopOpacity="0.75" />
+                <stop offset="60%" stopColor="#bab8ba" stopOpacity="0.85" />
+                <stop offset="100%" stopColor="#949293" stopOpacity="0.9" />
+            </linearGradient>
+
+            <linearGradient id="pink-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#ff33a7" stopOpacity="0.95" />
+                <stop offset="60%" stopColor="#ff2667" stopOpacity="0.95" />
+                <stop offset="100%" stopColor="rgb(255,0,0)" stopOpacity="0.95" />
+            </linearGradient>
+
           </defs>
+          
           <path
-            style={{ fill: "orangered" }}
+            style={{ fill: "url(#grey-grad)" }}
+            d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"
+            />
+
+          <path
+            style={{ fill: "url(#pink-grad)" }}
             d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"
             clipPath="url(#cut-off-bottom)"
-          />
+            />
+
         </svg>
       </div>
     );

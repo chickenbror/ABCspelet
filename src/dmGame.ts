@@ -15,7 +15,7 @@ nounInflector = new natural.NounInflector();
 
 const clearRecResult: Action<SDSContext, SDSEvent> = assign((context) => { return { recResult:''} })
 const clearTTSAgenda: Action<SDSContext, SDSEvent> = assign((context) => { return { ttsAgenda:''} })
-const resetTally: Action<SDSContext, SDSEvent> = assign((context) => { return { tally:undefined} })
+const resetTally: Action<SDSContext, SDSEvent> = assign((context) => { return { tally:0} })
 const clearLetter: Action<SDSContext, SDSEvent> = assign((context) => { return { letter:undefined} })
 
 const confettiOn: Action<SDSContext, SDSEvent> = assign((context) => { return { confettiSwitch:true} })
@@ -154,7 +154,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
         stop: {
             entry: say("Ok bye!"),
             on: { ENDSPEECH: {
-                actions: [resetTally,clearLetter,clearTTSAgenda,clearRecResult,confettiOff],
+                actions: [resetTally,clearLetter,clearTTSAgenda,clearRecResult,confettiOff, gameOff],
                 target:"init",
                 } 
             }
@@ -172,7 +172,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
             entry: say("Ok, starting over"),
             // always: 'sayletter'
             on: { ENDSPEECH: {
-                    actions: [newGameRound, clearTTSAgenda, clearRecResult],
+                    actions: [newGameRound, gameOn, clearTTSAgenda, clearRecResult],
                     target:"sayletter",
                     } 
             } 
