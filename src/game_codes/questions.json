@@ -3,14 +3,14 @@
         "answers": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
     },
     { "category": "a fruit",
-        "answers": ["apple", "avocado", "apricot", "banana", "cantaloupe", "cherries", "cherry", "clementine", "date",
-            "grapefruit", "grapes", "grape", "honeydew", "melon", "lemon", "lime", "mandarin", "orange", "mango", "orange",
+        "answers": ["apple", "avocado", "apricot", "banana", "cantaloupe", "cherry", "clementine", "date",
+            "grapefruit", "pomergranate", "grape", "honeydew", "melon", "lemon", "lime", "mandarin", "orange", "mango", "orange",
             "papaya", "peach", "pear", "pineapple", "plantain", "plum", "pomelo", "tangerine", "watermelon", "strawberry",
             "blueberry", "litchi", "lingonberry", "dragonfruit", "tomato", "pawpaw", "lychee", "kiwifruit", "jackfruit",
             "durian", "guava", "passionfruit"]
     },
     { "category": "an EU country",
-        "answers": ["austria", "belgium", "bulgaria", "croatia", "cyprus", "czech republic", "czechia", "denmark",
+        "answers": ["austria", "belgium", "bulgaria", "croatia", "cyprus", "cypress", "czech republic", "czechia", "denmark",
             "estonia", "finland", "france", "germany", "greece", "hungary", "ireland", "italy",
             "latvia", "lithuania", "luxembourg", "malta", "netherlands", "holland", "poland", "portugal",
             "romania", "slovakia", "slovenia", "spain", "sweden"]
@@ -22,7 +22,7 @@
     { "category": "a country that has won Eurovision",
         "answers": ["luxembourg", "portugal", "switzerland", "russia", "sweden", "estonia", "serbia", "monaco", "denmark", "israel", "norway",
             "greece", "france", "spain", "azerbaijan", "belgium", "italy", "yugoslavia", "finland", "latvia", "germany", "ireland", "austria",
-            "turkey", "united kingdom", "ukraine", "netherlands"]
+            "turkey", "united kingdom", "england", "ukraine", "netherlands", "holland"]
     },
     { "category": "a country in Asia",
         "answers": ["china", "india", "kazakhstan", "saudi arabia", "iran", "mongolia", "indonesia", "pakistan", "turkey", "myanmar", "afghanistan",
@@ -38,7 +38,7 @@
             "sarajevo", "skopje", "sofia", "stockholm", "tallinn", "tbilisi", "tirana", "vaduz", "valletta", "vatican", "vatican city", "vienna", "vilnius", "warsaw",
             "yerevan", "zagreb", "north nicosia", "pristina", "stepanakert", "sukhumi", "tiraspol", "tskhinvali", "south ossetia"]
     },
-    { "category": "a common pet animal",
+    { "category": "a pet animal",
         "answers": ["bird", "fish", "mouse", "rat", "dog", "cat", "gerbil", "hamster", "spider", "snake", "ferret", "goldfish", "turtle", "rabbit",
             "pig", "goat", "guinea", "pig", "frog", "hedgehog", "horse", "chicken", "duck", "goose", "budgie", "parrot", "canary"]
     },
@@ -49,13 +49,49 @@
     },
     { "category": "a family member",
         "answers": ["dad", "mom", "mum", "mother", "father", "sister", "brother", "auntie", "aunt", "uncle", "cousin", "niece", "nephew",
-            "grandfather", "grandmother", "grandma", "grandpa", "granny", "nanna", "pappa","papa", "mama", "mamma", "mommy"]
+            "grandfather", "grandmother", "grandma", "grandpa", "granny", "nanna", "nana", "pappa","papa", "mama", "mamma", "mommy"]
     },
     { "category": "a continent",
         "answers": ["america", "australia", "north america", "south america", "africa", "asia", "europe", "antarctica"]
     },
     { "category": "a social media website or app",
         "answers": ["facebook", "tik tok", "twitter", "instagram", "snapchat", "youtube"]
+    },
+    { "category": "a piece of furnature",
+        "answers": ["table", "chair", "desk", "sofa", "couch", "bench","wardrobe","chest","shelf","closet","armchair",
+                    "coffee table","carpet","bookshelf","shoe rack","bed"]
+    },
+    { "category": "a farm animal",
+        "answers": ["cow","sheep","goat","lamb","pig","chicken","duck","goose","donkey","horse","mule","cat"]
+    },
+    { "category": "a body part",
+        "answers": ["head","face","ear","neck","forehead","eye","nose","mouth","lip","chin","shoulder","elbow",
+                "arm","armpit","wrist","back","breast","waist","navel","belly", "belly button", "stomach",
+                "toe","ankle","nail","finger","abdomen","arse","ass","buttock","hip","leg","thigh","knee","foot","thumb",
+                "skin","eyebrow","hair","eyelash","tooth","hand"]
+    },
+    { "category": "a colour",
+        "answers": ["white","blue","red","yellow","green","black","grey","gray","brown","beige","purple","orange",
+                "maroon","magenta","coral","pink"]
+    },
+    { "category": "an African country",
+        "answers": ["zimbabwe","zambia","uganda","tunisia","togo","tanzania","swaziland","sudan","south africa","somalia",
+            "sierra leone","seychelles","senegal","sao tome and principe","rwanda","nigeria","niger","namibia","mozambique",
+            "morocco","mauritius","mauritania","mali","malawi","madagascar","libya","liberia","lesotho","kenya","guinea-bissau",
+            "guinea","ghana","gambia","gabon","ethiopia","eritrea","equatorial guinea","egypt","djibouti","chad","cote d’ivoire",
+            "ivory coast","congo","comoros","central african republic","cape verde","cameroon","burundi","burkina faso",
+            "botswana","benin","angola","algeria"]
     }
+    
+
+
+
+    
+
+
+
+
+
+
 ]
 }

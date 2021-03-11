@@ -300,7 +300,7 @@ const YourLetter=(props:any) =>{
 const HeartBar = (props:any) => {
     
     const maxScore = props.maxScore
-    const currentScore = props.currentScore>0? props.currentScore : '0'
+    const currentScore = props.currentScore>0? props.currentScore : ''
     const size = props.size
     const percentage = currentScore? 100*currentScore/maxScore : 0
     //add other props? eg, showScore={true/false}; showPercentage={true/false}
