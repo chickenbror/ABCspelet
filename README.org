@@ -8,4 +8,4 @@ To run:
 #+end_src
 
 
-Edit src/questions.json to add more question-sets
+To edit or add more question-sets, go to src/game_codes/questions.json 
