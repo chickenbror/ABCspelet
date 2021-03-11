@@ -94,12 +94,17 @@ const machine = Machine<SDSContext, any, SDSEvent>({
     });
 
 
-//COMPONENT: Big button in the middle, with changing texts
+
 interface Props extends React.HTMLAttributes<HTMLElement> {
-    state: State<SDSContext, any, any, any>;
-    speakingText:string; //Display of ttsAgenda value
+    state: State<SDSContext, any, any, any>;  //==dm context >>access via props.state.context
 }
+//COMPONENT: Big button in the middle, with changing texts
 const ReactiveButton = (props: Props,): JSX.Element => {
+    const {playingNow} = props.state.context
+    const {ttsAgenda} = props.state.context
+    let speakingText= playingNow? '😼 '+ttsAgenda : '😻 '+ttsAgenda
+    let promptMsg = playingNow? "...or say Clue, Skip, Restart, Stop " : "...say Yes or No"
+
     switch (true) {
         case props.state.matches({ asrtts: 'recognising' }):
             return (
@@ -108,14 +113,15 @@ const ReactiveButton = (props: Props,): JSX.Element => {
                     {/* Listening... */}
 
                     <TextLoop mask={true} interval={5000} springConfig={{ stiffness: 170, damping: 8 }} >
-                        <div><code>{props.speakingText}</code></div>
-                        <div><code>...or say Hint, Pass, Restart, Stop </code></div>
+                        <div><code> {speakingText} </code></div>
+                        <div><code> {promptMsg} </code></div>
                     </TextLoop>
 
                 </button>
             );
         case props.state.matches({ asrtts: 'speaking' }):
-            const [spokentext] = useWindupString(props.speakingText); // adds char-by-char animation
+            
+            const [spokentext] = useWindupString(speakingText); // adds char-by-char animation
             return (
                 <button type="button" className="glow-on-hover"
                     style={{ animation: "bordering 1s infinite" }} {...props}>
@@ -227,12 +233,12 @@ export default function App() {
                     </div> 
                 </div>
                 
+                <Confetti active={ confettiSwitch } config={ confettiConfig }/> 
+
                 <RubberBand>
-                <div className="Button"> 
-                    <ReactiveButton speakingText={playingNow?'😼 '+ttsAgenda:'😻 '+ttsAgenda} 
-                    state={current} onClick={() => {handleClick()}} /> 
-                    <Confetti active={ confettiSwitch } config={ confettiConfig }/> 
-                </div>
+                    <div className="Button"> 
+                        <ReactiveButton state={current} onClick={() => {handleClick()}} /> 
+                    </div>
                 </RubberBand>
 
                 <div className="Subtitles"> 

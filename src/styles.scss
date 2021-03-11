@@ -33,7 +33,6 @@
     outline: none;
 }
 
-
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 450% 0; }
@@ -46,6 +45,11 @@
   60% { box-shadow: 0 0 40px #c4a300; }
   100% { box-shadow: 0 0 -40px #c4a300; }
 }
+
+.glow-on-hover:hover{
+  animation: zoomin 0.3s forwards  ;
+}
+
 
 [data-xstate] {
   justify-self: stretch;
@@ -127,11 +131,23 @@ span{
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+
 .Subtitles{
   width: 300px;
   height: auto;
   padding-top: 1.5em;
   opacity: 0.9;
+}
+.Subtitles:hover{
+  animation: zoomin 0.3s forwards  ;
+}
+@keyframes zoomin {
+  from {
+    transform: scale(1.0); 
+  }
+  to{
+    transform: scale(1.3); 
+  }
 }
 
 
