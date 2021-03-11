@@ -53,16 +53,8 @@
   border: none;
 }
 
-canvas {
-  display: block;
-}
-
-// body {
-//   background-color: transparent;
-//   color: white;
-//   padding: 40px;
-//   font-family: Arial;
-//   text-align: center;
+// canvas {
+//   display: block;
 // }
 
 
@@ -107,7 +99,7 @@ span{
   width: 115%;
 }
 
-//syntax: .divClassName { ... }
+//Alternative page (for non-Chrome/Edge)
 .OtherBrowsers {
   font-family: sans-serif;
   text-align: center;
@@ -123,20 +115,8 @@ span{
     background-size: contain;
 }
 
-.Safari {
-  font-family: sans-serif;
-  text-align: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: orange 
-}
 
+//Message box in alternative page (for non-Chrome/Edge)
 .Box{
   width: auto;
   height: auto;
@@ -170,6 +150,7 @@ span{
   align-items: center;
 }
 
+//Neon letter animation
 .GlowLetter{
   
   font-size: 80px;
@@ -186,7 +167,9 @@ span{
   }
 }
 
+//Beating heart animation
 .Heart{
+  padding-left: 15px;
   animation: beating 0.7s ease-in-out infinite alternate;
 }
 @keyframes beating {
@@ -196,7 +179,10 @@ span{
   95% {
     transform: scale(1.1); opacity: 0.85;
   }
-  100% {
+  98% {
     transform: scale(1.15); opacity: 0.75;
+  }
+  100% {
+    transform: scale(1.35); opacity: 0.65;
   }
 }
