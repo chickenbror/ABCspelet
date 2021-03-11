@@ -4,7 +4,6 @@
 To run:
 #+begin_src sh
   npm install
-  npm install natural
   npm start
 #+end_src
 
