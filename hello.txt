@@ -4,3 +4,5 @@ Hej Eirini :)
 //add alternative homophonic words to answers?
 // eg when i say 'cyprus' or 'nanna', it's only recognised as 'cypress' and 'nana'
 // so maybe add the latter to answers?
+
+//eliminate hard-to-recognize words...eg 'knee', 'Oman', 

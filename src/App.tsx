@@ -347,8 +347,8 @@ const HeartBar = (props:any) => {
             clipPath="url(#cut-off-bottom)"
             />
 
-          <text textAnchor="middle" x="12" y="15" color="white" fontSize="11" fill="white" opacity="0.3"
-                style={{animation: "wiggle 2.4s ease-out infinite", animationDelay:'0.72s'}}>
+          <text textAnchor="middle" x="12" y="15" color="white" fontSize="11" fill="white" opacity="0.45"
+                style={{animation: "wiggle 2.5s ease-out infinite", animationDelay:'0.9s'}}>
             {currentScore} 
           </text>
 
@@ -356,3 +356,5 @@ const HeartBar = (props:any) => {
       </div>
     );
   };
+//0...0.9...1...1.9...2
+//....0.9.......1.9

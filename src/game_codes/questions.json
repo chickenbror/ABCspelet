@@ -6,7 +6,7 @@
         "answers": ["apple", "avocado", "apricot", "banana", "cantaloupe", "cherry", "clementine", "date",
             "grapefruit", "pomergranate", "grape", "honeydew", "melon", "lemon", "lime", "mandarin", "orange", "mango", "orange",
             "papaya", "peach", "pear", "pineapple", "plantain", "plum", "pomelo", "tangerine", "watermelon", "strawberry",
-            "blueberry", "litchi", "lingonberry", "dragonfruit", "tomato", "pawpaw", "lychee", "kiwifruit", "jackfruit",
+            "blueberry", "litchi", "lingonberry", "dragonfruit", "tomato", "pawpaw", "lychee", "kiwifruit", "kiwi", "jackfruit",
             "durian", "guava", "passionfruit"]
     },
     { "category": "an EU country",
@@ -26,9 +26,9 @@
     },
     { "category": "a country in Asia",
         "answers": ["china", "india", "kazakhstan", "saudi arabia", "iran", "mongolia", "indonesia", "pakistan", "turkey", "myanmar", "afghanistan",
-            "yemen", "thailand", "turkmenistan", "uzbekistan", "iraq", "japan", "vietnam", "malaysia", "oman", "philippines", "philippine",
+            "yemen", "thailand", "turkmenistan", "uzbekistan", "iraq", "japan", "vietnam", "malaysia", "philippines", "philippine",
             "laos", "lao", "kyrgyzstan", "syria", "cambodia", "bangladesh", "nepal", "tajikistan", "north korea", "south korea", "korea", "jordan", "azerbaijan",
-            "united arab emirates", "uae", "georgia", "sri lanka", "bhutan", "taiwan", "armenia", "israel", "kuwait", "east timor", "qatar", "lebanon",
+            "united arab emirates", "u.a.e.", "georgia", "sri lanka", "bhutan", "taiwan", "armenia", "israel", "kuwait", "east timor", "qatar", "lebanon",
             "cyprus", "northern cyprus", "palestine", "brunei", "bahrain", "singapore", "maldives"]
     },
     { "category": "a capital city in Europe",
@@ -39,17 +39,18 @@
             "yerevan", "zagreb", "north nicosia", "pristina", "stepanakert", "sukhumi", "tiraspol", "tskhinvali", "south ossetia"]
     },
     { "category": "a pet animal",
-        "answers": ["bird", "fish", "mouse", "rat", "dog", "cat", "gerbil", "hamster", "spider", "snake", "ferret", "goldfish", "turtle", "rabbit",
+        "answers": ["bird", "fish", "mouse", "rat", "dog", "cat", "gerbil", "hamster", "spider", "snake", "goldfish", "turtle", "rabbit",
             "pig", "goat", "guinea", "pig", "frog", "hedgehog", "horse", "chicken", "duck", "goose", "budgie", "parrot", "canary"]
     },
     { "category": "a vegetable",
-        "answers": ["watercress", "brussels sprout", "pumpkin", "squash", "mushroom", "bakchoy", "kale", "rocket", "broccoli", "spinach", "carrot",
+        "answers": ["watercress", "brussels sprout", "pumpkin", "squash", "mushroom", "bak choi", "kale", "broccoli", "spinach", "carrot",
             "beetroot", "celery", "zucchini", "potato", "onion", "cucumber", "eggplant", "aubergine", "corn", "cauliflower", "asparagus",
-            "cabbage"]
+            "cabbage","okra","lady finger","pepper","paprika","capsicum"]
     },
     { "category": "a family member",
         "answers": ["dad", "mom", "mum", "mother", "father", "sister", "brother", "auntie", "aunt", "uncle", "cousin", "niece", "nephew",
-            "grandfather", "grandmother", "grandma", "grandpa", "granny", "nanna", "nana", "pappa","papa", "mama", "mamma", "mommy"]
+            "grandfather", "grandmother", "grandma", "grandpa", "granny", "nanna", "nana", "pappa","papa", "mama", "mamma", "mommy","husband",
+            "wife","partner", "stepmother","stepfather", "stepson","stepdaughter","son","daughter","sibling"]
     },
     { "category": "a continent",
         "answers": ["america", "australia", "north america", "south america", "africa", "asia", "europe", "antarctica"]
@@ -57,22 +58,22 @@
     { "category": "a social media website or app",
         "answers": ["facebook", "tik tok", "twitter", "instagram", "snapchat", "youtube"]
     },
-    { "category": "a piece of furnature",
+    { "category": "a piece of furniture",
         "answers": ["table", "chair", "desk", "sofa", "couch", "bench","wardrobe","chest","shelf","closet","armchair",
                     "coffee table","carpet","bookshelf","shoe rack","bed"]
     },
     { "category": "a farm animal",
-        "answers": ["cow","sheep","goat","lamb","pig","chicken","duck","goose","donkey","horse","mule","cat"]
+        "answers": ["cow","sheep","goat","lamb","pig","chicken","duck","goose","donkey","horse","cat"]
     },
     { "category": "a body part",
-        "answers": ["head","face","ear","neck","forehead","eye","nose","mouth","lip","chin","shoulder","elbow",
+        "answers": ["head","face","ear","neck","forehead","eye","nose","lip","chin","shoulder","elbow",
                 "arm","armpit","wrist","back","breast","waist","navel","belly", "belly button", "stomach",
-                "toe","ankle","nail","finger","abdomen","arse","ass","buttock","hip","leg","thigh","knee","foot","thumb",
+                "toe","ankle","nail","finger","abdomen","arse","ass","buttock","hip","leg","thigh","bum","foot","thumb",
                 "skin","eyebrow","hair","eyelash","tooth","hand"]
     },
     { "category": "a colour",
         "answers": ["white","blue","red","yellow","green","black","grey","gray","brown","beige","purple","orange",
-                "maroon","magenta","coral","pink"]
+                "pink"]
     },
     { "category": "an African country",
         "answers": ["zimbabwe","zambia","uganda","tunisia","togo","tanzania","swaziland","sudan","south africa","somalia",
@@ -80,7 +81,11 @@
             "morocco","mauritius","mauritania","mali","malawi","madagascar","libya","liberia","lesotho","kenya","guinea-bissau",
             "guinea","ghana","gambia","gabon","ethiopia","eritrea","equatorial guinea","egypt","djibouti","chad","cote d’ivoire",
             "ivory coast","congo","comoros","central african republic","cape verde","cameroon","burundi","burkina faso",
-            "botswana","benin","angola","algeria"]
+            "botswana","benin","angola","algeria","eswatini"]
+    },
+    { "category": "a breed of dog",
+        "answers": ["whippet","greyhound","labrador","chihuahua","golden retriever","border collie","corgie","poodle","pomeranian","terrier","saluki","bulldog",
+                "maltese","sausage","shepherd","pug","dachshund"]
     }
     
 
