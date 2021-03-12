@@ -63,8 +63,11 @@ present ~5 mins:
 	challenges: lemmatiser overfits (eg philippines>>philippine); solution: match both original and lemmatised inputs
 	"which parts of the course was most useful? how did we apply them?" ...the labs (forced us to do hands-on)??
 	"how can the game be developed in the future?" 
-		...shorter latency? fuzzy match? sound effect? other speechRecog APIs (to be workable in other browsers)?
+		...shorter latency? 
+		fuzzy match? sound effect? 
+		other speechRecog APIs (to be workable in other browsers)?
 		use web crawler to generate questions (categories+things) from eg Wikipedia articles?
+		apply SSXML, eg "Your letter is <em> A </em> for <em> Adam </em> ..."
 
 live demo ~5 mins:
 	(show tinyurl & qr code if anyone wants to try)

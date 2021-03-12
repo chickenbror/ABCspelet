@@ -164,6 +164,7 @@ span{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  
 }
 
 //Neon letter animation
@@ -172,9 +173,9 @@ span{
   font-size: 80px;
   color: #fff;
   text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
+  animation: neonglow 1s ease-in-out infinite alternate ;
 }
-@keyframes glow {
+@keyframes neonglow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   }
@@ -185,20 +186,37 @@ span{
 
 //Beating heart animation
 .Heart{
-  padding-left: 15px;
-  animation: beating 0.7s ease-in-out infinite alternate;
+  padding-left: 15px;  //Space between GlowingLetter and Heart
+  animation: beating 0.8s ease-in-out infinite alternate; 
+  
 }
 @keyframes beating {
   90% {
-    transform: scale(1.0); opacity: 0.9;
+    transform: scale(1.0); opacity: 0.9; translateY:0 ;
   }
   95% {
-    transform: scale(1.1); opacity: 0.85;
+    transform: scale(1.1); opacity: 0.85; translateY:0 ;
   }
   98% {
-    transform: scale(1.15); opacity: 0.75;
+    transform: scale(1.15); opacity: 0.75; translateY:-8px ;
   }
   100% {
-    transform: scale(1.35); opacity: 0.65;
+    transform: scale(1.35); opacity: 0.65; translateY:0 ;
   }
 }
+
+@keyframes wiggle {
+  0% { transform: skewX(9deg); } 
+  10% { transform: skewX(-8deg); } 
+  20% { transform: skewX(7deg); } 
+  30% { transform: skewX(-6deg); } 
+  40% { transform: skewX(5deg); } 
+  50% { transform: skewX(-4deg); } 
+  60% { transform: skewX(3deg); } 
+  70% { transform: skewX(-2deg); } 
+  80% { transform: skewX(1deg); } 
+  90% { transform: skewX(0deg); } 
+  100% { transform: skewX(0deg); } 
+} 
+
+

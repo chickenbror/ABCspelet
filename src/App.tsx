@@ -229,7 +229,7 @@ export default function App() {
                 <div className="LetterAndHeart">
                     <div className="GlowLetter"> <YourLetter letter={letter}/> </div>
                     <div className="Heart"> 
-                        {playingNow? <HeartBar percentage={100*tally/5} /> : null }
+                        {playingNow? <HeartBar currentScore={tally} maxScore={5} size={50} /> : null }
                     </div> 
                 </div>
                 
@@ -245,6 +245,7 @@ export default function App() {
                     <YourSubtitles voiceIn={recResult} tally={tally}/>
                 </div>
                 
+            
             
         </div>
     )
@@ -297,14 +298,23 @@ const YourLetter=(props:any) =>{
 
 //COMPONENT: Grey heart to be filled with pink, based on percentage
 const HeartBar = (props:any) => {
-    const percentage = props.percentage? props.percentage : 0
-    const y = 24 - (24 * percentage) / 100;
+    
+    const maxScore = props.maxScore
+    const currentScore = props.currentScore>0? props.currentScore : ''
+    const size = props.size
+    const percentage = currentScore? 100*currentScore/maxScore : 0
+    //add other props? eg, showScore={true/false}; showPercentage={true/false}
+
+
+    const y = 24 - (24 * percentage) / 100; //Height of the pink filling shape
+
+    //Below: Heart-shaped vector graphs & text inside
     return (
       <div className="ProgressBarH">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
+          width={size}
+          height={size}
           viewBox="0 0 24 24"
         >
           <defs>
@@ -332,10 +342,15 @@ const HeartBar = (props:any) => {
             />
 
           <path
-            style={{ fill: "url(#pink-grad)" }}
+            style={{ fill: "url(#pink-grad)", }}
             d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"
             clipPath="url(#cut-off-bottom)"
             />
+
+          <text textAnchor="middle" x="12" y="15" color="white" fontSize="11" fill="white" opacity="0.3"
+                style={{animation: "wiggle 2.4s ease-out infinite", animationDelay:'0.72s'}}>
+            {currentScore} 
+          </text>
 
         </svg>
       </div>
