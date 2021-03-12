@@ -18,13 +18,12 @@
     { "category": "a name of a month",
         "answers": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
     },
-
     { "category": "a country that has won Eurovision",
         "answers": ["luxembourg", "portugal", "switzerland", "russia", "sweden", "estonia", "serbia", "monaco", "denmark", "israel", "norway",
             "greece", "france", "spain", "azerbaijan", "belgium", "italy", "yugoslavia", "finland", "latvia", "germany", "ireland", "austria",
             "turkey", "united kingdom", "england", "ukraine", "netherlands", "holland"]
     },
-    { "category": "a country in Asia",
+    { "category": "a country in asia",
         "answers": ["china", "india", "kazakhstan", "saudi arabia", "iran", "mongolia", "indonesia", "pakistan", "turkey", "myanmar", "afghanistan",
             "yemen", "thailand", "turkmenistan", "uzbekistan", "iraq", "japan", "vietnam", "malaysia", "philippines", "philippine",
             "laos", "lao", "kyrgyzstan", "syria", "cambodia", "bangladesh", "nepal", "tajikistan", "north korea", "south korea", "korea", "jordan", "azerbaijan",
@@ -75,7 +74,7 @@
         "answers": ["white","blue","red","yellow","green","black","grey","gray","brown","beige","purple","orange",
                 "pink"]
     },
-    { "category": "an African country",
+    { "category": "an african country",
         "answers": ["zimbabwe","zambia","uganda","tunisia","togo","tanzania","swaziland","sudan","south africa","somalia",
             "sierra leone","seychelles","senegal","sao tome and principe","rwanda","nigeria","niger","namibia","mozambique",
             "morocco","mauritius","mauritania","mali","malawi","madagascar","libya","liberia","lesotho","kenya","guinea-bissau",
@@ -85,19 +84,19 @@
     },
     { "category": "a breed of dog",
         "answers": ["whippet","greyhound","labrador","chihuahua","golden retriever","border collie","corgie","poodle","pomeranian","terrier","saluki","bulldog",
-                "maltese","sausage","shepherd","german shepherd","pug","dachshund"]
+                "maltese","sausage","shepherd","german shepherd","pug","dachshund", "chow chow", "caniche", "west highland terrier", "beagle", "rottweiler", "husky"]
     },
     { "category": "a video game",
         "answers": ["league of legends", "counter strike", "overwatch", "valorant", "apex legends", "world of warcraft", "diablo", "starcraft", 
         	"call of duty", "super mario bros", "pokemon", "angry birds", "among us", "rocket league", "age of empires", "rust", "valheim", 
-        	"sea of thieves", "minecraft", "hearthstone", "portal", "the sims", "candy crush", "pac man", "plwayer unknown's battlegrounds", 
+        	"sea of thieves", "minecraft", "hearthstone", "portal", "the sims", "candy crush", "pac man", "player unknown's battlegrounds", 
         	"grand theft auto", "tetris", "roblox", "team fortress", "final fantasy", "the last of us", "war of god", "mario cart", "animal crossing", "skyrim", 
         	"witcher", "assasin's creed" ]
     },
     { "category": "an occupation",
         "answers": ["doctor", "police officer", "detective", "bus driver", "post man", "dancer", "musician", "painter", "programmer", "nurse", "teacher", "professor", 
         	"firefighter", "blacksmith", "architect", "baker", "designer", "hairdresser", "tattoo artist", "actor", "director", "model", "engineer",
-        	"photographer", "journalist", "writer", "singer", "psychologist", "translator", "interprator", "detective", "soldier", "athlete", "chemist","tailor"]
+        	"photographer", "journalist", "writer", "singer", "mortician", "psychologist", "translator", "interprator", "detective", "soldier", "athlete", "chemist","tailor"]
     },
     { "category": "a TV series",
         "answers": ["breaking bad", "game of thrones", "peaky blinders", "friends", "how i met your mother", "sherlock", "vikings", "black sails", "blacklist", 
@@ -114,7 +113,8 @@
         	"american beauty", "reservoir dogs", "space odyssey", "requiem for a dream", "vertigo" ]
     },
     { "category": "a famous movie sequel",
-        "answers": ["star wars", "harry potter", "lord of the rings", "narnia", "twilight", "hunger games", "star trek", "fast and furious", "alien", "james bond","007",        	"mission impossible", "pirates of the carribean", "shrek", "scream", "avengers", "spiderman", "thor", "toy story", "underworld"]
+        "answers": ["star wars", "harry potter", "lord of the rings", "narnia", "twilight", "hunger games", "star trek", "fast and furious", "alien", "james bond","007",        	
+            "mission impossible", "pirates of the carribean", "shrek", "scream", "avengers", "spiderman", "thor", "toy story", "underworld"]
     },
     { "category": "a famous musical",
         "answers": ["wicked","miss saigon", "hamilton", "cats", "mary poppins", "producers", "aladdin", "beauty and the beast", "book of mormon", "lion king", "chicago", 
@@ -130,25 +130,69 @@
         	"captain marvel", "black widow", "shang-chi", "x-men", "x men", "wonder woman","wanda","wolverine","deadpool","batman","bat man","aquaman","aqua man"]
     },
     { "category": "a Disney animated movie",
-        "answers": ["frozen","moana", "sleeping beauty", "snow white", "cinderella", "mulan", "aladdin", "beauty and the beast", "the little mermaid","little mermaid", "lion king", "tangled", 
-        	"princess and the frog", "peter pan", "dumbo", "tarzan", "lady and the tramp", "bambi", "stitch", "alice in wonderland", "pocahontas", 
+        "answers": ["frozen","moana", "sleeping beauty", "snow white", "cinderella", "mulan", "aladdin", "beauty and the beast", "the little mermaid","little mermaid", 
+            "lion king", "tangled", "princess and the frog", "peter pan", "dumbo", "tarzan", "lady and the tramp", "bambi", "stitch", "alice in wonderland", "pocahontas", 
         	"hercules", "jungle book", "pinocchio"]
     },
     { "category": "a Harry Potter character",
-        "answers": ["harry","hermione", "ron", "voldermort", "hagrid", "dumbledore"]
+        "answers": ["harry","hermione", "ron", "voldemort", "hagrid", "dumbledore", "snape" ]
     },
     { "category": "a Disney princess",
         "answers": ["snow white","cinderella", "aurora", "ariel", "belle", "jasmine","pocahontas","mulan","repunzel","merida","moana","anna","elsa"]
+    },
+    { "category": "a state in the United States of america",
+        "answers": [ "alaska", "alabama", "arkansas", "american samoa", "arizona", "california", "colorado", "connecticut", "district of columbia", "delaware", 
+            "florida", "georgia", "guam", "hawaii", "iowa", "idaho", "illinois", "indiana", "kansas", "kentucky", "louisiana", "massachusetts", "maryland", "maine", 
+            "michigan", "minnesota", "missouri", "mississippi", "montana", "north carolina", "north dakota", "nebraska", "new hampshire", "new jersey", "new mexico", 
+            "nevada", "new york", "ohio", "oklahoma", "oregon", "pennsylvania", "puerto rico", "rhode island", "south carolina", "south Dakota", "tennessee", "texas", 
+            "utah", "virginia", "virgin islands", "vermont", "washington", "wisconsin", "west virginia", "wyoming" ]
+    },
+    { "category": "an island from the largest ones of the world",
+        "answers": [ "australia", "greenland", "new guinea", "madagascar", "iceland", "great britain", "java", "cuba", "ireland" ]
+    },
+    { "category": "a thing you typically buy from the grocery store",
+        "answers": [ "milk", "bread", "toilet paper", "juice", "fruit", "cheese", "butter", "vegetables", "oil", "soda", "salad", "cereal", "cookies", "coffee" ]
+    },
+    { "category": "a Spanish-speaking country ",
+        "answers": [ "spain", "mexico", "cuba", "argentina", "costa rica", "chile", "colombia", "guatemala", "peru", "venezuela", "ecuador", "bolivia", 
+            "dominican republic", "honduras", "paraguay", "nicaragua", "panama" ]
+    },
+    { "category": "a device you always have to keep plugged in",
+        "answers": [ "TV", "computer", "lamp", "headphones", "mouse", "stove", "mixer", "microwave oven", "phone", "air conditioning" ]
+    },
+    { "category": "a sport",
+        "answers": [ "hockey", "football", "soccer", "baseball", "rugby", "basketball", "volleyball", "badminton", "archery", "golf", "gymnastics", "figure skating", 
+            "ice skating", "cheerleading", "tennis", "surfing", "snowboarding", "cricket", "quidditch", "climbing", "hiking", "cycling", "wrestling", "fencing",
+            "ice hockey", "squash", "windsurfing", "ski", "skating", "lacrosse", "polo", "rowing", "swimming", "water polo", "weightlifting", "racing" ]
+    },
+    { "category": "a part of the body that can have an ache",
+        "answers": [ "head", "stomach", "back", "tooth", "muscle", "knee", "ear" ]
     }
-    
-    
-
-
-
-    
-
-
-
+    { "category": "a material that might be used to builf a house",
+        "answers": [ "wood", "nail", "plastic", "concrete", "brick", "glass", "steel", "insulation", "vinyl", "marble", "tile" ]
+    },
+    { "category": "a metal that old coins might be made out of",
+        "answers": [ "silver", "gold", "copper", "bronze", "zinc", "steel" ]
+    }
+    { "category": "a country with a lot of ice or cold",
+        "answers": [ "sweden", "norway", "iceland", "finland", "russia", "canada", "greenland", "antarctica", "alaska", "kazakhstan", "mongolia", "united states of america" ]
+    },
+    { "category": "a genre of music",
+        "answers": [ "pop", "rock", "metal", "country", "rap", "gospel", "latin", "rock and roll", "heavy metal", "trap", "jazz", "african", "r n b", "hip hop", 
+            "electronic", "house", "soul", "punk", "blues", "k pop" ]
+    },
+    { "category": "a famous band",
+        "answers": [ "queen", "rolling stones", "a c d c", "metallica", "led zepellin", "guns n roses", "green day", "beatles", "arctic monkeys", "coldplay", "fleetwood mac", 
+            "pink floyd", "muse", "smiths", "nirvana", "who", "radiohead", "red hot chili peppers", "u two", "kiss", "toto", "deep purple", "oasis", "iron maiden", 
+            "judas priest", "abba", "nickelback", "black sabbath", "bon jovi", "maroon five" ]
+    },
+    { "category": "a garment of clothing",
+        "answers": [ "shirt", "t shirt", "top", "pants", "jeans", "dress", "skirt", "tuxedo", "tie", "cardigan", "jacket", "socks", "leggings", "tights", "blazer", 
+            "tracksuit" ]
+    },
+    { "category": "an item that can be found in a wallet",
+        "answers": [ "money", "cash", "change", "card", "condom", "i d", "license", "coupon", "bandaid", "credit card", "debit card" ]
+    }
 
 
 
