@@ -398,7 +398,7 @@ const PopoverButtons = () => {
             </OverlayTrigger>
             
             <OverlayTrigger trigger="click" placement="bottom" overlay={popoverInfo}>
-                <Button id='round-button' >⌘</Button>
+                <Button id='round-button' >i</Button>
             </OverlayTrigger>
         </div>
     )

@@ -234,13 +234,19 @@ span{
   opacity: 50%;
   width: 30px;
   height: 30px;
-  background: whitesmoke;
-  color: rgb(74, 72, 72); 
+  background: transparent;
+  color: orange; 
   font-size: 1rem;
+  text-align: center;
+  border: 1.6px solid rgba(255, 166, 0, 0.75);
 }
 #round-button:hover{
   animation: wiggle 0.7s forwards;
 }
+#round-button:focus{
+  outline:0 //No square border when clicked
+}
+
 
 #popover-box{
   padding: 0.8em;
