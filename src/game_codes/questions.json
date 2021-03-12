@@ -85,7 +85,7 @@
     },
     { "category": "a breed of dog",
         "answers": ["whippet","greyhound","labrador","chihuahua","golden retriever","border collie","corgie","poodle","pomeranian","terrier","saluki","bulldog",
-                "maltese","sausage","shepherd","german shepherd","pug","dachshund"]
+                "maltese","sausage","shepherd","german shepherd","pug","dachshund", "chow chow", "caniche", "west highland terrier", "beagle", "rottweiler", "husky"]
     },
     { "category": "a video game",
         "answers": ["league of legends", "counter strike", "overwatch", "valorant", "apex legends", "world of warcraft", "diablo", "starcraft", 
@@ -140,6 +140,15 @@
     { "category": "a Disney princess",
         "answers": ["snow white","cinderella", "aurora", "ariel", "belle", "jasmine","pocahontas","mulan","repunzel","merida","moana","anna","elsa"]
     }
+    { "category": "a state in the United States of America",
+        "answers": [ "Alaska", "Alabama", "Arkansas", "American Samoa", "Arizona", "California", "Colorado", "Connecticut", "District ", "of Columbia", "Delaware", 
+            "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", 
+            "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "North Carolina", "North Dakota", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", 
+            "Nevada", "New York", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", 
+            "Utah", "Virginia", "Virgin Islands", "Vermont", "Washington", "Wisconsin", "West Virginia", "Wyoming" ]
+    }
+    
+    
     
     
 
