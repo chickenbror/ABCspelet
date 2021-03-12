@@ -69,7 +69,7 @@
         "answers": ["head","face","ear","neck","forehead","eye","nose","lip","chin","shoulder","elbow",
                 "arm","armpit","wrist","back","breast","waist","navel","belly", "belly button", "stomach",
                 "toe","ankle","nail","finger","abdomen","arse","ass","buttock","hip","leg","thigh","bum","foot","thumb",
-                "skin","eyebrow","hair","eyelash","tooth","hand"]
+                "skin","eyebrow","hair","eyelash","tooth","hand","chest"]
     },
     { "category": "a colour",
         "answers": ["white","blue","red","yellow","green","black","grey","gray","brown","beige","purple","orange",
