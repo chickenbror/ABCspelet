@@ -55,7 +55,46 @@
         "answers": ["america", "australia", "north america", "south america", "africa", "asia", "europe", "antarctica"]
     },
     { "category": "a social media website or app",
-        "answers": ["facebook", "tik tok", "twitter", "instagram", "snapchat", "youtube"]
+        "answers": ["facebook", "tik tok", "twitter", "instagram", "snapchat", "youtube", "me 2 today", "shazam", "photoshop"]
+    },
+    { "category": "an electronic game",
+        "answers": ["league of legends", "counter strike", "overwatch", "valorant", "apex legends", "world of warcraft", "diablo", "starcraft", 
+        	"call of duty", "super mario bros", "pokemon", "angry birds", "among us", "rocket league", "age of empires", "rust", "valheim", 
+        	"sea of thieves", "minecraft", "hearthstone", "portal", "the sims", "candy crush", "pac man", "plwayer unknown's battlegrounds", 
+        	"grand theft auto", "tetris", "roblox", "team fortress", "final fantasy", "the last of us", "war of god", "mario cart", "animal crossing", "skyrim", 
+        	"witcher", "assasin's creed" ]
+    },
+    { "category": "an occupation",
+        "answers": ["doctor", "police officer", "detective", "bus driver", "post man", "dancer", "musician", "painter", "programmer", "nurse", "teacher", "professor", 
+        	"firefighter", "blacksmith", "architect", "baker", "designer", "hairdresser", "tattoo artist", "actor", "director", "model", "engineer"
+        	"photographer", "journalist", "writer", "singer", "psychologist", "translator", "interprator", "detective", "soldier", "athlete", "chemist","tailor"]
+    },
+    { "category": "a TV series",
+        "answers": ["breaking bad", "game of thrones", "peaky blinders", "friends", "how i met your mother", "sherlock", "vikings", "black sails", "blacklist", 
+        	"prison break", "chernobyl", "the wire", "planet earth", "rick and morty", "true detective", "the office", "gravity falls", "riverdale", "house of cards", 
+        	"money heist", "monty python", "black mirror", "twin peaks", "walking dead", "lost", "stranger things", "the simpsons", "south park", "family guy", 
+        	"adventure time", "dark", "cobra kai", "mind hunter", "orange is the new black", "the handmaid's tale", "daredevil", "outlander", "doctor who", 
+        	"homeland", "c s i miami", "c s i", "mister robot", "community", "big bang theory", "better call saul", "sons of anarchy", "grey's anatomy", 
+        	"criminal minds", "american horror story"]
+    },
+    { "category": "a famous movie",
+        "answers": ["titanic", "godfather", "dark knight", "shawshank redemption", "superman", "twelve angry men", "pulp fiction", "fight club", "memento", 
+        	"inception", "matrix", "silence of the lambs", "interstellar", "leon the professional", "parasite", "spotlight", "whiplash", "lion king", 
+        	"back to the future", "american history x", "psycho", "prestige", "the departed", "joker", "wall e", "the great dictator", "the shining", 
+        	"american beauty", "reservoir dogs", "space odyssey", "requiem for a dream", "vertigo" ]
+    },
+    { "category": "a famous movie sequel",
+        "answers": ["star wars", "harry potter", "lord of the rings", "narnia", "twilight", "hunger games", "star trek", "fast and furious", "alien", "james bond",
+        	"mission impossible", "pirates of the carribean", "shrek", "scream", "avengers", "spiderman", "thor", "toy story", "underworld"]
+    },
+    { "category": "a colour",
+        "answers": ["blue", "red", "yellow", "green", "orange", "pink", "purple",
+        	"violet", "white", "black", "gray", "brown", "lime", "khaki", "maroon"]
+    },
+    { "category": "a famous musical",
+        "answers": ["miss saigon", "hamilton", "cats", "mary poppins", "producers", "aladdin", "beauty and the beast", "book of mormon", "lion king", "chicago", 
+        	"jersey boys", "mamma mia", "west side story", "phantom of the opera", "three penny opera", "wicked", "a chorus line", "rent", "forty second street", 
+        	"grease", "my fair lady", "hairspray", "fiddler on the roof", "kinky boots", "annie", "cabaret", "rock of ages", "oklahoma"]
     }
 ]
 }
