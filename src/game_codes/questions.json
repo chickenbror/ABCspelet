@@ -96,7 +96,7 @@
     { "category": "an occupation",
         "answers": ["doctor", "police officer", "detective", "bus driver", "post man", "dancer", "musician", "painter", "programmer", "nurse", "teacher", "professor", 
         	"firefighter", "blacksmith", "architect", "baker", "designer", "hairdresser", "tattoo artist", "actor", "director", "model", "engineer",
-        	"photographer", "journalist", "writer", "singer", "psychologist", "translator", "interprator", "detective", "soldier", "athlete", "chemist","tailor"]
+        	"photographer", "journalist", "writer", "singer", "mortician", "psychologist", "translator", "interprator", "detective", "soldier", "athlete", "chemist","tailor"]
     },
     { "category": "a TV series",
         "answers": ["breaking bad", "game of thrones", "peaky blinders", "friends", "how i met your mother", "sherlock", "vikings", "black sails", "blacklist", 
@@ -189,7 +189,11 @@
     { "category": "a garment of clothing",
         "answers": [ "shirt", "t shirt", "top", "pants", "jeans", "dress", "skirt", "tuxedo", "tie", "cardigan", "jacket", "socks", "leggings", "tights", "blazer", 
             "tracksuit" ]
+    },
+    { "category": "an item that can be found in a wallet",
+        "answers": [ "money", "cash", "change", "card", "condom", "i d", "license", "coupon", "bandaid", "credit card", "debit card" ]
     }
+
 
 
 ]
