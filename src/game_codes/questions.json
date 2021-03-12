@@ -139,49 +139,56 @@
     },
     { "category": "a Disney princess",
         "answers": ["snow white","cinderella", "aurora", "ariel", "belle", "jasmine","pocahontas","mulan","repunzel","merida","moana","anna","elsa"]
-    }
+    },
     { "category": "a state in the United States of america",
         "answers": [ "alaska", "alabama", "arkansas", "american samoa", "arizona", "california", "colorado", "connecticut", "district of columbia", "delaware", 
             "florida", "georgia", "guam", "hawaii", "iowa", "idaho", "illinois", "indiana", "kansas", "kentucky", "louisiana", "massachusetts", "maryland", "maine", 
             "michigan", "minnesota", "missouri", "mississippi", "montana", "north carolina", "north dakota", "nebraska", "new hampshire", "new jersey", "new mexico", 
             "nevada", "new york", "ohio", "oklahoma", "oregon", "pennsylvania", "puerto rico", "rhode island", "south carolina", "south Dakota", "tennessee", "texas", 
             "utah", "virginia", "virgin islands", "vermont", "washington", "wisconsin", "west virginia", "wyoming" ]
-    }
+    },
     { "category": "an island from the largest ones of the world",
         "answers": [ "australia", "greenland", "new guinea", "madagascar", "iceland", "great britain", "java", "cuba", "ireland" ]
-    }
+    },
     { "category": "a thing you typically buy from the grocery store",
         "answers": [ "milk", "bread", "toilet paper", "juice", "fruit", "cheese", "butter", "vegetables", "oil", "soda", "salad", "cereal", "cookies", "coffee" ]
-    }
+    },
     { "category": "a Spanish-speaking country ",
         "answers": [ "spain", "mexico", "cuba", "argentina", "costa rica", "chile", "colombia", "guatemala", "peru", "venezuela", "ecuador", "bolivia", 
             "dominican republic", "honduras", "paraguay", "nicaragua", "panama" ]
-    }
+    },
     { "category": "a device you always have to keep plugged in",
         "answers": [ "TV", "computer", "lamp", "headphones", "mouse", "stove", "mixer", "microwave oven", "phone", "air conditioning" ]
-    }
+    },
     { "category": "a sport",
         "answers": [ "hockey", "football", "soccer", "baseball", "rugby", "basketball", "volleyball", "badminton", "archery", "golf", "gymnastics", "figure skating", 
             "ice skating", "cheerleading", "tennis", "surfing", "snowboarding", "cricket", "quidditch", "climbing", "hiking", "cycling", "wrestling", "fencing",
             "ice hockey", "squash", "windsurfing", "ski", "skating", "lacrosse", "polo", "rowing", "swimming", "water polo", "weightlifting", "racing" ]
-    }
+    },
     { "category": "a part of the body that can have an ache",
         "answers": [ "head", "stomach", "back", "tooth", "muscle", "knee", "ear" ]
     }
     { "category": "a material that might be used to builf a house",
         "answers": [ "wood", "nail", "plastic", "concrete", "brick", "glass", "steel", "insulation", "vinyl", "marble", "tile" ]
-    }
+    },
     { "category": "a metal that old coins might be made out of",
         "answers": [ "silver", "gold", "copper", "bronze", "zinc", "steel" ]
     }
+    { "category": "a country with a lot of ice or cold",
+        "answers": [ "sweden", "norway", "iceland", "finland", "russia", "canada", "greenland", "antarctica", "alaska", "kazakhstan", "mongolia", "united states of america" ]
+    },
     { "category": "a genre of music",
         "answers": [ "pop", "rock", "metal", "country", "rap", "gospel", "latin", "rock and roll", "heavy metal", "trap", "jazz", "african", "r n b", "hip hop", 
             "electronic", "house", "soul", "punk", "blues", "k pop" ]
-    }
+    },
     { "category": "a famous band",
         "answers": [ "queen", "rolling stones", "a c d c", "metallica", "led zepellin", "guns n roses", "green day", "beatles", "arctic monkeys", "coldplay", "fleetwood mac", 
             "pink floyd", "muse", "smiths", "nirvana", "who", "radiohead", "red hot chili peppers", "u two", "kiss", "toto", "deep purple", "oasis", "iron maiden", 
             "judas priest", "abba", "nickelback", "black sabbath", "bon jovi", "maroon five" ]
+    },
+    { "category": "a garment of clothing",
+        "answers": [ "shirt", "t shirt", "top", "pants", "jeans", "dress", "skirt", "tuxedo", "tie", "cardigan", "jacket", "socks", "leggings", "tights", "blazer", 
+            "tracksuit" ]
     }
 
 
