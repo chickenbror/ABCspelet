@@ -14,6 +14,10 @@ import { useWindupString, WindupChildren } from "windups";
         // import HeadShake from 'react-reveal/HeadShake';
 const HeadShake = require('react-reveal/HeadShake'); //?import shows error in TS, so use require() here instead
 const RubberBand = require('react-reveal/RubberBand');
+import Popover from 'react-bootstrap/Popover';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Button from 'react-bootstrap/Button';
+
 
 
 //Browser detection 
@@ -225,11 +229,11 @@ export default function App() {
     //Show if using Chrome or Edge
     return (
         <div className="App">
-                
+                <div className="PopoverButtons"> <PopoverButtons/> </div>
                 <div className="LetterAndHeart">
                     <div className="GlowLetter"> <YourLetter letter={letter}/> </div>
                     <div className="Heart"> 
-                        {playingNow? <HeartBar currentScore={tally} maxScore={5} size={50} /> : null }
+                        {playingNow && <HeartBar currentScore={tally} maxScore={5} size={50} />  }
                     </div> 
                 </div>
                 
@@ -244,8 +248,6 @@ export default function App() {
                 <div className="Subtitles"> 
                     <YourSubtitles voiceIn={recResult} tally={tally}/>
                 </div>
-                
-            
             
         </div>
     )
@@ -356,5 +358,48 @@ const HeartBar = (props:any) => {
       </div>
     );
   };
-//0...0.9...1...1.9...2
-//....0.9.......1.9
+
+const PopoverButtons = () => {
+    const popoverTips = (
+        <Popover id="popover-box">
+          <Popover.Title as="h4">Having troubles playing? :(</Popover.Title>
+          <Popover.Content>
+            <p>
+            Due to limitations of the voice recogniser, these might help... <br></br><br></br>
+            -Speak in a North American accent.<br></br><br></br>
+            -After the cat finishes talking, wait for a sec for it to start listening to you
+            (indicated by the <strong>flashing button</strong>).
+            </p>
+          </Popover.Content>
+        </Popover>
+      );
+
+    const popoverInfo = (
+    <Popover id="popover-box">
+        <Popover.Title as="h4">ABC Game</Popover.Title>
+        <Popover.Content>
+        <p>
+        Designed & made by: <br></br>
+        Liao Hsien-hao Calvin<br></br>
+        Eirini Tsakiri <br></br><br></br>
+        for the project of <strong>LT2216 Dialogue Systems</strong> at Göteborgs universitet.
+        <br></br><br></br>
+        github.com/chickenbror/ABCgame
+        </p>
+        
+        </Popover.Content>
+    </Popover>
+    );
+    
+    return (
+        <div>
+            <OverlayTrigger trigger="click" placement="bottom" overlay={popoverTips}>
+                <Button id='round-button' >?</Button>
+            </OverlayTrigger>
+            
+            <OverlayTrigger trigger="click" placement="bottom" overlay={popoverInfo}>
+                <Button id='round-button' >⌘</Button>
+            </OverlayTrigger>
+        </div>
+    )
+}

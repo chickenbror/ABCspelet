@@ -85,9 +85,9 @@
     },
     { "category": "a breed of dog",
         "answers": ["whippet","greyhound","labrador","chihuahua","golden retriever","border collie","corgie","poodle","pomeranian","terrier","saluki","bulldog",
-                "maltese","sausage","shepherd","pug","dachshund"]
+                "maltese","sausage","shepherd","german shepherd","pug","dachshund"]
     },
-    { "category": "an electronic game",
+    { "category": "a video game",
         "answers": ["league of legends", "counter strike", "overwatch", "valorant", "apex legends", "world of warcraft", "diablo", "starcraft", 
         	"call of duty", "super mario bros", "pokemon", "angry birds", "among us", "rocket league", "age of empires", "rust", "valheim", 
         	"sea of thieves", "minecraft", "hearthstone", "portal", "the sims", "candy crush", "pac man", "plwayer unknown's battlegrounds", 
@@ -105,7 +105,7 @@
         	"money heist", "monty python", "black mirror", "twin peaks", "walking dead", "lost", "stranger things", "the simpsons", "south park", "family guy", 
         	"adventure time", "dark", "cobra kai", "mind hunter", "orange is the new black", "the handmaid's tale", "daredevil", "outlander", "doctor who", 
         	"homeland", "c s i miami", "c s i", "mister robot", "community", "big bang theory", "better call saul", "sons of anarchy", "grey's anatomy", 
-        	"criminal minds", "american horror story"]
+        	"criminal minds", "american horror story","wentworth", "wandavision","modern family","family guy","american dad","simpsons"]
     },
     { "category": "a famous movie",
         "answers": ["titanic", "godfather", "dark knight", "shawshank redemption", "superman", "twelve angry men", "pulp fiction", "fight club", "memento", 
@@ -123,7 +123,11 @@
     },
     { "category": "a Marvel superhero movie",
         "answers": ["iron man","hulk", "captain america", "thor", "avengers", "guardians of the galaxy", "ant man", "doctor strange", "spider-man", "spider man", "black panther", 
-        	"captain marvel", "black widow", "shang-chi", "x-men", "x men", "fantastic four"]
+        	"captain marvel", "black widow", "shang-chi", "x-men", "x men", "fantastic four","logan","wolverine","deadpool"]
+    },
+    { "category": "a comic superhero",
+        "answers": ["iron man","hulk", "captain america", "thor", "avenger", "superman", "ant man", "doctor strange", "spider-man", "spider man", "black panther", 
+        	"captain marvel", "black widow", "shang-chi", "x-men", "x men", "wonder woman","wanda","wolverine","deadpool","batman","bat man","aquaman","aqua man"]
     },
     { "category": "a Disney animated movie",
         "answers": ["frozen","moana", "sleeping beauty", "snow white", "cinderella", "mulan", "aladdin", "beauty and the beast", "the little mermaid","little mermaid", "lion king", "tangled", 
@@ -132,6 +136,9 @@
     },
     { "category": "a Harry Potter character",
         "answers": ["harry","hermione", "ron", "voldermort", "hagrid", "dumbledore"]
+    },
+    { "category": "a Disney princess",
+        "answers": ["snow white","cinderella", "aurora", "ariel", "belle", "jasmine","pocahontas","mulan","repunzel","merida","moana","anna","elsa"]
     }
     
     

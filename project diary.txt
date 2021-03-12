@@ -60,7 +60,11 @@ present ~5 mins:
 		difference-- no time limit on our game due to ASR latency etc
 		the game flowchart
 	platform-- xstate, react, lemmatiser (natural.js nlp instead of NLTK cuz we aren't using Python)
-	challenges: lemmatiser overfits (eg philippines>>philippine); solution: match both original and lemmatised inputs
+	challenges: 
+		lemmatiser overfits (eg philippines>>philippine); solution: match both original and lemmatised inputs
+		letter repeat a lot; solution: added a guarding state and context.lastLetter so the new letter won't be the same
+			(eg, S>>A>>K>>D>>S... instead of S>>S>>S... in a row )
+
 	"which parts of the course was most useful? how did we apply them?" ...the labs (forced us to do hands-on)??
 	"how can the game be developed in the future?" 
 		...shorter latency? 

@@ -29,6 +29,18 @@ const newGameRound: Action<SDSContext, SDSEvent> = assign((context) => {
     let qs=makeNewQuestions();
     return { letter: qs.letter, questions: qs.ques, tally:0, confettiSwitch:false} 
 })
+//After chosen a letter and before going saying it, remember it for referece of next game round
+const rememberLetter: Action<SDSContext, SDSEvent> = assign((context) => { 
+    return { lastLetter: context.letter} 
+})
+const remember3Letters: Action<SDSContext, SDSEvent> = assign((context) => { 
+    let last3Letters= context.lastLetters? context.lastLetters : []
+    last3Letters.push(context.letter)
+    if(last3Letters.length>3){
+        last3Letters.shift()
+    }
+    return { lastLetters: last3Letters} 
+})
 
 
 //Say the current random letter and a 'spelling/phonetic' alphabet
@@ -40,7 +52,7 @@ function letterNow(context:SDSContext){
         'y':'yesman', 'z':'zero'
         }
     let letter:string = context.letter
-    return `Your letter is ${letter.toUpperCase()} for ${alphabet[letter]}. `
+    return `Your letter is "${letter.toUpperCase()}" for "${alphabet[letter]}". `
 }
 
 function questionNow(context:SDSContext){
@@ -159,24 +171,37 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
                 } 
             }
         },
-        //Start new game: initiate new game object & reset tally counter
+        //Start/restart new game: initiate new questions-object & reset tally counter
         start: {
             entry: say("Starting the game "),
-            on: { ENDSPEECH: {
-                actions: [newGameRound, gameOn, clearTTSAgenda, clearRecResult],
-                target:"sayletter",
-                } 
-            } 
+            on: { ENDSPEECH: { target:"chooseNewLetter" } } 
         },
         restart: {
             entry: say("Ok, starting over"),
-            // always: 'sayletter'
-            on: { ENDSPEECH: {
-                    actions: [newGameRound, gameOn, clearTTSAgenda, clearRecResult],
-                    target:"sayletter",
-                    } 
-            } 
+            on: { ENDSPEECH: {target:"chooseNewLetter" } } 
         },
+        chooseNewLetter :{
+            always:[
+                {actions: [newGameRound, clearTTSAgenda, clearRecResult],
+                 target: "checkLastLetter" }
+            ]
+        },
+
+        //After choosing letter, comparing to last letter game so that the new letter is not repeated
+        checkLastLetter: {
+            always: [
+                //if chosen letter is the same as last ones >> choose again
+                { cond: (context) => !!context.lastLetter && context.letter===context.lastLetter, 
+                    target: 'chooseNewLetter', },
+
+                //chosen letter is different from last 3 letters >> remember it & resume game
+                { 
+                  actions: [rememberLetter, gameOn, ],
+                  target: 'sayletter',  },
+            ]
+        },
+
+        //Starting the game for real from this state
         //Say the letter
         sayletter:{
             entry: send((context)=>({ type: "SPEAK", value: letterNow(context) })),

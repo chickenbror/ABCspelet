@@ -13,6 +13,9 @@ interface SDSContext {
     
     confettiSwitch: boolean
     playingNow: boolean
+
+    lastLetter:string
+    lastLetters: string[]
 }
 
 type SDSEvent =
