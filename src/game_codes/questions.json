@@ -140,7 +140,7 @@
     { "category": "a Disney princess",
         "answers": ["snow white","cinderella", "aurora", "ariel", "belle", "jasmine","pocahontas","mulan","repunzel","merida","moana","anna","elsa"]
     },
-    { "category": "a state in the United States of america",
+    { "category": "a US state",
         "answers": [ "alaska", "alabama", "arkansas", "american samoa", "arizona", "california", "colorado", "connecticut", "district of columbia", "delaware", 
             "florida", "georgia", "guam", "hawaii", "iowa", "idaho", "illinois", "indiana", "kansas", "kentucky", "louisiana", "massachusetts", "maryland", "maine", 
             "michigan", "minnesota", "missouri", "mississippi", "montana", "north carolina", "north dakota", "nebraska", "new hampshire", "new jersey", "new mexico", 
@@ -150,7 +150,7 @@
     { "category": "an island from the largest ones of the world",
         "answers": [ "australia", "greenland", "new guinea", "madagascar", "iceland", "great britain", "java", "cuba", "ireland" ]
     },
-    { "category": "a thing you typically buy from the grocery store",
+    { "category": "a thing you buy from the grocery store",
         "answers": [ "milk", "bread", "toilet paper", "juice", "fruit", "cheese", "butter", "vegetables", "oil", "soda", "salad", "cereal", "cookies", "coffee" ]
     },
     { "category": "a Spanish-speaking country ",
@@ -167,17 +167,17 @@
     },
     { "category": "a part of the body that can have an ache",
         "answers": [ "head", "stomach", "back", "tooth", "muscle", "knee", "ear" ]
-    }
-    { "category": "a material that might be used to builf a house",
+    },
+    { "category": "a material that might be used to build a house",
         "answers": [ "wood", "nail", "plastic", "concrete", "brick", "glass", "steel", "insulation", "vinyl", "marble", "tile" ]
     },
     { "category": "a metal that old coins might be made out of",
         "answers": [ "silver", "gold", "copper", "bronze", "zinc", "steel" ]
-    }
+    },
     { "category": "a country with a lot of ice or cold",
         "answers": [ "sweden", "norway", "iceland", "finland", "russia", "canada", "greenland", "antarctica", "alaska", "kazakhstan", "mongolia", "united states of america" ]
     },
-    { "category": "a genre of music",
+    { "category": "a music genre",
         "answers": [ "pop", "rock", "metal", "country", "rap", "gospel", "latin", "rock and roll", "heavy metal", "trap", "jazz", "african", "r n b", "hip hop", 
             "electronic", "house", "soul", "punk", "blues", "k pop" ]
     },
@@ -186,12 +186,12 @@
             "pink floyd", "muse", "smiths", "nirvana", "who", "radiohead", "red hot chili peppers", "u two", "kiss", "toto", "deep purple", "oasis", "iron maiden", 
             "judas priest", "abba", "nickelback", "black sabbath", "bon jovi", "maroon five" ]
     },
-    { "category": "a garment of clothing",
+    { "category": "a clothing item",
         "answers": [ "shirt", "t shirt", "top", "pants", "jeans", "dress", "skirt", "tuxedo", "tie", "cardigan", "jacket", "socks", "leggings", "tights", "blazer", 
             "tracksuit" ]
     },
-    { "category": "an item that can be found in a wallet",
-        "answers": [ "money", "cash", "change", "card", "condom", "i d", "license", "coupon", "bandaid", "credit card", "debit card" ]
+    { "category": "an item found in a wallet",
+        "answers": [ "money", "cash", "change", "card", "condom", "i d", "id", "i.d.", "license", "coupon", "bandaid", "credit card", "debit card" ]
     }
 
 

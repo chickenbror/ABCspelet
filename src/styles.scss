@@ -221,13 +221,14 @@ span{
 
 //Container of top-right buttons
 .PopoverButtons{
+  z-index: 0 ;
   position: fixed;
   top: 3em;
   right: calc(50% - 350px); //relative from centre
 }
 
 //Individual popover button
-#round-button{
+.round-button{
   cursor: pointer;
   margin: 5px;
   border-radius: 50%;
@@ -240,15 +241,15 @@ span{
   text-align: center;
   border: 1.6px solid rgba(255, 166, 0, 0.75);
 }
-#round-button:hover{
+.round-button:hover{
   animation: wiggle 0.7s forwards;
 }
-#round-button:focus{
+.round-button:focus{
   outline:0 //No square border when clicked
 }
 
 
-#popover-box{
+.popover-box{
   padding: 0.8em;
   
   background-color: orange;
@@ -266,7 +267,7 @@ span{
   text-align: center;
 
 }
-#popover-box:before{
+.popover-box:before{
   content: '';
   opacity: 93%;
 	position: absolute;
