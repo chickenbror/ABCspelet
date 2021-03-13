@@ -1,8 +1,12 @@
 Hej Eirini :)
 
->>Questions.json
-//add alternative homophonic words to answers?
-// eg when i say 'cyprus' or 'nanna', it's only recognised as 'cypress' and 'nana'
-// so maybe add the latter to answers?
 
-//eliminate hard-to-recognize words...eg 'knee', 'Oman', 
+==Considerations when adding ansswers:==
+
+-can it be recognised by ASR? (try saying it and see the output) 
+    //eliminate hard-to-recognize words...eg 'knee', 'Oman',
+-always use singular, lemma form (unless something like 'netherlands')
+-should be a common answer (ie not something obscure)
+-would be nice if there are other anwser starting with the same letter (so it won't be the only right answer)
+-if an answer keeps being recognised as something else, consider adding the latter to answers
+    // eg when i say 'cyprus' or 'nanna', it keeps getting recognised as 'cypress' and 'nana'
