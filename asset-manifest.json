@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ABCgame/static/css/main.284739bd.chunk.css",
+    "main.css": "/ABCgame/static/css/main.7f2905a4.chunk.css",
     "main.js": "/ABCgame/static/js/main.fde0c4a8.chunk.js",
     "main.js.map": "/ABCgame/static/js/main.fde0c4a8.chunk.js.map",
     "runtime-main.js": "/ABCgame/static/js/runtime-main.2c8985ee.js",
@@ -8,13 +8,13 @@
     "static/js/2.e97cc413.chunk.js": "/ABCgame/static/js/2.e97cc413.chunk.js",
     "static/js/2.e97cc413.chunk.js.map": "/ABCgame/static/js/2.e97cc413.chunk.js.map",
     "index.html": "/ABCgame/index.html",
-    "static/css/main.284739bd.chunk.css.map": "/ABCgame/static/css/main.284739bd.chunk.css.map",
+    "static/css/main.7f2905a4.chunk.css.map": "/ABCgame/static/css/main.7f2905a4.chunk.css.map",
     "static/js/2.e97cc413.chunk.js.LICENSE.txt": "/ABCgame/static/js/2.e97cc413.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2c8985ee.js",
     "static/js/2.e97cc413.chunk.js",
-    "static/css/main.284739bd.chunk.css",
+    "static/css/main.7f2905a4.chunk.css",
     "static/js/main.fde0c4a8.chunk.js"
   ]
 }
