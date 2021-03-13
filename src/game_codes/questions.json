@@ -23,7 +23,7 @@
             "greece", "france", "spain", "azerbaijan", "belgium", "italy", "yugoslavia", "finland", "latvia", "germany", "ireland", "austria",
             "turkey", "united kingdom", "england", "ukraine", "netherlands", "holland"]
     },
-    { "category": "a country in asia",
+    { "category": "a country in Asia",
         "answers": ["china", "india", "kazakhstan", "saudi arabia", "iran", "mongolia", "indonesia", "pakistan", "turkey", "myanmar", "afghanistan",
             "yemen", "thailand", "turkmenistan", "uzbekistan", "iraq", "japan", "vietnam", "malaysia", "philippines", "philippine",
             "laos", "lao", "kyrgyzstan", "syria", "cambodia", "bangladesh", "nepal", "tajikistan", "north korea", "south korea", "korea", "jordan", "azerbaijan",
@@ -74,7 +74,7 @@
         "answers": ["white","blue","red","yellow","green","black","grey","gray","brown","beige","purple","orange",
                 "pink"]
     },
-    { "category": "an african country",
+    { "category": "an African country",
         "answers": ["zimbabwe","zambia","uganda","tunisia","togo","tanzania","swaziland","sudan","south africa","somalia",
             "sierra leone","seychelles","senegal","sao tome and principe","rwanda","nigeria","niger","namibia","mozambique",
             "morocco","mauritius","mauritania","mali","malawi","madagascar","libya","liberia","lesotho","kenya","guinea-bissau",
@@ -100,23 +100,8 @@
         "pilot","dancer","teacher","lawyer","judge","secretary","salesperson","gardener","architect","mailman","handyman","plumber","tradie","director","accountant","carpenter",
     "cook","chef","butcher","waiter","waitress","maid","cleaner","technician","hairdresser","barber","mechanic","farmer","actor","actress"]
     },
-    { "category": "a TV series",
-        "answers": ["breaking bad", "game of thrones", "peaky blinders", "friends", "how i met your mother", "sherlock", "vikings", "black sails", "blacklist", 
-        	"prison break", "chernobyl", "the wire", "planet earth", "rick and morty", "true detective", "the office", "gravity falls", "riverdale", "house of cards", 
-        	"money heist", "monty python", "black mirror", "twin peaks", "walking dead", "lost", "stranger things", "the simpsons", "south park", "family guy", 
-        	"adventure time", "dark", "cobra kai", "mind hunter", "orange is the new black", "the handmaid's tale", "daredevil", "outlander", "doctor who", 
-        	"homeland", "c.s.i. miami", "c.s.i.", "mister robot", "community", "big bang theory", "better call saul", "sons of anarchy", "grey's anatomy", 
-        	"criminal minds", "american horror story","wentworth", "wandavision","modern family","family guy","american dad","simpsons","black mirror", "crown", "emily in paris",
-        "orange is the new black","queen's gambit"]
-    },
-    { "category": "a famous movie",
-        "answers": ["titanic", "godfather", "dark knight", "shawshank redemption", "superman", "twelve angry men", "pulp fiction", "fight club", "memento", 
-        	"inception", "matrix", "silence of the lambs", "interstellar", "leon the professional", "parasite", "spotlight", "whiplash", "lion king", 
-        	"back to the future", "american history x", "psycho", "prestige", "the departed", "joker", "wall e", "the great dictator", "the shining", 
-        	"american beauty", "reservoir dogs", "space odyssey", "requiem for a dream", "vertigo" ]
-    },
-    { "category": "a famous movie sequel",
-        "answers": ["star wars", "harry potter", "lord of the rings", "narnia", "twilight", "hunger games", "star trek", "fast and furious", "alien", "james bond","007",        	
+    { "category": "a famous movie franchise",
+        "answers": ["star wars", "harry potter", "lord of the rings", "twilight", "hunger games", "star trek", "fast and furious", "alien", "james bond",        	
             "mission impossible", "pirates of the carribean", "shrek", "scream", "avengers", "spiderman", "thor", "toy story", "underworld"]
     },
     { "category": "a famous musical",
@@ -143,14 +128,7 @@
     { "category": "a Disney princess",
         "answers": ["snow white","cinderella", "aurora", "ariel", "belle", "jasmine","pocahontas","mulan","rapunzel","merida","moana","anna","elsa"]
     },
-    { "category": "a US state",
-        "answers": [ "alaska", "alabama", "arkansas", "american samoa", "arizona", "california", "colorado", "connecticut", "district of columbia", "delaware", 
-            "florida", "georgia", "guam", "hawaii", "iowa", "idaho", "illinois", "indiana", "kansas", "kentucky", "louisiana", "massachusetts", "maryland", "maine", 
-            "michigan", "minnesota", "missouri", "mississippi", "montana", "north carolina", "north dakota", "nebraska", "new hampshire", "new jersey", "new mexico", 
-            "nevada", "new york", "ohio", "oklahoma", "oregon", "pennsylvania", "puerto rico", "rhode island", "south carolina", "south Dakota", "tennessee", "texas", 
-            "utah", "virginia", "virgin islands", "vermont", "washington", "wisconsin", "west virginia", "wyoming" ]
-    },
-    { "category": "an island from the largest ones of the world",
+    { "category": "a large island in the world",
         "answers": [ "australia", "greenland", "new guinea", "madagascar", "iceland", "great britain", "java", "cuba", "ireland" ]
     },
     { "category": "a thing you buy from the grocery store",
@@ -168,7 +146,7 @@
             "ice skating", "cheerleading", "tennis", "surfing", "snowboarding", "cricket", "quidditch", "climbing", "hiking", "cycling", "wrestling", "fencing",
             "ice hockey", "squash", "windsurfing", "ski", "skating", "lacrosse", "polo", "rowing", "swimming", "water polo", "weightlifting", "racing" ]
     },
-    { "category": "a part of the body that can have an ache",
+    { "category": "a body part that can have an ache",
         "answers": [ "head", "stomach", "back", "tooth", "muscle", "foot", "ear" ]
     },
     { "category": "a material that might be used to build a house",
@@ -181,8 +159,8 @@
         "answers": [ "sweden", "norway", "iceland", "finland", "russia", "canada", "greenland", "antarctica", "alaska", "kazakhstan", "mongolia", "united states of america" ]
     },
     { "category": "a music genre",
-        "answers": [ "pop", "rock", "metal", "country", "rap", "gospel", "latin", "rock and roll", "heavy metal", "trap", "jazz", "african", "r n b", "hip hop", 
-            "electronic", "house", "soul", "punk", "blues", "k pop" ]
+        "answers": [ "pop", "rock", "metal", "country", "rap", "gospel", "latin", "metal", "trap", "jazz", "african", "r & b", "hip hop", 
+            "electronic", "house", "soul", "punk", "blues" ]
     },
     { "category": "a famous band",
         "answers": [ "queen", "rolling stones", "a c d c", "metallica", "led zepellin", "guns n roses", "green day", "beatles", "arctic monkeys", "coldplay", "fleetwood mac", 
@@ -190,7 +168,7 @@
             "judas priest", "abba", "nickelback", "black sabbath", "bon jovi", "maroon five" ]
     },
     { "category": "a clothing item",
-        "answers": [ "shirt", "t shirt", "top", "pants", "jeans", "dress", "skirt", "tuxedo", "tie", "cardigan", "jacket", "socks", "leggings", "tights", "blazer", 
+        "answers": [ "shirt", "t-shirt", "top", "pants", "jeans", "dress", "skirt", "tuxedo", "tie", "cardigan", "jacket", "socks", "leggings", "tights", "blazer", 
             "tracksuit" ]
     },
     { "category": "an item found in a wallet",
@@ -202,8 +180,23 @@
     { "category": "a makeup product",
         "answers": ["lipstick", "foundation", "mascara", "lipgloss", "toner", "nail polish","eyeliner","eye shadow"]
     },
-    { "category": "a product in you bathroom",
+    { "category": "a product in your bathroom",
         "answers": ["toothpaste", "toothbrush", "soap", "shampoo", "conditioner", "mosturizer","lotion","shower gel"]
+    },
+    { "category": "a video streaming website",
+        "answers": ["netflix", "disney plus", "disney", "apple tv", "amazon prime", "prime video","youtube","hbo"]
+    },
+    { "category": "a soft drink",
+        "answers": ["coke", "coca-cola", "pepsi", "sprite", "seven up", "red bull","redbull"]
+    },
+    { "category": "an Italian food",
+        "answers": ["pasta", "pizza", "lasagna", "lasagne", "risotto", "polenta","gelato","tiramisu","espresso"]
+    },
+    { "category": "a Japanese food",
+        "answers": ["sushi", "sashimi", "ramen", "miso soup", "teriyaki", "tempura","matcha"]
+    },
+    { "category": "a kitchen appliance",
+        "answers": ["refrigerator", "fridge", "oven", "microwave", "coffee", "kettle","blender","mixer","toaster"]
     }
 
 

@@ -248,7 +248,7 @@ export default function App() {
                 </RubberBand>
 
                 <div className="Subtitles"> 
-                    <YourSubtitles voiceIn={recResult} tally={tally}/>
+                    <UserSubtitles state={current}/>
                 </div>
             
             </div>
@@ -258,18 +258,24 @@ export default function App() {
 };
 
 //COMPONENT: Displaying input of voice interface (ie, recResult)
-const YourSubtitles=(props:any) =>{
+const UserSubtitles=(props:Props) =>{
     // Player's speech-- only displays when recResult!=undefined 
+
+    const {tally} = props.state.context
+    const {recResult} = props.state.context
+    // const recResult="this is test text"
 
     //Prefix face changes based on score of the game
     const  emojis=['😗','🙂','😀','😄','😁','🥳']
-    let emoji=props.tally? emojis[props.tally]:'🙃'
+    let emoji = tally? emojis[tally]:'🙃'
 
-    const subtitlesText = props.voiceIn? emoji+' '+props.voiceIn : ''
-    const [textAnimated] = useWindupString(subtitlesText, {pace: (char) => 3,});
+    const subtitlesText = recResult? recResult : ''
+    const [textAnimated] = useWindupString(subtitlesText)
+
     return(
-        <div>
-            <span> {textAnimated} </span>
+        <div className="emoji-and-bubble">
+            {recResult && <div className="speech-bubble"> {textAnimated} </div>}
+            {recResult && <div className="emoji-face">{emoji}</div>}
         </div>
     )
 }

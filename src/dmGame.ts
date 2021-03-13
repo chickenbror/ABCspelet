@@ -27,20 +27,22 @@ const gameOff: Action<SDSContext, SDSEvent> = assign((context) => { return { pla
 //Initiate a questions object & assign values to context.letter/questions/tally
 const newGameRound: Action<SDSContext, SDSEvent> = assign((context) => { 
     let qs=makeNewQuestions();
+    console.log(`Last round:${context.lastLetter}`)
+    console.log(qs.ques)
     return { letter: qs.letter, questions: qs.ques, tally:0, confettiSwitch:false} 
 })
 //After chosen a letter and before going saying it, remember it for referece of next game round
 const rememberLetter: Action<SDSContext, SDSEvent> = assign((context) => { 
     return { lastLetter: context.letter} 
 })
-const remember3Letters: Action<SDSContext, SDSEvent> = assign((context) => { 
-    let last3Letters= context.lastLetters? context.lastLetters : []
-    last3Letters.push(context.letter)
-    if(last3Letters.length>3){
-        last3Letters.shift()
-    }
-    return { lastLetters: last3Letters} 
-})
+// const remember3Letters: Action<SDSContext, SDSEvent> = assign((context) => { 
+//     let last3Letters= context.lastLetters? context.lastLetters : []
+//     last3Letters.push(context.letter)
+//     if(last3Letters.length>3){
+//         last3Letters.shift()
+//     }
+//     return { lastLetters: last3Letters} 
+// })
 
 
 //Say the current random letter and a 'spelling/phonetic' alphabet
@@ -226,6 +228,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
                      actions: assign((context:SDSContext) => { 
                         let skipped=context.questions.shift();
                         context.questions.push(skipped);
+                        console.log(context.questions)
                         return { } }),
                      target:"checkscore"  },
 

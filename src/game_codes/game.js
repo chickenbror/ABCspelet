@@ -6,15 +6,10 @@ const obj = require('./questions.json') //only works on server-end eg Node.js
 
 
 function eligibleQues(letter) {
-    let validQues = [];
-    obj.questions.forEach(que => { //for each question, if it has 1+ answer starting with letter>>add que to valid array
-
-        let hasAnsWithLetter = que.answers.some(ans => ans[0] === letter) //T or F
-
-        if (hasAnsWithLetter) {
-            validQues.push(que);
-        }
-    });
+    //filter questions with at least 1+ answer starting with letter
+    let validQues = obj.questions.filter( que => 
+        que.answers.some(
+            ans => ans[0]===letter ) )
     return validQues; //array of questions containing at least 1 ans that starts with letter (could be empty)
 }
 
@@ -40,7 +35,7 @@ export function randomChoice(items) {
     return choice;
 }
 
-//Instanticates an object with .letter (a random letter) & .ques (array of 5+ questions objects); 
+//Instancicates an object with .letter (a random letter) & .ques (array of 5+ questions objects); 
 //each question object has .category & .answers (array of things in that category and begins with the letter)
 export function makeNewQuestions() {
     let alphabet = 'abcdefghijklmnopqrstvvwxyz';
@@ -56,15 +51,10 @@ export function makeNewQuestions() {
         }
     }
     candidates.forEach(candidate => {
-        let okAnswers = [];
-        candidate.answers.forEach(ans => {
-            if (ans[0] === letter) {
-                okAnswers.push(ans);
-            }
-        });
-        candidate.answers = okAnswers;
+        //Filter answer/answers that start with letter
+        candidate.answers = candidate.answers.filter( ans => ans[0]===letter); 
     });
-    let ques = shuffleArray(candidates);
+    let ques = shuffleArray(candidates); //shuffle the order
     return {letter, ques}; //returns an object with 2 properties
 }
 
@@ -134,3 +124,5 @@ export function makeNewQuestions() {
 // }
 
 // game()
+
+// console.log(eligibleQues('z').length)
