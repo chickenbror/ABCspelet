@@ -94,17 +94,20 @@
         	"witcher", "assasin's creed" ]
     },
     { "category": "an occupation",
-        "answers": ["doctor", "police officer", "detective", "bus driver", "post man", "dancer", "musician", "painter", "programmer", "nurse", "teacher", "professor", 
-        	"firefighter", "blacksmith", "architect", "baker", "designer", "hairdresser", "tattoo artist", "actor", "director", "model", "engineer",
-        	"photographer", "journalist", "writer", "singer", "mortician", "psychologist", "translator", "interprator", "detective", "soldier", "athlete", "chemist","tailor"]
+        "answers": ["doctor", "police", "detective", "bus driver", "postman", "dancer", "musician", "painter", "programmer", "nurse", "teacher", "professor", 
+        	"firefighter", "blacksmith", "architect", "baker", "designer", "hairdresser", "artist", "actor", "director", "model", "engineer",
+        	"photographer", "journalist", "writer", "singer", "mortician", "psychologist", "translator", "interprator", "detective", "soldier", "athlete", "chemist","tailor",
+        "pilot","dancer","teacher","lawyer","judge","secretary","salesperson","gardener","architect","mailman","handyman","plumber","tradie","director","accountant","carpenter",
+    "cook","chef","butcher","waiter","waitress","maid","cleaner","technician","hairdresser","barber","mechanic","farmer","actor","actress"]
     },
     { "category": "a TV series",
         "answers": ["breaking bad", "game of thrones", "peaky blinders", "friends", "how i met your mother", "sherlock", "vikings", "black sails", "blacklist", 
         	"prison break", "chernobyl", "the wire", "planet earth", "rick and morty", "true detective", "the office", "gravity falls", "riverdale", "house of cards", 
         	"money heist", "monty python", "black mirror", "twin peaks", "walking dead", "lost", "stranger things", "the simpsons", "south park", "family guy", 
         	"adventure time", "dark", "cobra kai", "mind hunter", "orange is the new black", "the handmaid's tale", "daredevil", "outlander", "doctor who", 
-        	"homeland", "c s i miami", "c s i", "mister robot", "community", "big bang theory", "better call saul", "sons of anarchy", "grey's anatomy", 
-        	"criminal minds", "american horror story","wentworth", "wandavision","modern family","family guy","american dad","simpsons"]
+        	"homeland", "c.s.i. miami", "c.s.i.", "mister robot", "community", "big bang theory", "better call saul", "sons of anarchy", "grey's anatomy", 
+        	"criminal minds", "american horror story","wentworth", "wandavision","modern family","family guy","american dad","simpsons","black mirror", "crown", "emily in paris",
+        "orange is the new black","queen's gambit"]
     },
     { "category": "a famous movie",
         "answers": ["titanic", "godfather", "dark knight", "shawshank redemption", "superman", "twelve angry men", "pulp fiction", "fight club", "memento", 
@@ -151,14 +154,14 @@
         "answers": [ "australia", "greenland", "new guinea", "madagascar", "iceland", "great britain", "java", "cuba", "ireland" ]
     },
     { "category": "a thing you buy from the grocery store",
-        "answers": [ "milk", "bread", "toilet paper", "juice", "fruit", "cheese", "butter", "vegetables", "oil", "soda", "salad", "cereal", "cookies", "coffee" ]
+        "answers": [ "milk", "bread", "toilet paper", "juice", "fruit", "cheese", "butter", "vegetable", "oil", "soda", "salad", "cereal", "cookie", "coffee","soft drink","coke","food" ]
     },
     { "category": "a Spanish-speaking country ",
         "answers": [ "spain", "mexico", "cuba", "argentina", "costa rica", "chile", "colombia", "guatemala", "peru", "venezuela", "ecuador", "bolivia", 
             "dominican republic", "honduras", "paraguay", "nicaragua", "panama" ]
     },
     { "category": "a device you always have to keep plugged in",
-        "answers": [ "TV", "computer", "lamp", "headphones", "mouse", "stove", "mixer", "microwave oven", "phone", "air conditioning" ]
+        "answers": [ "tv", "computer", "lamp", "headphones", "mouse", "stove", "mixer", "microwave", "phone", "air conditioning" ]
     },
     { "category": "a sport",
         "answers": [ "hockey", "football", "soccer", "baseball", "rugby", "basketball", "volleyball", "badminton", "archery", "golf", "gymnastics", "figure skating", 
@@ -166,7 +169,7 @@
             "ice hockey", "squash", "windsurfing", "ski", "skating", "lacrosse", "polo", "rowing", "swimming", "water polo", "weightlifting", "racing" ]
     },
     { "category": "a part of the body that can have an ache",
-        "answers": [ "head", "stomach", "back", "tooth", "muscle", "knee", "ear" ]
+        "answers": [ "head", "stomach", "back", "tooth", "muscle", "foot", "ear" ]
     },
     { "category": "a material that might be used to build a house",
         "answers": [ "wood", "nail", "plastic", "concrete", "brick", "glass", "steel", "insulation", "vinyl", "marble", "tile" ]
@@ -183,7 +186,7 @@
     },
     { "category": "a famous band",
         "answers": [ "queen", "rolling stones", "a c d c", "metallica", "led zepellin", "guns n roses", "green day", "beatles", "arctic monkeys", "coldplay", "fleetwood mac", 
-            "pink floyd", "muse", "smiths", "nirvana", "who", "radiohead", "red hot chili peppers", "u two", "kiss", "toto", "deep purple", "oasis", "iron maiden", 
+            "pink floyd", "muse", "smiths", "nirvana", "who", "radiohead", "red hot chili peppers", "u2", "kiss", "toto", "deep purple", "oasis", "iron maiden", 
             "judas priest", "abba", "nickelback", "black sabbath", "bon jovi", "maroon five" ]
     },
     { "category": "a clothing item",
@@ -192,6 +195,15 @@
     },
     { "category": "an item found in a wallet",
         "answers": [ "money", "cash", "change", "card", "condom", "i d", "id", "i.d.", "license", "coupon", "bandaid", "credit card", "debit card" ]
+    },
+    { "category": "a Netflix series",
+        "answers": ["house of cards", "black mirror", "stranger things", "orange is the new black", "crown", "emily in paris","queen's gambit","narcos","bojack horseman"]
+    },
+    { "category": "a makeup product",
+        "answers": ["lipstick", "foundation", "mascara", "lipgloss", "toner", "nail polish","eyeliner","eye shadow"]
+    },
+    { "category": "a product in you bathroom",
+        "answers": ["toothpaste", "toothbrush", "soap", "shampoo", "conditioner", "mosturizer","lotion","shower gel"]
     }
 
 

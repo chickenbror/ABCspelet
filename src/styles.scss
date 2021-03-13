@@ -1,16 +1,26 @@
+.main{
+  background: transparent  no-repeat center top fixed;
+  background-image: url("./catpic_withPrompts.jpg");
+  background-size: auto 100%;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+
+}
+
+
 .App {
   font-family: sans-serif;
   text-align: center;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: white url("./catpic_withPrompts.jpg") no-repeat center top fixed;
-    background-size: auto 100%;
+
   
 }
 
@@ -221,7 +231,8 @@ span{
 
 //Container of top-right buttons
 .PopoverButtons{
-  z-index: 0 ;
+  
+  z-index: 2 ;
   position: fixed;
   top: 3em;
   right: calc(50% - 350px); //relative from centre
@@ -229,6 +240,7 @@ span{
 
 //Individual popover button
 .round-button{
+  z-index: 2 ;
   cursor: pointer;
   margin: 5px;
   border-radius: 50%;
@@ -250,6 +262,7 @@ span{
 
 
 .popover-box{
+  z-index: 2 ;
   padding: 0.8em;
   
   background-color: orange;
@@ -268,6 +281,7 @@ span{
 
 }
 .popover-box:before{
+  z-index: 2 ;
   content: '';
   opacity: 93%;
 	position: absolute;

@@ -228,8 +228,10 @@ export default function App() {
 
     //Show if using Chrome or Edge
     return (
-        <div className="App">
-                <div className="PopoverButtons"> <PopoverButtons/> </div>
+        <div className='main'>
+            <div className="PopoverButtons"> <PopoverButtons/> </div>
+            <div className="App">
+                
                 <div className="LetterAndHeart">
                     <div className="GlowLetter"> <YourLetter letter={letter}/> </div>
                     <div className="Heart"> 
@@ -249,6 +251,8 @@ export default function App() {
                     <YourSubtitles voiceIn={recResult} tally={tally}/>
                 </div>
             
+            </div>
+
         </div>
     )
 };

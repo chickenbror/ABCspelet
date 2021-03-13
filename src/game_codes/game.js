@@ -4,42 +4,18 @@
 const obj = require('./questions.json') //only works on server-end eg Node.js
 
 
-// console.log(obj.questions) //list of cat+answers
-// function eligibleCats(letter) {
-//     let ques = obj.questions;
-//     let validCats = [];
-//     ques.forEach(que => {
-//         let cat = que.category;
-//         let answers = que.answers;
-//         let validAns = [];
-//         answers.forEach(ans => {
-//             if (ans[0] === letter) {
-//                 validAns.push(ans);
-//             }
-//         });
-//         if (validAns.length > 0) {
-//             validCats.push(cat);
-//         }
-//     });
-//     return validCats;
-// }
 
 function eligibleQues(letter) {
-    let ques = obj.questions;
-    let validCats = [];
-    ques.forEach(que => {
-        let answers = que.answers;
-        let validAns = [];
-        answers.forEach(ans => {
-            if (ans[0] === letter) {
-                validAns.push(ans);
-            }
-        });
-        if (validAns.length > 0) {
-            validCats.push(que);
+    let validQues = [];
+    obj.questions.forEach(que => { //for each question, if it has 1+ answer starting with letter>>add que to valid array
+
+        let hasAnsWithLetter = que.answers.some(ans => ans[0] === letter) //T or F
+
+        if (hasAnsWithLetter) {
+            validQues.push(que);
         }
     });
-    return validCats;
+    return validQues; //array of questions containing at least 1 ans that starts with letter (could be empty)
 }
 
 //let eligibleList= eligibleQues('h') //given a letter => a list of que objects
@@ -63,7 +39,10 @@ export function randomChoice(items) {
     let choice = items[items.length * Math.random() | 0];
     return choice;
 }
-function pickRandomLetter() {
+
+//Instanticates an object with .letter (a random letter) & .ques (array of 5+ questions objects); 
+//each question object has .category & .answers (array of things in that category and begins with the letter)
+export function makeNewQuestions() {
     let alphabet = 'abcdefghijklmnopqrstvvwxyz';
     let letter;
     let candidates;
@@ -77,34 +56,20 @@ function pickRandomLetter() {
         }
     }
     candidates.forEach(candidate => {
-        let answers = candidate.answers;
         let okAnswers = [];
-        answers.forEach(ans => {
+        candidate.answers.forEach(ans => {
             if (ans[0] === letter) {
                 okAnswers.push(ans);
             }
         });
         candidate.answers = okAnswers;
     });
-    candidates = shuffleArray(candidates);
-    return [letter, candidates];
-}
-class questions {
-    constructor(letter, ques) {
-        this.letter = letter;
-        this.ques = ques;
-    }
+    let ques = shuffleArray(candidates);
+    return {letter, ques}; //returns an object with 2 properties
 }
 
-//Instanticates an object with .letter (a random letter) & .ques (array of 5+ questions objects); 
-//each question object has .category & .answers (array of things in that category and begins with the letter)
-export function makeNewQuestions() {
-    let arr = pickRandomLetter();
-    let letter = arr[0];
-    let ques = arr[1];
-    let questionsObj = new questions(letter, ques);
-    return questionsObj;
-}
+
+
 
 // let q = makeNewQuestions(); //q has two properties: .letter and .ques= five or more categories+answers
 // console.log(q.letter);
