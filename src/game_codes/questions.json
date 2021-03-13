@@ -4,7 +4,7 @@
     },
     { "category": "a fruit",
         "answers": ["apple", "avocado", "apricot", "banana", "cantaloupe", "cherry", "clementine", "date",
-            "grapefruit", "pomergranate", "grape", "honeydew", "melon", "lemon", "lime", "mandarin", "orange", "mango", "orange",
+            "grapefruit", "pomegranate", "grape", "honeydew", "melon", "lemon", "lime", "mandarin", "orange", "mango", "orange",
             "papaya", "peach", "pear", "pineapple", "plantain", "plum", "pomelo", "tangerine", "watermelon", "strawberry",
             "blueberry", "litchi", "lingonberry", "dragonfruit", "tomato", "pawpaw", "lychee", "kiwifruit", "kiwi", "jackfruit",
             "durian", "guava", "passionfruit"]
