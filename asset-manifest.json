@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ABCgame/static/css/main.3d328e7b.chunk.css",
-    "main.js": "/ABCgame/static/js/main.4f427434.chunk.js",
-    "main.js.map": "/ABCgame/static/js/main.4f427434.chunk.js.map",
+    "main.js": "/ABCgame/static/js/main.354c8978.chunk.js",
+    "main.js.map": "/ABCgame/static/js/main.354c8978.chunk.js.map",
     "runtime-main.js": "/ABCgame/static/js/runtime-main.2c8985ee.js",
     "runtime-main.js.map": "/ABCgame/static/js/runtime-main.2c8985ee.js.map",
     "static/js/2.0bb126c3.chunk.js": "/ABCgame/static/js/2.0bb126c3.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.2c8985ee.js",
     "static/js/2.0bb126c3.chunk.js",
     "static/css/main.3d328e7b.chunk.css",
-    "static/js/main.4f427434.chunk.js"
+    "static/js/main.354c8978.chunk.js"
   ]
 }
