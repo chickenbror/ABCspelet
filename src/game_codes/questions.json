@@ -84,7 +84,7 @@
     },
     { "category": "a breed of dog",
         "answers": ["whippet","greyhound","labrador","chihuahua","golden retriever","border collie","corgie","poodle","pomeranian","terrier","saluki","bulldog",
-                "maltese","sausage","shepherd","german shepherd","pug","dachshund", "chow chow", "caniche", "west highland terrier", "beagle", "rottweiler", "husky"]
+                "maltese","sausage","shepherd","german shepherd","pug","dachshund", "chow chow", "beagle", "husky"]
     },
     { "category": "a video game",
         "answers": ["league of legends", "counter strike", "overwatch", "valorant", "apex legends", "world of warcraft", "diablo", "starcraft", 
@@ -141,7 +141,7 @@
         "answers": ["harry","hermione", "ron", "voldemort", "hagrid", "dumbledore", "snape" ]
     },
     { "category": "a Disney princess",
-        "answers": ["snow white","cinderella", "aurora", "ariel", "belle", "jasmine","pocahontas","mulan","repunzel","merida","moana","anna","elsa"]
+        "answers": ["snow white","cinderella", "aurora", "ariel", "belle", "jasmine","pocahontas","mulan","rapunzel","merida","moana","anna","elsa"]
     },
     { "category": "a US state",
         "answers": [ "alaska", "alabama", "arkansas", "american samoa", "arizona", "california", "colorado", "connecticut", "district of columbia", "delaware", 

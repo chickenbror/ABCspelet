@@ -1,12 +1,17 @@
-Hej Eirini :)
+
 
 
 ==Considerations when adding ansswers:==
 
 -can it be recognised by ASR? (try saying it and see the output) 
     //eliminate hard-to-recognize words...eg 'knee', 'Oman',
+    //what is the recognised output? eg is it 'post man' or 'postman', 'k pop' or 'k-pop'...etc
+
 -always use singular, lemma form (unless something like 'netherlands')
+
 -should be a common answer (ie not something obscure)
+
 -would be nice if there are other anwser starting with the same letter (so it won't be the only right answer)
+
 -if an answer keeps being recognised as something else, consider adding the latter to answers
     // eg when i say 'cyprus' or 'nanna', it keeps getting recognised as 'cypress' and 'nana'
