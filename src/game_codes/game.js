@@ -1,20 +1,8 @@
 "use strict";
 
 //A JSON object. Can be read from an external .json file
-const obj = require('./questions.json') //only works on server-end eg Node.js
+// const quesJSON = require('./questions.json') //only works on server-end eg Node.js
 
-
-
-function eligibleQues(letter) {
-    //filter questions with at least 1+ answer starting with letter
-    let validQues = obj.questions.filter( que => 
-        que.answers.some(
-            ans => ans[0]===letter ) )
-    return validQues; //array of questions containing at least 1 ans that starts with letter (could be empty)
-}
-
-//let eligibleList= eligibleQues('h') //given a letter => a list of que objects
-// console.log(eligibleList[0])
 
 function shuffleArray(array) {
     let curId = array.length;
@@ -37,14 +25,15 @@ export function randomChoice(items) {
 
 //Instancicates an object with .letter (a random letter) & .ques (array of 5+ questions objects); 
 //each question object has .category & .answers (array of things in that category and begins with the letter)
-export function makeNewQuestions() {
-    let alphabet = 'abcdefghijklmnopqrstvvwxyz';
+export function makeNewQuestions( obj ) {
     let letter;
     let candidates;
     let done = false;
     while (done === false) {
-        letter = randomChoice(alphabet);
-        candidates = eligibleQues(letter);
+        letter = randomChoice('abcdefghijklmnopqrstvvwxyz');
+        candidates = obj.questions.filter( que => 
+            que.answers.some(
+                ans => ans[0]===letter ) );
         //Need at least 5 ques
         if (candidates.length >= 5) {
             done = true;
@@ -72,7 +61,7 @@ export function makeNewQuestions() {
 // function game() {
 //     let playing = true;
 //     while (playing === true) {
-//         let quesObj = makeNewQuestions();
+//         let quesObj = makeNewQuestions(quesJSON);
 //         let letter = quesObj.letter; //A random letter
 //         let ques = quesObj.ques; //5 more more question-sets (categories+answers)
 //         let tally = 0; // If incorporating with xstate, use this as context.tally...?

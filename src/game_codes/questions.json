@@ -100,22 +100,18 @@
         "pilot","dancer","teacher","lawyer","judge","secretary","salesperson","gardener","architect","mailman","handyman","plumber","tradie","director","accountant","carpenter",
     "cook","chef","butcher","waiter","waitress","maid","cleaner","technician","hairdresser","barber","mechanic","farmer","actor","actress"]
     },
-    { "category": "a famous movie franchise",
-        "answers": ["star wars", "harry potter", "lord of the rings", "twilight", "hunger games", "star trek", "fast and furious", "alien", "james bond",        	
-            "mission impossible", "pirates of the carribean", "shrek", "scream", "avengers", "spiderman", "thor", "toy story", "underworld"]
-    },
     { "category": "a famous musical",
         "answers": ["wicked","miss saigon", "hamilton", "cats", "mary poppins", "producers", "aladdin", "beauty and the beast", "book of mormon", "lion king", "chicago", 
         	"jersey boys", "mamma mia", "west side story", "phantom of the opera", "three penny opera", "wicked", "a chorus line", "rent", "forty second street", 
-        	"grease", "my fair lady", "hairspray", "fiddler on the roof", "kinky boots", "annie", "cabaret", "rock of ages", "oklahoma"]
+        	"grease", "my fair lady", "hairspray", "fiddler on the roof", "kinky boots", "annie", "cabaret", "rock of ages", "oklahoma","moulin rouge"]
     },
     { "category": "a Marvel superhero movie",
         "answers": ["iron man","hulk", "captain america", "thor", "avengers", "guardians of the galaxy", "ant man", "doctor strange", "spider-man", "spider man", "black panther", 
         	"captain marvel", "black widow", "shang-chi", "x-men", "x men", "fantastic four","logan","wolverine","deadpool"]
     },
     { "category": "a comic superhero",
-        "answers": ["iron man","hulk", "captain america", "thor", "avenger", "superman", "ant man", "doctor strange", "spider-man", "spider man", "black panther", 
-        	"captain marvel", "black widow", "shang-chi", "x-men", "x men", "wonder woman","wanda","wolverine","deadpool","batman","bat man","aquaman","aqua man"]
+        "answers": ["iron man","hulk", "hawkeye","captain america", "thor", "avenger", "superman", "ant man", "doctor strange", "spider-man", "spider man", "black panther", 
+        	"captain marvel", "black widow", "shang-chi", "scarlet witch", "x-men", "x men", "wonder woman","wanda","wolverine","wasp","deadpool","batman","bat man","aquaman","aqua man"]
     },
     { "category": "a Disney animated movie",
         "answers": ["frozen","moana", "sleeping beauty", "snow white", "cinderella", "mulan", "aladdin", "beauty and the beast", "the little mermaid","little mermaid", 
@@ -127,9 +123,6 @@
     },
     { "category": "a Disney princess",
         "answers": ["snow white","cinderella", "aurora", "ariel", "belle","bell", "jasmine","pocahontas","mulan","rapunzel","merida","moana","anna","elsa"]
-    },
-    { "category": "a large island in the world",
-        "answers": [ "australia", "greenland", "new guinea", "madagascar", "iceland", "great britain", "java", "cuba", "ireland" ]
     },
     { "category": "a thing you buy from the grocery store",
         "answers": [ "milk", "bread", "toilet paper", "juice", "fruit", "cheese", "butter", "vegetable", "oil", "soda", "salad", "cereal", "cookie", "coffee","soft drink","coke","food" ]
@@ -181,13 +174,14 @@
         "answers": ["lipstick", "foundation", "mascara", "lipgloss", "toner", "nail polish","eyeliner","eye shadow"]
     },
     { "category": "a product in your bathroom",
-        "answers": ["toothpaste", "toothbrush", "soap", "shampoo", "conditioner", "mosturizer","lotion","shower gel"]
+        "answers": ["toothpaste", "toothbrush", "soap", "shampoo", "conditioner", "moisturizer","moisturiser","lotion","shower gel","mouthwash","toilet paper","deodorant","dental floss",
+                    "razor","mirror","cleanser"]
     },
     { "category": "a video streaming website",
         "answers": ["netflix", "disney plus", "disney", "apple tv", "amazon prime", "prime video","youtube","hbo"]
     },
     { "category": "a soft drink",
-        "answers": ["coke", "coca-cola", "pepsi", "sprite", "seven up", "red bull","redbull"]
+        "answers": ["coke", "coca-cola", "pepsi", "sprite", "seven up", "red bull","redbull","fanta","monster"]
     },
     { "category": "an Italian food",
         "answers": ["pasta", "pizza", "lasagna", "lasagne", "risotto", "polenta","gelato","tiramisu","espresso"]
@@ -203,6 +197,28 @@
     },
     { "category": "an alcoholic drink",
         "answers": ["vodka", "rum", "whiskey", "brandy", "gin", "tequila","beer","wine","champagne"]
+    },
+    { "category": "an animated sitcom for adults",
+        "answers": ["family guy", "american dad", "bojack horseman", "simpsons", "robot chicken", "solar opposites","rick and morty","futurama","south park"]
+    },
+    { "category": "a Disney villain",
+        "answers": ["evil queen", "maleficent", "ursula", "gaston", "scar", "jafar","captain hook","cruella","cruella de vil"]
+    },
+    { "category": "a type of animal meat",
+        "answers": ["chicken", "duck", "goose", "beef", "pork", "mutton","turkey","frog","ostrich","crocodile","quail","fish","salmon","tuna"]
+    },
+    { "category": "a dairy product",
+        "answers": ["milk", "yoghurt", "cheese", "cream", "butter", "sour cream"]
+    },
+    { "category": "an island nation",
+        "answers": ["bahamas", "bahrain", "barbados", "brunei", "cape verde","comoros","cuba","cyprus","cypress",
+            "dominica","dominican republic","fiji","haiti","iceland","indonesia","ireland","jamaica","japan","micronesia","madagasgar","maldives",
+            "malta","marshall islands","mauritius","nauru","new zealand","northern cyprus","papua new guinea","philippines","saint kitts and nevis",
+            "saint lucia","saint vincent and the grenadines","samoa","sao tome and principe","seychelles","singapore","solomon islands","sri lanka",
+            "taiwan","tonga","trinidad and tobago","tuvalu","united kingdom","vanuatu"]
+    },
+	{ "category": "a fast-food restaurant",
+        "answers": ["mcdonald's", "subway", "kfc", "burger king", "max", "pizza hut"]
     }
 
 
