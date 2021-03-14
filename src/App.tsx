@@ -1,4 +1,3 @@
-
 import * as React from "react";
 
 //XState library & Game DM-machine
@@ -248,7 +247,11 @@ export default function App() {
                 </RubberBand>
 
                 <div className="Subtitles"> 
-                    <UserSubtitles state={current}/>
+                    {/* FOR Github deployment & Canvas submission */}
+                    {/* <YourSubtitles voiceIn={recResult} tally={tally}/>  */}
+
+                    {/* FOR demo (on local cuz it cannot show on Github page) */}
+                    <UserSubtitles state={current}/> 
                 </div>
             
             </div>
@@ -258,44 +261,43 @@ export default function App() {
 };
 
 //COMPONENT: Displaying input of voice interface (ie, recResult)
-const UserSubtitles=(props:Props) =>{
+const YourSubtitles=(props:any) =>{
     // Player's speech-- only displays when recResult!=undefined 
-
-    const {tally} = props.state.context
-    const {recResult} = props.state.context
-    // const recResult="this is test text"
 
     //Prefix face changes based on score of the game
     const  emojis=['😗','🙂','😀','😄','😁','🥳']
-    let emoji = tally? emojis[tally]:'🙃'
+    let emoji=props.tally? emojis[props.tally]:'🙃'
 
-    const subtitlesText = recResult? recResult : ''
-    const [textAnimated] = useWindupString(subtitlesText)
-
+    const subtitlesText = props.voiceIn? emoji+' '+props.voiceIn : ''
+    const [textAnimated] = useWindupString(subtitlesText);
     return(
-        <div className="emoji-and-bubble">
-            {recResult && <div className="speech-bubble"> {textAnimated} </div>}
-            {recResult && <div className="emoji-face">{emoji}</div>}
+        <div>
+            <span> {textAnimated} </span>
         </div>
     )
 }
 
-//COMPONENT: Current score (number & hearts)
-// const Scoreboard=(props:any) =>{
-//     // Shows score and hearts when tally>=1 
-//     const tally = props.tally
-//     // const scoreNum = tally? tally : '' 
-//     const hearts = tally? '💛'.repeat(tally) : '' 
-//     return(
-//         <div>
-//             {/* <h1>{scoreNum}</h1> */}
-//             <RubberBand>
-//             <h2> {hearts}</h2>
-//             </RubberBand>
+//This one doesn't show on Github pages...? but can run locally and use for presentation
+const UserSubtitles=(props:Props) =>{
 
-//         </div>
-//     )
-// }
+    const {tally} = props.state.context
+    const {recResult} = props.state.context
+    // const recResult='testing text'
+
+    const  emojis=['😗','🙂','😀','😄','😁','🥳']
+    let emoji= tally? emojis[tally]:'🙃'
+
+    const subtitlesText = recResult? recResult : ''
+    const [textAnimated] = useWindupString(subtitlesText);
+    return(
+        <div id='emoji-and-bubble'>
+            {recResult && <span id='speech-bubble'> {textAnimated} </span>}
+            {recResult && <div id='emoji'> {emoji} </div>}
+        </div>
+    )
+}
+
+
 
 //COMPONENT: Capital letter of the game
 const YourLetter=(props:any) =>{
