@@ -48,7 +48,7 @@
     },
     { "category": "a family member",
         "answers": ["dad", "mom", "mum", "mother", "father", "sister", "brother", "auntie", "aunt", "uncle", "cousin", "niece", "nephew",
-            "grandfather", "grandmother", "grandma", "grandpa", "granny", "nanna", "nana", "pappa","papa", "mama", "mamma", "mommy","husband",
+            "grandfather", "grandmother", "grandma", "grandpa", "grandad", "granny", "nanna", "nana", "pappa","papa", "mama", "mamma", "mommy","husband",
             "wife","partner", "stepmother","stepfather", "stepson","stepdaughter","son","daughter","sibling"]
     },
     { "category": "a continent",
@@ -125,7 +125,7 @@
         "answers": ["snow white","cinderella", "aurora", "ariel", "belle","bell", "jasmine","pocahontas","mulan","rapunzel","merida","moana","anna","elsa"]
     },
     { "category": "a thing you buy from the grocery store",
-        "answers": [ "milk", "bread", "toilet paper", "juice", "fruit", "cheese", "butter", "vegetable", "oil", "soda", "salad", "cereal", "cookie", "coffee","soft drink","coke","food" ]
+        "answers": [ "milk", "bread", "toilet paper", "juice", "jam", "fruit", "cheese", "butter", "vegetable", "oil", "soda", "salad", "cereal", "cookie", "coffee","soft drink","coke","food" ]
     },
     { "category": "a Spanish-speaking country ",
         "answers": [ "spain", "mexico", "cuba", "argentina", "costa rica", "chile", "colombia", "guatemala", "peru", "venezuela", "ecuador", "bolivia", 
@@ -153,10 +153,10 @@
     },
     { "category": "a music genre",
         "answers": [ "pop", "rock", "metal", "country", "rap", "gospel", "latin", "metal", "trap", "jazz", "african", "r & b", "hip hop", 
-            "electronic", "house", "soul", "punk", "blues" ]
+            "electronic", "house", "soul", "punk", "blues", "k-pop" ]
     },
     { "category": "a famous band",
-        "answers": [ "queen", "rolling stones", "a c d c", "metallica", "led zepellin", "guns n roses", "green day", "beatles", "arctic monkeys", "coldplay", "fleetwood mac", 
+        "answers": [ "queen", "rolling stones", "AC DC", "metallica", "led zepellin", "guns n roses", "green day", "beatles", "arctic monkeys", "coldplay", "fleetwood mac", 
             "pink floyd", "muse", "smiths", "nirvana", "who", "radiohead", "red hot chili peppers", "u2", "kiss", "toto", "deep purple", "oasis", "iron maiden", 
             "judas priest", "abba", "nickelback", "black sabbath", "bon jovi", "maroon five" ]
     },
@@ -168,47 +168,47 @@
         "answers": [ "money", "cash", "change", "card", "condom", "i d", "id", "i.d.", "license", "coupon", "bandaid", "credit card", "debit card" ]
     },
     { "category": "a Netflix series",
-        "answers": ["house of cards", "black mirror", "stranger things", "orange is the new black", "crown", "emily in paris","queen's gambit","narcos","bojack horseman"]
+        "answers": [ "house of cards", "black mirror", "stranger things", "orange is the new black", "crown", "emily in paris", "queen's gambit","narcos", "bojack horseman", "dark" ]
     },
-    { "category": "a makeup product",
-        "answers": ["lipstick", "foundation", "mascara", "lipgloss", "toner", "nail polish","eyeliner","eye shadow"]
+    { "category": "a makeup or skincare product",
+        "answers": [ "lipstick", "foundation", "mascara", "lipgloss", "toner", "eyeliner", "eye shadow", "powder", "moisturizer", "blush" ]
     },
     { "category": "a product in your bathroom",
-        "answers": ["toothpaste", "toothbrush", "soap", "shampoo", "conditioner", "moisturizer","moisturiser","lotion","shower gel","mouthwash","toilet paper","deodorant","dental floss",
-                    "razor","mirror","cleanser"]
+        "answers": ["toothpaste", "toothbrush", "soap", "shampoo", "conditioner", "moisturizer","moisturiser","lotion", "shower gel", "mouthwash", "toilet paper", "deodorant",
+            "dental floss", "razor", "cleanser", "mask", "shaving foam", "wipes", "q-tips", "cotton buds", "cotton balls", "makeup wipes", "brush" ]
     },
     { "category": "a video streaming website",
-        "answers": ["netflix", "disney plus", "disney", "apple tv", "amazon prime", "prime video","youtube","hbo"]
+        "answers": ["netflix", "hulu", "disney plus", "disney", "apple tv", "amazon prime", "prime video", "youtube", "hbo", "twitch", "vimeo", "dailymotion" ]
     },
     { "category": "a soft drink",
-        "answers": ["coke", "coca-cola", "pepsi", "sprite", "seven up", "red bull","redbull","fanta","monster"]
+        "answers": ["coke", "coca-cola", "pepsi", "sprite", "seven up", "red bull","redbull","fanta","monster", "doctor pepper", "mountain dew" ]
     },
-    { "category": "an Italian food",
-        "answers": ["pasta", "pizza", "lasagna", "lasagne", "risotto", "polenta","gelato","tiramisu","espresso"]
+    { "category": "an Italian food or drink",
+        "answers": ["pasta", "pizza", "lasagna", "lasagne", "risotto", "polenta", "gelato", "tiramisu", "espresso", "gnocchi" ]
     },
     { "category": "a Japanese food",
-        "answers": ["sushi", "sashimi", "ramen", "miso soup", "teriyaki", "tempura","matcha"]
+        "answers": ["sushi", "sashimi", "ramen", "miso soup", "teriyaki", "tempura", "matcha", "mochi"]
     },
     { "category": "a kitchen appliance",
-        "answers": ["refrigerator", "fridge", "oven", "microwave", "coffee", "kettle","blender","mixer","toaster"]
+        "answers": ["refrigerator", "freezer", "fridge", "oven", "microwave", "coffee", "kettle", "blender", "mixer", "toaster", "sandwich maker"]
     },
     { "category": "a Pixar movie",
-        "answers": ["toy story", "finding nemo", "cars", "monsters","ratatouille", "up", "brave","inside out","finding dory","coco", "onward","soul"]
+        "answers": ["toy story", "finding nemo", "cars", "monsters","ratatouille", "up", "brave","inside out", "finding dory", "coco", "onward","soul", "wall-e"]
     },
     { "category": "an alcoholic drink",
         "answers": ["vodka", "rum", "whiskey", "brandy", "gin", "tequila","beer","wine","champagne"]
     },
     { "category": "an animated sitcom for adults",
-        "answers": ["family guy", "american dad", "bojack horseman", "simpsons", "robot chicken", "solar opposites","rick and morty","futurama","south park"]
+        "answers": ["family guy", "american dad", "bojack horseman", "simpsons", "robot chicken", "solar opposites","rick and morty", "futurama", "south park", "adventure time"]
     },
     { "category": "a Disney villain",
         "answers": ["evil queen", "maleficent", "ursula", "gaston", "scar", "jafar","captain hook","cruella","cruella de vil"]
     },
     { "category": "a type of animal meat",
-        "answers": ["chicken", "duck", "goose", "beef", "pork", "mutton","turkey","frog","ostrich","crocodile","quail","fish","salmon","tuna"]
+        "answers": ["chicken", "duck", "goose", "beef", "pork", "mutton", "turkey", "frog", "ostrich", "crocodile", "quail", "fish", "salmon", "tuna", "eel", "moose", "lamb", "goat"]
     },
     { "category": "a dairy product",
-        "answers": ["milk", "yoghurt", "cheese", "cream", "butter", "sour cream"]
+        "answers": ["milk", "yoghurt", "cheese", "cream", "butter", "sour cream", "cottage cheese", "ice cream", "cream cheese" ]
     },
     { "category": "an island nation",
         "answers": ["bahamas", "bahrain", "barbados", "brunei", "cape verde","comoros","cuba","cyprus","cypress",
@@ -219,6 +219,9 @@
     },
 	{ "category": "a fast-food restaurant",
         "answers": ["mcdonald's", "subway", "kfc", "burger king", "max", "pizza hut"]
+    },
+    { "category": "a flower",
+        "answers": ["rose", "daisy", "tulip", "sunflower", "jasmine", "lily", "poppy", "iris", "narcissus", "orchid", "violet", "daffodil", "carnation", "anemone" ]
     }
 
 
