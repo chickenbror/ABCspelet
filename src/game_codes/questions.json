@@ -160,7 +160,7 @@
     },
     { "category": "a music genre",
         "answers": [ "pop", "rock", "metal", "country", "rap", "gospel", "latin", "metal", "trap", "jazz", "african", "r & b", "hip hop", 
-            "electronic", "house", "soul", "punk", "blues" ]
+            "electronic", "house", "soul", "punk", "blues", "k-pop"]
     },
     { "category": "a famous band",
         "answers": [ "queen", "rolling stones", "a c d c", "metallica", "led zepellin", "guns n roses", "green day", "beatles", "arctic monkeys", "coldplay", "fleetwood mac", 
@@ -181,13 +181,13 @@
         "answers": ["lipstick", "foundation", "mascara", "lipgloss", "toner", "nail polish","eyeliner","eye shadow"]
     },
     { "category": "a product in your bathroom",
-        "answers": ["toothpaste", "toothbrush", "soap", "shampoo", "conditioner", "mosturizer","lotion","shower gel"]
+        "answers": ["toothpaste", "toothbrush", "soap", "shampoo", "conditioner", "mosturizer","lotion", "shower gel", "q tip", "cotton bud" ]
     },
     { "category": "a video streaming website",
-        "answers": ["netflix", "disney plus", "disney", "apple tv", "amazon prime", "prime video","youtube","hbo"]
+        "answers": ["netflix", "disney plus", "disney", "apple tv", "amazon prime", "prime video", "youtube", "hbo", "twitch", "daily motion" ]
     },
     { "category": "a soft drink",
-        "answers": ["coke", "coca-cola", "pepsi", "sprite", "seven up", "red bull","redbull"]
+        "answers": ["coke", "coca-cola", "pepsi", "sprite", "seven up", "red bull","redbull", "doctor pepper", "mountain dew" ]
     },
     { "category": "an Italian food",
         "answers": ["pasta", "pizza", "lasagna", "lasagne", "risotto", "polenta","gelato","tiramisu","espresso"]
