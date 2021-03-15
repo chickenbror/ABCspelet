@@ -2,7 +2,8 @@ import { MachineConfig, actions, Action, assign, send } from "xstate";
 
 //Instantiate a new obj for each new round of game
 import { makeNewQuestions, randomChoice } from './game_codes/game'
-// let qs=makeNewQuestions()
+const quesJSON = require('./game_codes/questions.json') //Source of game questions; require() only works on server
+// let qs=makeNewQuestions(quesJSON)
 // console.log(qs.letter)
 // console.log(qs.ques)
 
@@ -26,7 +27,7 @@ const gameOff: Action<SDSContext, SDSEvent> = assign((context) => { return { pla
 
 //Initiate a questions object & assign values to context.letter/questions/tally
 const newGameRound: Action<SDSContext, SDSEvent> = assign((context) => { 
-    let qs=makeNewQuestions();
+    let qs=makeNewQuestions( quesJSON );
     console.log(`Last round:${context.lastLetter}`)
     console.log(qs.ques)
     return { letter: qs.letter, questions: qs.ques, tally:0, confettiSwitch:false} 

@@ -9,7 +9,7 @@ import { dmMachine } from './dmGame';
 //Animation effects
 import Confetti from 'react-dom-confetti';
 import TextLoop from "react-text-loop";
-import { useWindupString, WindupChildren } from "windups";
+import { useWindupString } from "windups";
         // import HeadShake from 'react-reveal/HeadShake';
 const HeadShake = require('react-reveal/HeadShake'); //?import shows error in TS, so use require() here instead
 const RubberBand = require('react-reveal/RubberBand');
@@ -20,7 +20,7 @@ import Tippy from '@tippyjs/react';
 
 
 //Browser detection 
-import { isSafari,isChrome, isEdge, isMobile} from "react-device-detect";
+import { isChrome, isEdge } from "react-device-detect";
 
 
 // import { inspect } from "@xstate/inspect";
@@ -291,7 +291,7 @@ const UserSubtitles=(props:Props) =>{
     const [textAnimated] = useWindupString(subtitlesText);
     return(
         <div id='emoji-and-bubble'>
-            {recResult && <span id='speech-bubble'> {textAnimated} </span>}
+            {recResult &&  <span className='speech-bubble'> {textAnimated} </span> }
             {recResult && <div id='emoji'> {emoji} </div>}
         </div>
     )
