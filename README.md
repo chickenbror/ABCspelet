@@ -32,12 +32,14 @@ go to src/game_codes/questions.json
 ###### 2. Made prototype game in Python
 - (2021-02-11, Calvin)
 - original py codes: https://tinyurl.com/lt2216-project-python
+- 
 ![Py code](https://media.giphy.com/media/BALZbz6P3BJmUui3jQ/giphy.gif "Py code")
 
 
 ###### 3. Rewrote protopype game in TypeScript
 - (2021-03-03, Calvin)
 - original ts codes: https://tinyurl.com/lt2216-project
+- 
 ![ts code](https://media.giphy.com/media/g4mvkk7aZujKuGl4Af/giphy.gif "ts code")
 
 ###### 4. Combined Step3 with React & Xstate from Lab2/4 to make a web app with voice interface
