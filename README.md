@@ -74,3 +74,18 @@ go to src/game_codes/questions.json
 - Presentation for LT2216 course & show the game demo.
 
 
+## Challenges, Limitations and Future Improvement
+
+§§§Draft scripts below§§§
+challenges: 
+		lemmatiser overfits (eg philippines>>philippine); solution: match both original and lemmatised inputs
+		letter repeat a lot; solution: added a guarding state and context.lastLetter so the new letter won't be the same
+			(eg, S>>A>>K>>D>>S... instead of S>>S>>S... in a row )
+
+	"which parts of the course was most useful? how did we apply them?" ...the labs (forced us to do hands-on)??
+	"how can the game be developed in the future?" 
+		...shorter latency? 
+		fuzzy match? sound effect? 
+		other speechRecog APIs (to be workable in other browsers)?
+		use web crawler to generate questions (categories+things) from eg Wikipedia articles?
+		apply SSXML, eg "Your letter is <em> A </em> for <em> Adam </em> ..."
