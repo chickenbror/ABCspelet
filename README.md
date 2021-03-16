@@ -21,6 +21,7 @@ go to src/game_codes/questions.json
 ##### Collaborators:
 - 	Hsien-hao Calvin Liao 
 - 	Eirini Tsakiri
+----
 
 ##### Project diary of who does what and when:
 
