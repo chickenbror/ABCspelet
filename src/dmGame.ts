@@ -15,6 +15,8 @@ nounInflector = new natural.NounInflector();
 
 
 
+//Add context.skips, context.hintsGiven & guard states??
+
 
 const clearRecResult: Action<SDSContext, SDSEvent> = assign((context) => { return { recResult:''} })
 const clearTTSAgenda: Action<SDSContext, SDSEvent> = assign((context) => { return { ttsAgenda:''} })

@@ -184,14 +184,14 @@
         "answers": ["toothpaste", "toothbrush", "soap", "shampoo", "conditioner", "moisturizer","moisturiser","lotion", "shower gel", "mouthwash", "toilet paper", "deodorant",
             "dental floss", "razor", "cleanser", "mask", "shaving foam", "wipes", "q-tips", "cotton buds", "cotton balls", "makeup wipes", "brush" ]
     },
-    { "category": "a video streaming website",
-        "answers": ["netflix", "hulu", "disney plus", "disney", "apple tv", "amazon prime", "prime video", "youtube", "hbo", "twitch", "vimeo", "dailymotion" ]
+    { "category": "a video streaming service",
+        "answers": ["netflix", "hulu", "disney plus", "disney", "apple tv", "amazon prime", "prime video", "youtube", "hbo"]
     },
     { "category": "a soft drink",
-        "answers": ["coke", "coca-cola", "pepsi", "sprite", "seven up", "red bull","redbull","fanta","monster", "doctor pepper", "mountain dew" ]
+        "answers": ["coke", "coca-cola", "pepsi", "sprite", "seven up", "red bull","redbull","fanta","monster", "doctor pepper","dr. pepper", "mountain dew" ]
     },
     { "category": "an Italian food or drink",
-        "answers": ["pasta", "pizza", "lasagna", "lasagne", "risotto", "polenta", "gelato", "tiramisu", "espresso", "gnocchi" ]
+        "answers": ["pasta", "pizza", "lasagna", "lasagne", "risotto", "polenta", "gelato", "tiramisu", "espresso", "gnocchi","ravioli","tortellini","prosecco" ]
     },
     { "category": "a Japanese food",
         "answers": ["sushi", "sashimi", "ramen", "miso soup", "teriyaki", "tempura", "matcha", "mochi"]
@@ -212,7 +212,7 @@
         "answers": ["evil queen", "maleficent", "ursula", "gaston", "scar", "jafar","captain hook","cruella","cruella de vil"]
     },
     { "category": "a type of animal meat",
-        "answers": ["chicken", "duck", "goose", "beef", "pork", "mutton", "turkey", "frog", "ostrich", "crocodile", "quail", "fish", "salmon", "tuna", "eel", "moose", "lamb", "goat"]
+        "answers": ["chicken", "duck", "goose", "beef", "pork", "mutton", "turkey", "frog", "ostrich", "crocodile", "quail", "fish", "salmon", "tuna", "moose", "lamb", "reindeer"]
     },
     { "category": "a dairy product",
         "answers": ["milk", "yoghurt", "cheese", "cream", "butter", "sour cream", "cottage cheese", "ice cream", "cream cheese" ]
@@ -229,6 +229,12 @@
     },
     { "category": "a flower",
         "answers": ["rose", "daisy", "tulip", "sunflower", "jasmine", "lily", "poppy", "iris", "narcissus", "orchid", "violet", "daffodil", "carnation", "anemone" ]
+    },
+    { "category": "a country that has a monarch",
+        "answers": ["bahrain", "belgium", "bhutan", "brunei", "cambodia", "denmark", "japan", "kuwait", "jordan", "lesotho", "liechtenstein", "luxembourg", "malaysia", "monaco","morocco","netherlands","holland","qatar","spain","sweden","norway","thailand","tonga","united arab emirates","united kingdom","vatican"]
+    },
+	{ "category": "a Greek food",
+        "answers": ["souvlaki", "feta cheese", "moussaka", "hummus", "tzatziki", "pita", "halloumi"]
     }
 
 
