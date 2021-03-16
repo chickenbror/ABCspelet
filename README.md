@@ -24,6 +24,7 @@ go to src/game_codes/questions.json
 
 ###### 1. Discussed and came up with game concept
 - (2021-02-02, Eirini & Calvin)
+- 
 ![Notes for brainstorming & the flow chart](https://media.giphy.com/media/GayPUtZ3UFPcsGBtxg/giphy.gif "Notes for brainstorming & the flow chart")
 
 
