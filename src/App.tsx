@@ -248,7 +248,7 @@ export default function App() {
 
                 <div className="Subtitles"> 
                     {/* FOR Github deployment & Canvas submission */}
-                    <YourSubtitles voiceIn={recResult} tally={tally}/> 
+                    <YourSubtitles state={current}/> 
 
                     {/* FOR demo (on local cuz it cannot show on Github page) */}
                     {/* <UserSubtitles state={current}/>  */}
@@ -261,14 +261,24 @@ export default function App() {
 };
 
 //COMPONENT: Displaying input of voice interface (ie, recResult)
-const YourSubtitles=(props:any) =>{
+const YourSubtitles=(props:Props) =>{
     // Player's speech-- only displays when recResult!=undefined 
 
+    const {tally} = props.state.context
+    const {recResult} = props.state.context
     //Prefix face changes based on score of the game
     const  emojis=['😗','🙂','😀','😄','😁','🥳']
-    let emoji=props.tally? emojis[props.tally]:'🙃'
+    let emoji=tally? emojis[tally]:'🙃'
 
-    const subtitlesText = props.voiceIn? emoji+' '+props.voiceIn : ''
+    let subtitlesText:string;
+    if(props.state.matches({ asrtts: 'recognising' })){
+        subtitlesText=emoji+' Listening...'
+    }else if(recResult && recResult!=''){
+        subtitlesText = emoji+' '+recResult
+    }else{
+        subtitlesText = ''
+    }
+
     const [textAnimated] = useWindupString(subtitlesText);
     return(
         <div>
@@ -287,12 +297,24 @@ const UserSubtitles=(props:Props) =>{
     const  emojis=['😗','🙂','😀','😄','😁','🥳']
     let emoji= tally? emojis[tally]:'🙃'
 
-    const subtitlesText = recResult? recResult : ''
+    // const defaultText = props.state.matches({ asrtts: 'recognising' })? 'Listening...' : ''
+    // const subtitlesText = recResult? recResult : defaultText
+
+    let subtitlesText:string;
+    if(props.state.matches({ asrtts: 'recognising' })){
+        subtitlesText='Listening...'
+    }else if(recResult && recResult!=''){
+        subtitlesText = recResult
+    }else{
+        subtitlesText = ''
+    }
+
     const [textAnimated] = useWindupString(subtitlesText);
+    const showing = subtitlesText!=''
     return(
         <div id='emoji-and-bubble'>
-            {recResult &&  <span className='speech-bubble'> {textAnimated} </span> }
-            {recResult && <div id='emoji'> {emoji} </div>}
+            {showing &&  <span className='speech-bubble'> {textAnimated} </span> }
+            {showing && <div id='emoji'> {emoji} </div>}
         </div>
     )
 }
