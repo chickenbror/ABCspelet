@@ -235,6 +235,10 @@
     },
 	{ "category": "a Greek food",
         "answers": ["souvlaki", "feta cheese", "moussaka", "hummus", "tzatziki", "pita", "halloumi"]
+    },
+    { "category": "a common ice cream flavour",
+        "answers": ["vanilla", "chocolate", "strawberry", "caramel", "coffee", "cherry", "fudge","cookie","mint","coconut","banana","mango","green tea","berry","blueberry",
+		   "matcha","tea","tofu"]
     }
 
 
