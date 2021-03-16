@@ -27,22 +27,22 @@ go to src/game_codes/questions.json
 ###### 1. Discussed and came up with game concept
 - (2021-02-02, Eirini & Calvin)
 - Notes for brainstorming the idea & the flow chart
-- 
-![Notes for brainstorming & the flow chart](https://media.giphy.com/media/GayPUtZ3UFPcsGBtxg/giphy.gif "Notes for brainstorming & the flow chart")
+
+	![Notes for brainstorming & the flow chart](https://media.giphy.com/media/GayPUtZ3UFPcsGBtxg/giphy.gif "Notes for brainstorming & the flow chart")
 
 
 ###### 2. Made prototype game in Python
 - (2021-02-11, Calvin)
 - original py codes: https://tinyurl.com/lt2216-project-python
-- 
-![Py code](https://media.giphy.com/media/BALZbz6P3BJmUui3jQ/giphy.gif "Py code")
+
+	![Py code](https://media.giphy.com/media/BALZbz6P3BJmUui3jQ/giphy.gif "Py code")
 
 
 ###### 3. Rewrote protopype game in TypeScript
 - (2021-03-03, Calvin)
 - original ts codes: https://tinyurl.com/lt2216-project
-- 
-![ts code](https://media.giphy.com/media/g4mvkk7aZujKuGl4Af/giphy.gif "ts code")
+
+	![ts code](https://media.giphy.com/media/g4mvkk7aZujKuGl4Af/giphy.gif "ts code")
 
 ###### 4. Combined Step3 with React & Xstate from Lab2/4 to make a web app with voice interface
 - (2021-03-07, Calvin)
@@ -77,10 +77,12 @@ go to src/game_codes/questions.json
 ## Challenges, Limitations and Future Improvement
 
 §§§Draft scripts below§§§
-challenges: 
-		lemmatiser overfits (eg philippines>>philippine); solution: match both original and lemmatised inputs
-		letter repeat a lot; solution: added a guarding state and context.lastLetter so the new letter won't be the same
-			(eg, S>>A>>K>>D>>S... instead of S>>S>>S... in a row )
+
+
+	challenges: 
+			lemmatiser overfits (eg philippines>>philippine); solution: match both original and lemmatised inputs
+			letter repeat a lot; solution: added a guarding state and context.lastLetter so the new letter won't be the same
+				(eg, S>>A>>K>>D>>S... instead of S>>S>>S... in a row )
 
 	"which parts of the course was most useful? how did we apply them?" ...the labs (forced us to do hands-on)??
 	"how can the game be developed in the future?" 
