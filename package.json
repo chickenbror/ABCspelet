@@ -15,7 +15,7 @@
     "bootstrap": "^4.6.0",
     "fs": "0.0.1-security",
     "moving-letters": "^1.0.1",
-    "natural": "^4.0.0",
+    "natural": "^4.0.2",
     "node-sass": "^4.14.1",
     "react": "17.0.1",
     "react-bootstrap": "^1.5.2",

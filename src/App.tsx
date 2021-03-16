@@ -248,10 +248,10 @@ export default function App() {
 
                 <div className="Subtitles"> 
                     {/* FOR Github deployment & Canvas submission */}
-                    {/* <YourSubtitles voiceIn={recResult} tally={tally}/>  */}
+                    <YourSubtitles voiceIn={recResult} tally={tally}/> 
 
                     {/* FOR demo (on local cuz it cannot show on Github page) */}
-                    <UserSubtitles state={current}/> 
+                    {/* <UserSubtitles state={current}/>  */}
                 </div>
             
             </div>
