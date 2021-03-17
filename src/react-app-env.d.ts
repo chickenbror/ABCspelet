@@ -11,11 +11,14 @@ interface SDSContext {
     letter: string;
     questions: any;
     
-    confettiSwitch: boolean
-    playingNow: boolean
+    confettiSwitch: boolean;
+    playingNow: boolean;
 
-    lastLetter:string
-    lastLetters: string[]
+    lastLetter:string;
+    lastLetters: string[];
+
+    skipped:number;
+    hinted:number;
 }
 
 type SDSEvent =

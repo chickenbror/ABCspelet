@@ -34,7 +34,7 @@ const newGameRound: Action<SDSContext, SDSEvent> = assign((context) => {
     let qs=makeNewQuestions( quesJSON );
     console.log(`Last round:${context.lastLetter}`)
     console.log(qs.ques)
-    return { letter: qs.letter, questions: qs.ques, tally:0, confettiSwitch:false} 
+    return { letter: qs.letter, questions: qs.ques, tally:0, skipped:0, hinted:0, confettiSwitch:false} 
 })
 //After chosen a letter and before going saying it, remember it for referece of next game round
 const rememberLetter: Action<SDSContext, SDSEvent> = assign((context) => { 
@@ -154,13 +154,6 @@ function sayKeyword(reply: string){
     if(exists(reply, shortcut)){ return 'shortcut' } //for testing
 }
 
-/*
-NOTES
-Swear words are censored so won't match. Unless change them to f*** in the JSON
-? Find out how to show prompts & recognised text on screen
-? Confetti effect in winning state
-! Need to lemmatize userinput. Use js-lemmatizer, Natural, and/or Wink libraries 
-*/
 
 export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
     initial: 'init',
@@ -229,16 +222,11 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
                      target:"checkscore"  },
                     
                     //If pass, move the question to the last (unshift & push)
-                    {cond: (context:SDSContext) => sayKeyword(context.recResult)==='pass',
-                     actions: assign((context:SDSContext) => { 
-                        let skipped=context.questions.shift();
-                        context.questions.push(skipped);
-                        console.log(context.questions)
-                        return { } }),
-                     target:"checkscore"  },
+                    {cond: (context:SDSContext) => sayKeyword(context.recResult)==='pass', target:"skip"  },
 
                     //Hint 3 or 2 letters
                     {cond: (context:SDSContext) => sayKeyword(context.recResult)==='hint', target:"hint"},
+
                     //Repeat letter
                     {cond: (context:SDSContext) => sayKeyword(context.recResult)==='whatletter', target:"sayletter"},
 
@@ -250,9 +238,56 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
                                                     value: questionNow(context) })) )
         },
 
+        skip: {
+            initial: 'checkSkipped',
+            states:{
+                checkSkipped:{
+                    always:[
+                        { target: 'letSkip', cond: (context) => context.skipped<5 },
+                        { target: 'maxSkipped', cond: (context) => context.skipped>=5 },
+                    ]
+                },
+                //move the question to the last (unshift & push); context.skipped++
+                letSkip:{
+                    entry:  assign((context:SDSContext) => { 
+                        let skipped=context.questions.shift();
+                        context.questions.push(skipped);
+                        console.log(`Skipped so far: ${context.skipped+1} `)
+                        console.log(context.questions)
+                        return { skipped:context.skipped+1} }),
+                    always: '#root.dm.checkscore'
+                },
+                maxSkipped:{
+                    entry: say(`Oops, you've skipped for too many times!`),
+                    on:{ ENDSPEECH: {target:'#root.dm.checkscore'}}
+                }
+            }
+        },
+
         hint: {
-            entry: send((context)=>({ type: "SPEAK", value: giveHint(context) })),
-            always: 'checkscore'
+            initial: 'checkHinted',
+            states:{
+                checkHinted:{
+                    always:[
+                        { target: 'giveHint', cond: (context) => context.hinted<5 },
+                        { target: 'maxHinted', cond: (context) => context.hinted>=5 },
+                    ]
+                },
+                //Hint 3 or 2 letters or a random answer; context.hinted++
+                giveHint:{
+                    entry: [
+                        send((context)=>({ type: "SPEAK", value: giveHint(context) })),
+                        assign((context:SDSContext) => {
+                            console.log(`Hinted so far: ${context.hinted+1} `);
+                            return { hinted:context.hinted+1} })
+                    ],
+                    always: '#root.dm.checkscore' // use 'on endspeech...' if we want the question being said again
+                },
+                maxHinted:{
+                    entry: say(`Oops, you've asked for too many hints!`),
+                    on:{ ENDSPEECH: {target:'#root.dm.checkscore'}}
+                }
+            }
         },
         
         checkscore:{

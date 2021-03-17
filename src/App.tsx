@@ -105,8 +105,18 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 const ReactiveButton = (props: Props,): JSX.Element => {
     const {playingNow} = props.state.context
     const {ttsAgenda} = props.state.context
+
+    const maxHinted = props.state.context.hinted >= 5
+	const maxSkipped = props.state.context.skipped >= 5
+
+    let promptInGame:string;
+    if(maxSkipped && maxHinted){promptInGame = '...or say Restart, Stop'}
+    else if(maxSkipped && !maxHinted){promptInGame = '...or say Clue, Restart, Stop'}
+    else if(!maxSkipped && maxHinted){promptInGame = '...or say Skip, Restart, Stop'}
+    else {promptInGame = '...or say Clue, Skip, Restart, Stop'}  //default
+
     let speakingText= playingNow? '😼 '+ttsAgenda : '😻 '+ttsAgenda
-    let promptMsg = playingNow? "...or say Clue, Skip, Restart, Stop " : "...say Yes or No"
+    let promptMsg = playingNow? promptInGame : "...say Yes or No"
 
     switch (true) {
         case props.state.matches({ asrtts: 'recognising' }):
