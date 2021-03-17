@@ -51,6 +51,8 @@ go to src/game_codes/questions.json
 
 ###### 5. Test/debug/improvement feedback
 - (2021-03-08, Eirini)
+- "I forget what the letter is during the game" >> Show current letter on the screen as a visual reminder
+- "Players don't know what other commands can be said" >> Show prompt messages in the centre button "or say clue/skip...etc"
 
 ###### 6. Added React components & updated CSS
 - (2021-03-09, Calvin)
@@ -59,15 +61,15 @@ go to src/game_codes/questions.json
 - Text animation
 - dependencies: react-dom-confetti, react-text-loop, windups, react-reveal
 
-###### 7. Add more question-sets to game to make it playable
+###### 7. Added more question-sets to game to make it playable
 - (2021-03-10 ~ 2021-03-16, Eirini & Calvin)
 - During testing, we noticed that some words are not be easily recognised, especially when said as a single word, so they were removed from the question-answers.
 
-###### 8. Make the UI prettier
+###### 8. Made the UI prettier
 - (2021-03-12 ~ 2021-03-14, Calvin)
 - Adjusted layout, colours, and animations
 
-###### 9. Improve on the game
+###### 9. Improved on the game
 - (2021-03-19, Eirini)
 - Added extra context and states in dmGame, eg maximum allowance on skipping the question and asking for clues.
 
