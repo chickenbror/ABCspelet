@@ -184,8 +184,6 @@ export default function App() {
     const { confettiSwitch } = current.context; //triggers confetti when true
     const { playingNow } = current.context;
     const { tally } = current.context;
-    const { recResult } = current.context;
-    const { ttsAgenda } = current.context;
     const { letter } = current.context;
     
     // Config for confetti 
@@ -247,11 +245,11 @@ export default function App() {
                 </RubberBand>
 
                 <div className="Subtitles"> 
-                    {/* FOR Github deployment & Canvas submission */}
-                    <YourSubtitles state={current}/> 
+                    {/* VersionA: FOR Github deployment & Canvas submission */}
+                    {/* <YourSubtitles state={current}/>  */}
 
-                    {/* FOR demo (on local cuz it cannot show on Github page) */}
-                    {/* <UserSubtitles state={current}/>  */}
+                    {/* Version B: FOR demo (on local cuz it cannot show on Github page) */}
+                    <UserSubtitles state={current}/> 
                 </div>
             
             </div>
@@ -287,7 +285,7 @@ const YourSubtitles=(props:Props) =>{
     )
 }
 
-//This one doesn't show on Github pages...? but can run locally and use for presentation
+//This one doesn't show on Github pages...? but can run locally and use for presentation demo
 const UserSubtitles=(props:Props) =>{
 
     const {tally} = props.state.context
@@ -318,8 +316,6 @@ const UserSubtitles=(props:Props) =>{
         </div>
     )
 }
-
-
 
 //COMPONENT: Capital letter of the game
 const YourLetter=(props:any) =>{

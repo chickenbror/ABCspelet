@@ -42,7 +42,7 @@
             "pig", "goat", "guinea", "pig", "frog", "hedgehog", "horse", "chicken", "duck", "goose", "budgie", "parrot", "canary"]
     },
     { "category": "a vegetable",
-        "answers": ["watercress", "brussels sprout", "pumpkin", "squash", "mushroom", "bak choi", "kale", "broccoli", "spinach", "carrot",
+        "answers": ["watercress", "brussels sprout", "pumpkin", "squash", "mushroom", "bak choi", "kale", "broccoli", "spinach", "carrot","lettuce","sweet potato",
             "beetroot", "celery", "zucchini", "potato", "onion", "cucumber", "eggplant", "aubergine", "corn", "cauliflower", "asparagus",
             "cabbage","okra","lady finger","pepper","paprika","capsicum"]
     },
@@ -71,8 +71,7 @@
                 "skin","eyebrow","hair","eyelash","tooth","hand","chest"]
     },
     { "category": "a colour",
-        "answers": ["white","blue","red","yellow","green","black","grey","gray","brown","beige","purple","orange",
-                "pink"]
+        "answers": ["white","blue","red","yellow","green","black","grey","gray","brown","beige","purple","orange","pink","violet"]
     },
     { "category": "an African country",
         "answers": ["zimbabwe","zambia","uganda","tunisia","togo","tanzania","swaziland","sudan","south africa","somalia",
@@ -128,9 +127,6 @@
     { "category": "a Disney princess",
         "answers": ["snow white","cinderella", "aurora", "ariel", "belle","bell", "jasmine","pocahontas","mulan","rapunzel","merida","moana","anna","elsa"]
     },
-    { "category": "a large island in the world",
-        "answers": [ "australia", "greenland", "new guinea", "madagascar", "iceland", "great britain", "java", "cuba", "ireland" ]
-    },
     { "category": "a thing you buy from the grocery store",
         "answers": [ "milk", "bread", "toilet paper", "juice", "jam", "fruit", "cheese", "butter", "vegetable", "oil", "soda", "salad", "cereal", "cookie", "coffee","soft drink","coke","food" ]
     },
@@ -146,9 +142,6 @@
             "ice skating", "cheerleading", "tennis", "surfing", "snowboarding", "cricket", "quidditch", "climbing", "hiking", "cycling", "wrestling", "fencing",
             "ice hockey", "squash", "windsurfing", "ski", "skating", "lacrosse", "polo", "rowing", "swimming", "water polo", "weightlifting", "racing" ]
     },
-    { "category": "a body part that can have an ache",
-        "answers": [ "head", "stomach", "back", "tooth", "muscle", "foot", "ear" ]
-    },
     { "category": "a material that might be used to build a house",
         "answers": [ "wood", "nail", "plastic", "concrete", "brick", "glass", "steel", "insulation", "vinyl", "marble", "tile" ]
     },
@@ -156,7 +149,7 @@
         "answers": [ "silver", "gold", "copper", "bronze", "zinc", "steel" ]
     },
     { "category": "a country in the Arctic Circle",
-        "answers": [ "sweden", "norway", "iceland", "finland", "russia", "canada", "greenland" ]
+        "answers": [ "sweden", "norway", "iceland", "finland", "russia", "canada"]
     },
     { "category": "a music genre",
         "answers": [ "pop", "rock", "metal", "country", "rap", "gospel", "latin", "metal", "trap", "jazz", "african", "r & b", "hip hop", 
@@ -182,7 +175,7 @@
     },
     { "category": "a product in your bathroom",
         "answers": ["toothpaste", "toothbrush", "soap", "shampoo", "conditioner", "moisturizer","moisturiser","lotion", "shower gel", "mouthwash", "toilet paper", "deodorant",
-            "dental floss", "razor", "cleanser", "mask", "shaving foam", "wipes", "q-tips", "cotton buds", "cotton balls", "makeup wipes", "brush" ]
+            "dental floss", "razor", "cleanser", "shaving"]
     },
     { "category": "a video streaming service",
         "answers": ["netflix", "hulu", "disney plus", "disney", "apple tv", "amazon prime", "prime video", "youtube", "hbo"]
@@ -197,7 +190,7 @@
         "answers": ["sushi", "sashimi", "ramen", "miso soup", "teriyaki", "tempura", "matcha", "mochi"]
     },
     { "category": "a kitchen appliance",
-        "answers": ["refrigerator", "freezer", "fridge", "oven", "microwave", "coffee", "kettle", "blender", "mixer", "toaster", "sandwich maker"]
+        "answers": ["refrigerator", "freezer", "fridge", "oven", "microwave", "coffee", "blender", "mixer", "toaster", "sandwich maker"]
     },
     { "category": "a Pixar movie",
         "answers": ["toy story", "finding nemo", "cars", "monsters","ratatouille", "up", "brave","inside out", "finding dory", "coco", "onward","soul", "wall-e"]
