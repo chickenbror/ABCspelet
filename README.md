@@ -9,7 +9,8 @@
 (React + xstate + Webspeech API & Natural.js)
 
 ###### To run locally:
-` npm install`
+` npm install` (if error occurs, try `npm install --legacy-peer-deps`)
+
   `npm start`
 
 ###### To edit or add more question-sets:
