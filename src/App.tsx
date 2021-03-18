@@ -156,18 +156,21 @@ const ReactiveButton = (props: Props,): JSX.Element => {
 export default function App() {
     
     //Voice interface events (& console logs)
+    //Text to speech:
     const { speak, cancel, speaking, voices } = useSpeechSynthesis({
         onEnd: () => {send('ENDSPEECH') },
     });
 
-    //? Lists the available languages/voices ... varies depending on the computer/browser
-    // const [voiceIndex, setVoiceIndex] = React.useState(null);
-    // // console.log(voices)
-    // const myvoice =  voices[7] || null; // voices[idx]? voices[idx] : null *(browser default voice)
-
+    //Speech to text
     const { listen, listening, stop } = useSpeechRecognition({
         onResult: (result: any) => {send({ type: "ASRRESULT", value: result })  },
     });
+
+    //List the supported synthesis-voices on the browswer:
+    const [voiceIndex, setVoiceIndex] = React.useState(null);
+    console.log(voices) //An array of available voices/languages ... varies depending on the computer/browser
+    // const voice =  voices[5] || null; // voices[idx]? voices[idx] : null *(browser default voice)
+
     const [current, send, service] = useMachine(machine, {
         devTools: true,
         actions: {
@@ -175,7 +178,8 @@ export default function App() {
                 console.log('Ready to receive a voice input.');
                 listen({
                     interimResults: false,
-                    continuous: true
+                    continuous: true,
+                    lang: 'en-SG'  //Config recognition language here. //list of langs https://cloud.google.com/speech-to-text/docs/languages
                 });
             }),
             recStop: asEffect(() => {
@@ -184,7 +188,9 @@ export default function App() {
             }),
             ttsStart: asEffect((context, effect) => {
                 console.log('Speaking...');
-                speak({ text: context.ttsAgenda, /*myvoice*/  }) //Config which language/voice to speak in
+                speak({ text: context.ttsAgenda
+                        /*, voice*/ //Config which language/voice to speak in
+                     }) 
             }),
             ttsCancel: asEffect((context, effect) => {
                 console.log('TTS STOP...');
