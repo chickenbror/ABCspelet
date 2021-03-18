@@ -30,6 +30,7 @@ import { isChrome, isEdge } from "react-device-detect";
 // State machines: ASR-TTS (voice interface) & dmGame
 import { useSpeechSynthesis, useSpeechRecognition } from 'react-speech-kit';
 
+
 const machine = Machine<SDSContext, any, SDSEvent>({
     id: 'root',
     type: 'parallel',
@@ -155,9 +156,15 @@ const ReactiveButton = (props: Props,): JSX.Element => {
 export default function App() {
     
     //Voice interface events (& console logs)
-    const { speak, cancel, speaking } = useSpeechSynthesis({
+    const { speak, cancel, speaking, voices } = useSpeechSynthesis({
         onEnd: () => {send('ENDSPEECH') },
     });
+
+    //? Lists the available languages/voices ... varies depending on the computer/browser
+    // const [voiceIndex, setVoiceIndex] = React.useState(null);
+    // // console.log(voices)
+    // const myvoice =  voices[7] || null; // voices[idx]? voices[idx] : null *(browser default voice)
+
     const { listen, listening, stop } = useSpeechRecognition({
         onResult: (result: any) => {send({ type: "ASRRESULT", value: result })  },
     });
@@ -177,7 +184,7 @@ export default function App() {
             }),
             ttsStart: asEffect((context, effect) => {
                 console.log('Speaking...');
-                speak({ text: context.ttsAgenda })
+                speak({ text: context.ttsAgenda, /*myvoice*/  }) //Config which language/voice to speak in
             }),
             ttsCancel: asEffect((context, effect) => {
                 console.log('TTS STOP...');

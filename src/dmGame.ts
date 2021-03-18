@@ -255,11 +255,11 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
                         console.log(`Skipped so far: ${context.skipped+1} `)
                         console.log(context.questions)
                         return { skipped:context.skipped+1} }),
-                    always: '#root.dm.checkscore'
+                    always: '#checkscore'
                 },
                 maxSkipped:{
                     entry: say(`Oops, you've skipped for too many times!`),
-                    on:{ ENDSPEECH: {target:'#root.dm.checkscore'}}
+                    on:{ ENDSPEECH: {target:'#checkscore'}}
                 }
             }
         },
@@ -281,16 +281,17 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
                             console.log(`Hinted so far: ${context.hinted+1} `);
                             return { hinted:context.hinted+1} })
                     ],
-                    always: '#root.dm.checkscore' // use 'on endspeech...' if we want the question being said again
+                    always: '#checkscore' // use 'on endspeech...' if we want the question being said again
                 },
                 maxHinted:{
                     entry: say(`Oops, you've asked for too many hints!`),
-                    on:{ ENDSPEECH: {target:'#root.dm.checkscore'}}
+                    on:{ ENDSPEECH: {target:'#checkscore'}}
                 }
             }
         },
         
         checkscore:{
+            id:"checkscore",
             always: [
                 //Less than 5 correct
                 { target: 'askQues', cond: (context) => context.tally<5 },

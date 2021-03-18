@@ -6,7 +6,6 @@
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
-    "@hyperjumptech/react-native-confetti": "^0.1.1",
     "@tippyjs/react": "^4.2.4",
     "@types/webrtc": "0.0.26",
     "@types/webspeechapi": "0.0.29",
@@ -29,8 +28,6 @@
     "react-favicon": "0.0.18",
     "react-flip-numbers": "^3.0.5",
     "react-moving-text": "0.0.7",
-    "react-native-animated-emoji": "^0.1.4",
-    "react-native-confetti-cannon": "^1.5.2",
     "react-reveal": "^1.2.2",
     "react-router": "^5.2.0",
     "react-scripts": "4.0.0",
@@ -41,11 +38,8 @@
     "react-use": "^17.1.1",
     "reactjs-popup": "^2.0.4",
     "tippy.js": "^6.3.1",
-    "use-sound": "^2.0.1",
     "uxcore-dialog": "^0.8.9",
     "windups": "^1.1.9",
-    "wink-eng-lite-model": "https://github.com/winkjs/wink-eng-lite-model/releases/download/1.1.0/wink-eng-lite-model-1.1.0.tgz",
-    "wink-nlp": "^1.2.0",
     "xstate": "4.13.0"
   },
   "devDependencies": {
