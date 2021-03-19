@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ABCspelet/static/css/main.4954dc4a.chunk.css",
-    "main.js": "/ABCspelet/static/js/main.879f44c1.chunk.js",
-    "main.js.map": "/ABCspelet/static/js/main.879f44c1.chunk.js.map",
+    "main.css": "/ABCspelet/static/css/main.41f94a8b.chunk.css",
+    "main.js": "/ABCspelet/static/js/main.22397c7d.chunk.js",
+    "main.js.map": "/ABCspelet/static/js/main.22397c7d.chunk.js.map",
     "runtime-main.js": "/ABCspelet/static/js/runtime-main.5ed85f93.js",
     "runtime-main.js.map": "/ABCspelet/static/js/runtime-main.5ed85f93.js.map",
     "static/js/2.17a250ad.chunk.js": "/ABCspelet/static/js/2.17a250ad.chunk.js",
     "static/js/2.17a250ad.chunk.js.map": "/ABCspelet/static/js/2.17a250ad.chunk.js.map",
     "index.html": "/ABCspelet/index.html",
-    "static/css/main.4954dc4a.chunk.css.map": "/ABCspelet/static/css/main.4954dc4a.chunk.css.map",
+    "static/css/main.41f94a8b.chunk.css.map": "/ABCspelet/static/css/main.41f94a8b.chunk.css.map",
     "static/js/2.17a250ad.chunk.js.LICENSE.txt": "/ABCspelet/static/js/2.17a250ad.chunk.js.LICENSE.txt",
-    "static/media/styles.scss": "/ABCspelet/static/media/catpic_withPrompts.cf7297fe.jpg"
+    "static/media/styles.scss": "/ABCspelet/static/media/catpic.68e94fc5.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.5ed85f93.js",
     "static/js/2.17a250ad.chunk.js",
-    "static/css/main.4954dc4a.chunk.css",
-    "static/js/main.879f44c1.chunk.js"
+    "static/css/main.41f94a8b.chunk.css",
+    "static/js/main.22397c7d.chunk.js"
   ]
 }
