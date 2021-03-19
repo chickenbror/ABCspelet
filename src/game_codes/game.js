@@ -30,7 +30,7 @@ export function makeNewQuestions( obj ) {
     let candidates;
     let done = false;
     while (done === false) {
-        letter = randomChoice('abcdefghijklmnopqrstvvwxyz');
+        letter = randomChoice('abcdefghijklmnopqrstvvwxyzåäö');
         candidates = obj.questions.filter( que => 
             que.answers.some(
                 ans => ans[0]===letter ) );
@@ -44,7 +44,8 @@ export function makeNewQuestions( obj ) {
         candidate.answers = candidate.answers.filter( ans => ans[0]===letter); 
     });
     let ques = shuffleArray(candidates); //shuffle the order
-    return {letter, ques}; //returns an object with 2 properties
+    ques = ques.slice(0,11) //Only return max 10 ques to save memory?
+    return {letter, ques}; //returns an object with 2 properties  
 }
 
 

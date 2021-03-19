@@ -2,20 +2,42 @@ import { MachineConfig, actions, Action, assign, send } from "xstate";
 
 //Instantiate a new obj for each new round of game
 import { makeNewQuestions, randomChoice } from './game_codes/game'
-const quesJSON = require('./game_codes/questions.json') //Source of game questions; require() only works on server
+const quesJSON = require('./game_codes/questionsSV.json') //Source of game questions; require() only works on server
 // let qs=makeNewQuestions(quesJSON)
 // console.log(qs.letter)
 // console.log(qs.ques)
 
-//Using "Natural" NLP library
+//Using "Natural" NLP library --Swedish lemmatizer?
 const natural = require('natural'),
 nounInflector = new natural.NounInflector();
 // let singular = nounInflector.singularize('those tomatoes');
 // console.log(singular); //>>those tomato
 
+// var snowball = require('node-snowball');
+
+// // Using String
+// let stemmed = snowball.stemword('consignment'); // 'consign'
+// console.log(stemmed)
+
+// https://json-tagger.com/ needs CORS...?
+// const proxyurl = "https://cors-anywhere.herokuapp.com/";
+// const taggerurl = 'https://json-tagger.com/tag'
+// const taggerRequest = (text: string) =>
+//     fetch(new Request(proxyurl + taggerurl, {
+//         method: 'POST',
+//         headers: { 'Origin': 'http://maraev.me' }, // only required with proxy
+//         body: `${text}`
+//         })
+//         )
+//         .then(data => data.json());
+// console.log( taggerRequest("Fördomen har alltid sin rot i vardagslivet - Olof Palme") )
+// var request = require('request');
+// request.post({url: 'https://json-tagger.com/tag', body: "Fördomen har alltid sin rot i vardagslivet - Olof Palme"}, function (error, response, body) {
+//     console.log(body)
+// })
 
 
-//Add context.skips, context.hintsGiven & guard states??
+
 
 
 const clearRecResult: Action<SDSContext, SDSEvent> = assign((context) => { return { recResult:''} })
@@ -53,18 +75,18 @@ const rememberLetter: Action<SDSContext, SDSEvent> = assign((context) => {
 //Say the current random letter and a 'spelling/phonetic' alphabet
 function letterNow(context:SDSContext){
     let alphabet:any = {
-        'a':'Adam', 'b':'Bella', 'c':'Cindy', 'd':'Daniel', 'e':'Eva', 'f':'Francesca', 'g':'Gabriel', 'h':'Harry',
-        'i':'Ida', 'j':'Julia', 'k':'Kevin', 'l':'Laura', 'm':'Michael', 'n':'Nicole', 'o':'Oscar', 'p':'Paula',
-        'q':'Quebec', 'r':'Rachel', 's':'Sara', 't':'Tina', 'u':'unique', 'v':'Victoria', 'w':'window', 'x':'x-ray',
-        'y':'yesman', 'z':'zero'
+        'a':'Adam', 'b':'Benedikt', 'c':'Cecilia', 'd':'Daniel', 'e':'Eva', 'f':'Francesca', 'g':'Gustav', 'h':'Håkan',
+        'i':'Ida', 'j':'Julia', 'k':'Klara', 'l':'Lotta', 'm':'Markus', 'n':'Natalie', 'o':'Oscar', 'p':'Paula',
+        'q':'Queen', 'r':'Rebecka', 's':'Sven', 't':'Tina', 'u':'Ulla', 'v':'Viktoria', 'w':'Wanda', 'x':'Xavier',
+        'y':'Ylva', 'z':'Zara', 'å':'Åsa','ä':'Ängel', 'ö':'Örebro', 
         }
     let letter:string = context.letter
-    return `Your letter is "${letter.toUpperCase()}" for "${alphabet[letter]}". `
+    return `Bokstaven är "${letter.toUpperCase()}" för "${alphabet[letter]}". `
 }
 
 function questionNow(context:SDSContext){
     let category = context.questions[0].category //the question at front of array
-    return `Name ${category}. `
+    return `Nämna ${category}. `
 }
 
 function giveHint(context:SDSContext){
@@ -72,12 +94,12 @@ function giveHint(context:SDSContext){
     let anAns = randomChoice(answers)
     if (anAns.length >= 3) {
         let hint = anAns.slice(0, 3).toUpperCase() //first 3 letters
-        return `Spelled with ${hint[0]}, ${hint[1]}, ${hint[2]}.`
+        return `Stavas med ${hint[0]}, ${hint[1]}, ${hint[2]}.`
     }
     //in case word is too short>>hint only 2 letters
     else {
         let hint = anAns.slice(0, 2).toUpperCase() //first 2 letters
-        return `Spelled with ${hint[0]}, ${hint[1]}, ${hint[2]}.`
+        return `Stavas med ${hint[0]}, ${hint[1]}, ${hint[2]}.`
     }
 }
 
@@ -119,7 +141,7 @@ function promptAndAsk(promptEvent: Action<SDSContext, SDSEvent>): MachineConfig<
             ask: {
                 entry: send('LISTEN'),
             },
-            nomatch: { entry: [say("Try again")],  
+            nomatch: { entry: [say("Försök igen")],  
                        on: { ENDSPEECH: "prompt" } 
             },
         }
@@ -134,13 +156,13 @@ function exists(input:string, keywords:string[]){
 }
 //Replace this with grammar parser?
 function sayKeyword(reply: string){
-    let yes=["yes", "of course", "sure", "absolutely", "yeah", "yep", "okay", "ok"]
-    let no=["no", "nope", "no thanks", "nah",]
-    let pass=["skip", "pass", "next",]
-    let hint=["hint", "clue", "help"]
-    let whatletter=['letter','repeat']
-    let stop=['stop','end the game','shut down']
-    let restart=['restart','start again', 'reboot']
+    let yes=["ja", "naturligtvis", "säker", "absolut", "javisst", "visst", "okej", "ok"]
+    let no=["nej", "nä", "nej tack"]
+    let pass=["hoppa", "pass", "nästa",]
+    let hint=["hint", "tips", "ledtråd", "hjälp"]
+    let whatletter=['bokstav', 'upprepa']
+    let stop=['stop', 'avsluta', 'sluta', 'stopp']
+    let restart=['starta om', 'börja om', 'starta igen']
     let shortcut=['short cut', 'shortcut'] //for testing
 
     reply=reply.toLowerCase()
@@ -164,7 +186,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
             }
         },
         stop: {
-            entry: say("Ok bye!"),
+            entry: say("Hej och farväl!"),
             on: { ENDSPEECH: {
                 actions: [resetTally,clearLetter,clearTTSAgenda,clearRecResult,confettiOff, gameOff],
                 target:"init",
@@ -173,11 +195,11 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
         },
         //Start/restart new game: initiate new questions-object & reset tally counter
         start: {
-            entry: say("Starting the game "),
+            entry: say("Var redo att spela!"),
             on: { ENDSPEECH: { target:"chooseNewLetter" } } 
         },
         restart: {
-            entry: say("Ok, starting over"),
+            entry: say("Okej, vi startar om!"),
             on: { ENDSPEECH: {target:"chooseNewLetter" } } 
         },
         chooseNewLetter :{
@@ -258,7 +280,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
                     always: '#checkscore'
                 },
                 maxSkipped:{
-                    entry: say(`Oops, you've skipped for too many times!`),
+                    entry: say(`Åjojoj, du har hoppat över för många gånger!`),
                     on:{ ENDSPEECH: {target:'#checkscore'}}
                 }
             }
@@ -284,7 +306,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
                     always: '#checkscore' // use 'on endspeech...' if we want the question being said again
                 },
                 maxHinted:{
-                    entry: say(`Oops, you've asked for too many hints!`),
+                    entry: say(`Åjojoj, du har bett om för många hints!`),
                     on:{ ENDSPEECH: {target:'#checkscore'}}
                 }
             }
@@ -303,7 +325,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
 
                     //? reset/clear tally here or not...? 
         winning: {
-            entry: [ say("Winner winner chicken dinner"), confettiOn, clearTTSAgenda ], 
+            entry: [ say("Du vann, winner winner chicken dinner!"), confettiOn, clearTTSAgenda ], 
             on: {ENDSPEECH:{target:'playagain'}}
         },
         playagain: {
@@ -317,7 +339,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
                     //Else    
                     ...sharedRecognitions() 
                 ]},
-                ...promptAndAsk( say('Want to play again?') )
+                ...promptAndAsk( say('Vill du spela igen?') )
         }, 
         
     },

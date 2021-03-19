@@ -1,0 +1,150 @@
+{"questions": [
+        {"category":"en veckodag",
+          "answers": ["måndag","tisdag","onsdag","torsdag","fredag","lördag","söndag"]
+        },
+        {"category":"en frukt",
+          "answers": ["äpple","avokado","aprikos","banan","cantaloup","körsbär","klementin",
+              "grapefrukt","granatäpple","druva","honungsdagg","melon","citron","lime","mandarin","apelsin","mango",
+              "papaya","persika","päron","ananas","plantain","plommon","pomelo","vattenmelon","jordgubbe",
+              "blåbär","lingon","tomat","pawpaw","lychee","kiwifrukt","kiwi","durian"]
+        },
+        {"category":"ett EU-land",
+          "answers": ["österrike","belgien","bulgarien","kroatien","cypern","tjeckien","tjeckien","danmark",
+              "estland","finland","frankrike","tyskland","grekland","ungern","irland","italien",
+              "lettland","litauen","luxemburg","malta","nederländerna","holland","polen","portugal",
+              "rumänien","slovakien","slovenien","spanien","sverige"]
+        },
+        {"category":"ett månadsnamn",
+          "answers": ["januari","februari","mars","april","maj","juni","juli","augusti","september","oktober","november","december"]
+        },
+        {"category":"ett land som har vunnit Eurovision",
+          "answers": ["luxemburg","portugal","schweiz","ryssland","sverige","estland","serbien","monaco","danmark","israel","norge",
+              "grekland","frankrike","spanien","azerbajdzjan","belgien","italien","jugoslavien","finland","lettland","tyskland","irland","österrike",
+              "turkiet","storbritannien","england","ukraina","nederländerna","holland"]
+        },
+        {"category":"ett land i Asien",
+          "answers": ["kina","indien","kazakstan","saudiarabien","iran","mongoliet","indonesien","pakistan","turkiet","myanmar","afghanistan",
+              "yemen","thailand","turkmenistan","uzbekistan","irak","japan","vietnam","malaysia","filippinerna","filippinerna",
+              "laos","lao","kirgizistan","syrien","kambodja","bangladesh","nepal","tadzjikistan","nordkorea","sydkorea","korea","jordanien","azerbajdzjan",
+              "förenade arabemiraten","förenade arabemiraten","georgien","sri lanka","bhutan","taiwan","armenien","israel","kuwait","östtimor","qatar","libanon",
+           "palestina","brunei","bahrain","singapore","maldiverna"]
+        },
+        {"category":"en huvudstad i Europa",
+          "answers": ["amsterdam","andorra la vella","ankara","athen","baku","belgrade","berlin","bern","bratislava","bryssel","bucharest",
+              "budapest","chisinau","kishinev","köpenhamn","dublin","helsingfors","kyiv","lissabon","ljubljana","london","luxembourg","madrid",
+              "minsk","monaco","moskva","nicosia","nur-sultan","oslo","paris","podgorica","prag","reykjavik","riga","rom","san marino",
+              "sarajevo","skopje","sofia","stockholm","tallinn","tbilisi","tirana","vaduz","valletta","vatikanen","vatikanstaten","wien","vilnius","warszawa",
+              "yerevan","zagreb","norra nicosia","pristina","stepanakert","sukhumi","tiraspol","tskhinvali","södra ossetia"]
+        },
+        {"category":"ett sällskapsdjur",
+          "answers": ["fågel","fisk","mus","råtta","hund","katt","gerbil","hamster","spindel","orm","guldfisk","sköldpadda","kanin",
+              "gris","get","marsvin","gris","groda","igelkott","häst","kyckling","anka","gås","undulat","papegoja","kanariefågel","ökenråtta"]
+        },
+        {"category":"en grönsak",
+          "answers": ["vattenkrasse","rosenkål","brysselkål","pumpa","squash","svamp","rättika","grönkål","broccoli","spenat","morot","sallad","sötpotatis",
+              "rödbetor","selleri","zucchini","potatis","lök","gurka","aubergine","majs","blomkål","sparris",
+              "kål","kronärtskocka","vitlök","paprika"]
+        },
+        {"category":"en släkting",
+          "answers": ["pappa","mamma","morsa","mor","far","syster","bror","moster","faster","farbror","morbror","kusin","systerdotter","brorson",
+              "farfar","mormor","farmor","morfar","pappa","far","man","make","systerson","brordotter",
+              "fru","partner","styvmor","styvfar","styvson","styvdotter","son","dotter","syskon","sambo"]
+        },
+        {"category":"en kontinent",
+          "answers": ["amerika","australien","nordamerika","sydamerika","afrika","asien","europa","antarktis"]
+        },
+        {"category":"en webbplats eller app för sociala medier",
+          "answers": ["facebook","tik tok","tiktok","twitter","instagram","snapchat","youtube"]
+        },
+    {"category":"ett möbel",
+      "answers": ["bord","stol","skrivbord","soffa","bänk","garderob","bröst","hylla","garderob","fåtölj",
+                  "soffbord","matta","bokhylla","skostativ","säng"]
+    },
+    {"category":"ett bondgårdsdjur",
+      "answers": ["ko","får","get","lamm","gris","kyckling","anka","gås","åsna","häst","katt"]
+    },
+    {"category":"en kroppsdel",
+      "answers": ["huvud","ansikte","öra","hals","panna","öga","ögon","näsa","läpp","haka","axel","armbåge",
+              "arm","armhåla","handled","rygg","bröst","midja","navel","mage","navel","mun",
+              "tå","fotled","spik","finger","buk","röv","röv","skinka","höft","ben","lår","bum","fot","tumme",
+              "hud","ögonbryn","hår","ögonfransar","tand","hand","bröst","öra","öron"]
+    },
+    {"category":"en färg",
+      "answers": ["vit","blå","röd","gul","grön","grå","brun","beige","lila","orange","rosa","violett"]
+    },
+    {"category":"ett afrikanskt land",
+      "answers": ["zimbabwe","zambia","uganda","tunisien","togo","tanzania","swaziland","sudan","south africa","somalia",
+          "sierra leone","seychellerna","senegal","sao tome och principe","rwanda","nigeria","niger","namibia","mozambique",
+          "marocko","mauritius","mauritania","mali","malawi","madagascar","libya","liberia","lesotho","kenya","guinea-bissau",
+          "guinea","ghana","gambia","gabon","etiopien","eritrea","ekvatorialguinea","egypten","djibouti","chad","cote d'ivoire",
+          "elfenbenskusten","kongo","komorerna","centralafrikanska republiken","kap verde","kamerun","burundi","burkina faso",
+          "botswana","benin","angola","algeria","eswatini"]
+    },
+    {"category":"ett yrke",
+      "answers": ["läkare","polis","detektiv","bussförare","brevbärare","dansare","musiker","målare","programmerare","sjuksköterska","lärare","professor",
+      "brandman","smed","arkitekt","bagare","designer","frisör","artist","skådespelare","regissör","modell","ingenjör",
+      "fotograf","journalist","författare","sångare","mortician","psykolog","översättare","tolk","detektiv","soldat","idrottsman","kemist","skräddare",
+      "pilot","dansare","lärare","advokat","domare","sekreterare","säljare","trädgårdsmästare","arkitekt","mailman","handyman","rörmokare","tradie","regissör","revisor","snickare",
+  "kock","kock","slaktare","servitör","servitris","piga","renare","tekniker","frisör","frisör","mekaniker","bonde","skådespelare","skådespelerska"]
+    },
+    {"category":"en Disney-prinsessa",
+          "answers": ["snövit","cinderella","aurora","ariel","belle","bell","jasmine","pocahontas","mulan","rapunzel","merida","moana","anna","elsa","vaiana"]
+        },
+    {"category":"en sak man köper från mataffären",
+      "answers": ["mjölk","bröd","toalettpapper","juice","sylt","frukt","ost","smör","grönsak","olja","läsk","sallad","flingor","kaka","kaffe","läsk","mat"]
+    },
+    {"category":"ett spansktalande land",
+      "answers": ["spanien","mexico","kuba","argentina","costa rica","chile","colombia","guatemala","peru","venezuela","ecuador","bolivia",
+          "dominikanska republiken","honduras","paraguay","nicaragua","panama","dominika"]
+    },
+    {"category":"ett land som ligger i polcirkeln",
+      "answers": ["sverige","norge","island","finland","ryssland","kanada"]
+    },
+    {"category":"en alkoholdryck",
+          "answers": ["vodka","rum","whisky","akvavit","gin","tequila","öl","vin","champagne","snaps"]
+        },
+    {"category":"en mejeriprodukt",
+          "answers": ["mjölk","yoghurt","ost","grädde","smör","gräddfil","keso","glass","gräddost","kvarg","filmjölk"]
+        },
+    {"category":"en önation",
+          "answers": ["bahamas","bahrain","barbados","brunei","cape verde","comoros","cuba","cyprus","cypress",
+              "dominika","dominikanska republiken","fiji","haiti","island","indonesien","irland","jamaica","japan","mikronesien","madagasgar","maldiverna",
+              "malta","marshallöarna","mauritius","nauru","nya zeeland","norra cypern","papua nya guinea","filippinerna","saint kitts and nevis",
+              "saint lucia","saint vincent and the grenadines","samoa","sao tome and principe","seychelles","singapore","solomon islands","sri lanka",
+              "taiwan","tonga","trinidad och tobago","tuvalu","storbritannien","vanuatu"]
+        },
+    {"category":"ett land som har monarki",
+          "answers": ["bahrain","belgien","bhutan","brunei","kambodja","danmark","japan","kuwait","jordan","lesotho","liechtenstein","luxemburg","malaysia","monaco","marocko","nederländerna","holland","qatar","spanien","sverige","norge","thailand","tonga","förenade arab emiraten","storbritannien","vatikanen"]
+        },
+    {"category":"en vanlig glasssmak",
+          "answers": ["vanilj","choklad","jordgubbe","karamell","kaffe","körsbär","fudge","kaka","mynta","kokosnöt","banan","mango","grönt te","bär","blåbär",
+  "matcha","te","tofu"]
+        },
+    {"category":"ett landskap",
+       "answers": ["blekinge","bohuslän","dalarna","dalsland","gotland","gästrikland","halland","hälsingland","härjedalen","jämtland","lappland","medelpad","norrbotten","närke","skåne",
+       "småland","södermanöand","uppland","värmland","västerbotten","västergötland","västmandland","ångermanland","öland","östergötland","södermanland"]
+        },
+    
+    {"category":"en Netflix-serie",
+       "answers": ["house of cards","black mirror","stranger things","orange is the new black","crown","emily in paris","queen's gambit","narcos","bojack horseman"]
+    },
+    {"category":"en livsmedelsbutik",
+       "answers": ["ica","hemköp","coop","willys","lidl","netto"]
+    },
+    {"category":"en produkt i badrumet",
+       "answers": ["tandkräm","tandborste","tvål","schampo","balsam","fuktkräm","fuktkräm","lotion","duschgel","munvatten","toalettpapper","deodorant",
+           "tandtråd","rakhyvel","rengöringsmedel","rakkräm"]
+    },
+    {"category":"en animerad film från Disney",
+       "answers": ["frost","vaiana","törnrosa","snövit","askungen","mulan","aladdin","skönhet och odjuret","den lilla sjöjungfrun","lady och lufsen",
+           "lejonkungen","trassel","prinsessa och grodan","peter pan","dumbo","tarzan","bambi","stitch","alice i underlandet","pocahontas",
+       "herkules","djungelboken","pinocchio","zootropolis"]
+    },
+    {"category":"en svordom",
+     "answers": ["fan","f****","j****","helvete","satan","s***","k**"]
+  }
+
+
+
+]
+}

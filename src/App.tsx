@@ -23,6 +23,8 @@ import Tippy from '@tippyjs/react';
 import { isChrome, isEdge } from "react-device-detect";
 
 
+
+
 // import { inspect } from "@xstate/inspect";
 // inspect({ url:"https://statecharts.io/inspect", iframe: false });
 
@@ -111,13 +113,13 @@ const ReactiveButton = (props: Props,): JSX.Element => {
 	const maxSkipped = props.state.context.skipped >= 5
 
     let promptInGame:string;
-    if(maxSkipped && maxHinted){promptInGame = '...or say Restart, Stop'}
-    else if(maxSkipped && !maxHinted){promptInGame = '...or say Clue, Restart, Stop'}
-    else if(!maxSkipped && maxHinted){promptInGame = '...or say Skip, Restart, Stop'}
-    else {promptInGame = '...or say Clue, Skip, Restart, Stop'}  //default
+    if(maxSkipped && maxHinted){promptInGame = '...eller säg Starta om, Sluta'}
+    else if(maxSkipped && !maxHinted){promptInGame = '...eller säg Tips, Starta om, Sluta'}
+    else if(!maxSkipped && maxHinted){promptInGame = '...eller säg Pass, Starta om, Sluta'}
+    else {promptInGame = '...eller säg Tips, Pass, Starta om, Sluta'}  //default
 
     let speakingText= playingNow? '😼 '+ttsAgenda : '😻 '+ttsAgenda
-    let promptMsg = playingNow? promptInGame : "...say Yes or No"
+    let promptMsg = playingNow? promptInGame : "...säg Ja eller Nej"
 
     switch (true) {
         case props.state.matches({ asrtts: 'recognising' }):
@@ -146,7 +148,7 @@ const ReactiveButton = (props: Props,): JSX.Element => {
         default:
             return (
                 <button type="button" className="glow-on-hover" {...props}>
-                    <HeadShake>Play game!</HeadShake>
+                    <HeadShake>Spela nu!</HeadShake>
                 </button >
             );
     }
@@ -168,8 +170,8 @@ export default function App() {
 
     //List the supported synthesis-voices on the browswer:
     const [voiceIndex, setVoiceIndex] = React.useState(null);
-    console.log(voices) //An array of available voices/languages ... varies depending on the computer/browser
-    // const voice =  voices[5] || null; // voices[idx]? voices[idx] : null *(browser default voice)
+    // console.log(voices) //An array of available voices/languages ... varies depending on the computer/browser
+    const voice =  voices[2] || null; // voices[idx]? voices[idx] : null *(browser default voice)
 
     const [current, send, service] = useMachine(machine, {
         devTools: true,
@@ -179,7 +181,7 @@ export default function App() {
                 listen({
                     interimResults: false,
                     continuous: true,
-                    lang: 'en-SG'  //Config recognition language here. //list of langs https://cloud.google.com/speech-to-text/docs/languages
+                    lang: 'sv-SE'  //Config ASR input language here. //list of langs https://cloud.google.com/speech-to-text/docs/languages
                 });
             }),
             recStop: asEffect(() => {
@@ -189,7 +191,7 @@ export default function App() {
             ttsStart: asEffect((context, effect) => {
                 console.log('Speaking...');
                 speak({ text: context.ttsAgenda
-                        /*, voice*/ //Config which language/voice to speak in
+                        , voice //Config of TTS output language/voice
                      }) 
             }),
             ttsCancel: asEffect((context, effect) => {
@@ -293,7 +295,7 @@ const YourSubtitles=(props:Props) =>{
 
     let subtitlesText:string;
     if(props.state.matches({ asrtts: 'recognising' })){
-        subtitlesText=emoji+' Listening...'
+        subtitlesText=emoji+' Lyssnar nu på dig...'
     }else if(recResult && recResult!=''){
         subtitlesText = emoji+' '+recResult
     }else{
@@ -323,7 +325,7 @@ const UserSubtitles=(props:Props) =>{
 
     let subtitlesText:string;
     if(props.state.matches({ asrtts: 'recognising' })){
-        subtitlesText='Listening...'
+        subtitlesText='Lyssnar nu på dig...'
     }else if(recResult && recResult!=''){
         subtitlesText = recResult
     }else{
@@ -420,13 +422,12 @@ const PopoverButtons = () => {
 
             <Tippy content={
                 <div>
-                <h4>Having troubles playing? :</h4>
+                <h4>Har du problem med att spela? :</h4>
             
                     <p>
-                    Due to limitations of the voice recogniser, these might help... <br></br><br></br>
-                    -Speak in a North American accent.<br></br><br></br>
-                    -After the cat finishes talking, wait for a sec for it to start listening to you
-                    (indicated by the <strong>flashing button</strong>).
+                    På grund av begränsningar av röstigenkännaren kan dessa hjälpa till... <br></br><br></br>
+                    -Tala klart och i normal takt.<br></br><br></br>
+                    -Vänta för katten att avsluta prata och börja lyssna på dig.
                     </p>
                 </div>
             } className="popover-box">
@@ -437,10 +438,10 @@ const PopoverButtons = () => {
                     <div>
                     <h4>ABC Game</h4>
                         <p>
-                        Designed & made by: <br></br>
+                        Designades av: <br></br>
                         Liao Hsien-hao Calvin<br></br>
-                        Eirini Tsakiri <br></br><br></br>
-                        for the project of <strong>LT2216 Dialogue Systems</strong> at Göteborgs universitet.
+                        <br></br>
+                        för kursprojektet av <strong>LT2216 Dialogue Systems</strong> på Göteborgs universitet.
                         <br></br><br></br>
                         github.com/chickenbror/ABCgame
                         </p>
