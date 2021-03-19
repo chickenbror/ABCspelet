@@ -117,7 +117,7 @@
           "answers": ["bahrain","belgien","bhutan","brunei","kambodja","danmark","japan","kuwait","jordan","lesotho","liechtenstein","luxemburg","malaysia","monaco","marocko","nederländerna","holland","qatar","spanien","sverige","norge","thailand","tonga","förenade arab emiraten","storbritannien","vatikanen"]
         },
     {"category":"en vanlig glasssmak",
-          "answers": ["vanilj","choklad","jordgubbe","karamell","kaffe","körsbär","fudge","kaka","mynta","kokosnöt","banan","mango","grönt te","bär","blåbär",
+          "answers": ["vanilj","vanilla","choklad","jordgubbe","karamell","kaffe","körsbär","fudge","kaka","mynta","kokosnöt","banan","mango","grönt te","bär","blåbär",
   "matcha","te","tofu"]
         },
     {"category":"ett landskap",
@@ -142,7 +142,11 @@
     },
     {"category":"en svordom",
      "answers": ["fan","f****","j****","helvete","satan","s***","k**"]
-  }
+    },
+    {"category":"en allmän helgdag",
+      "answers": ["nyårsdag","trettondedag","långfredag","påskdag","annandag påsk","första maj","kristi himmelsfärdsdag","pingstdag","sveriges nationaldag","midsommarafton",
+          "middsommardag","alla helgons dag","julafton","juldag","annandag jul","nyårsafton"]
+    }
 
 
 

@@ -86,7 +86,7 @@ function letterNow(context:SDSContext){
 
 function questionNow(context:SDSContext){
     let category = context.questions[0].category //the question at front of array
-    return `Nämna ${category}. `
+    return `Nämn ${category}. `
 }
 
 function giveHint(context:SDSContext){

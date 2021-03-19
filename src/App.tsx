@@ -240,9 +240,8 @@ export default function App() {
         <div className='OtherBrowsers'>  
             <HeadShake>
             <div className='Box'>   
-                <h1>Speech Recognition Not Supported :( </h1>
-                <p>I won't be able to hear you on this browser.</p>
-                <p>Please try Chrome or Edge. :-)</p>
+                <h1>Din webbläsare stöder inte taligenkänning 🥲 </h1>
+                <p>Använd istället Chrome eller Edge :-)</p>
             </div>
             </HeadShake>
         </div>
@@ -425,7 +424,7 @@ const PopoverButtons = () => {
                 <h4>Har du problem med att spela? :</h4>
             
                     <p>
-                    På grund av begränsningar av röstigenkännaren kan dessa hjälpa till... <br></br><br></br>
+                    På grund av taligenkännarens begränsningar kan dessa hjälpa till... <br></br><br></br>
                     -Tala klart och i normal takt.<br></br><br></br>
                     -Vänta för katten att avsluta prata och börja lyssna på dig.
                     </p>
