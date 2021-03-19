@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/656e1498-7bfc-4240-b0ec-23597585378a/resourceGroups/react-app/providers/Microsoft.Web/sites/abc-game",
-    "appService.deploySubpath": "."
-}
