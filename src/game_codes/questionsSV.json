@@ -61,7 +61,7 @@
                   "soffbord","matta","bokhylla","skostativ","säng"]
     },
     {"category":"ett bondgårdsdjur",
-      "answers": ["ko","får","get","lamm","gris","kyckling","anka","gås","åsna","häst","katt"]
+      "answers": ["ko","får","get","lamm","gris","kyckling","anka","gås","åsna","häst","katt","hund"]
     },
     {"category":"en kroppsdel",
       "answers": ["huvud","ansikte","öra","hals","panna","öga","ögon","näsa","läpp","haka","axel","armbåge",
@@ -82,10 +82,10 @@
     },
     {"category":"ett yrke",
       "answers": ["läkare","polis","detektiv","bussförare","brevbärare","dansare","musiker","målare","programmerare","sjuksköterska","lärare","professor",
-      "brandman","smed","arkitekt","bagare","designer","frisör","artist","skådespelare","regissör","modell","ingenjör",
-      "fotograf","journalist","författare","sångare","mortician","psykolog","översättare","tolk","detektiv","soldat","idrottsman","kemist","skräddare",
-      "pilot","dansare","lärare","advokat","domare","sekreterare","säljare","trädgårdsmästare","arkitekt","mailman","handyman","rörmokare","tradie","regissör","revisor","snickare",
-  "kock","kock","slaktare","servitör","servitris","piga","renare","tekniker","frisör","frisör","mekaniker","bonde","skådespelare","skådespelerska"]
+      "brandman","smed","arkitekt","bagare","designer","jurist","artist","skådespelare","regissör","modell","ingenjör",
+      "fotograf","journalist","författare","sångare","sångerska","psykolog","översättare","tolk","personlig assistent","soldat","idrottsman","kemist","skräddare",
+      "pilot","dansare","lärare","advokat","domare","sekreterare","säljare","trädgårdsmästare","arkitekt","mailman","handyman","rörmokare","taxiförare","regissör","revisor","snickare",
+  "kock","handläggare","slaktare","servitör","servitris","piga","renare","tekniker","frisör","mekaniker","bonde","skådespelare","skådespelerska","ishockeyspelare"]
     },
     {"category":"en Disney-prinsessa",
           "answers": ["snövit","cinderella","aurora","ariel","belle","bell","jasmine","pocahontas","mulan","rapunzel","merida","moana","anna","elsa","vaiana"]
@@ -97,7 +97,7 @@
       "answers": ["spanien","mexico","kuba","argentina","costa rica","chile","colombia","guatemala","peru","venezuela","ecuador","bolivia",
           "dominikanska republiken","honduras","paraguay","nicaragua","panama","dominika"]
     },
-    {"category":"ett land som ligger i polcirkeln",
+    {"category":"ett land som ligger på polcirkeln",
       "answers": ["sverige","norge","island","finland","ryssland","kanada"]
     },
     {"category":"en alkoholdryck",
@@ -114,7 +114,7 @@
               "taiwan","tonga","trinidad och tobago","tuvalu","storbritannien","vanuatu"]
         },
     {"category":"ett land som har monarki",
-          "answers": ["bahrain","belgien","bhutan","brunei","kambodja","danmark","japan","kuwait","jordan","lesotho","liechtenstein","luxemburg","malaysia","monaco","marocko","nederländerna","holland","qatar","spanien","sverige","norge","thailand","tonga","förenade arab emiraten","storbritannien","vatikanen"]
+          "answers": ["bahrain","belgien","bhutan","brunei","kambodja","danmark","japan","kuwait","jordan","lesotho","liechtenstein","luxemburg","malaysia","monaco","marocko","nederländerna","holland","qatar","spanien","sverige","norge","thailand","tonga","förenade arab emiraten","storbritannien","vatikan","vatikanstaten"]
         },
     {"category":"en vanlig glasssmak",
           "answers": ["vanilj","vanilla","choklad","jordgubbe","karamell","kaffe","körsbär","fudge","kaka","mynta","kokosnöt","banan","mango","grönt te","bär","blåbär",
@@ -141,11 +141,11 @@
        "herkules","djungelboken","pinocchio","zootropolis"]
     },
     {"category":"en svordom",
-     "answers": ["fan","f****","j****","helvete","satan","s***","k**"]
+     "answers": ["fan","f****","fitta","j****","jävla","helvete","satan","s***","skit","k**","kuk","fy fan"]
     },
     {"category":"en allmän helgdag",
       "answers": ["nyårsdag","trettondedag","långfredag","påskdag","annandag påsk","första maj","kristi himmelsfärdsdag","pingstdag","sveriges nationaldag","midsommarafton",
-          "middsommardag","alla helgons dag","julafton","juldag","annandag jul","nyårsafton"]
+          "middsommardag","alla helgons dag","julafton","juldag","annandag jul","nationaldagen"]
     }
 
 

@@ -157,6 +157,7 @@ const ReactiveButton = (props: Props,): JSX.Element => {
 // //MAIN CONTAINER: React webpage elements & VOI
 export default function App() {
     
+
     //Voice interface events (& console logs)
     //Text to speech:
     const { speak, cancel, speaking, voices } = useSpeechSynthesis({
@@ -170,8 +171,8 @@ export default function App() {
 
     //List the supported synthesis-voices on the browswer:
     const [voiceIndex, setVoiceIndex] = React.useState(null);
-    // console.log(voices) //An array of available voices/languages ... varies depending on the computer/browser
-    const voice =  voices[2] || null; // voices[idx]? voices[idx] : null *(browser default voice)
+    console.log(voices) //An array of available voices/languages ... varies depending on the computer/browser
+    const voice =  voices[2] || null; // voices[idx]? voices[idx] : null *(browser default voice) //chrome on Mac:2, edge:8 bengt, edgeDev:32 bengt 
 
     const [current, send, service] = useMachine(machine, {
         devTools: true,
@@ -270,10 +271,10 @@ export default function App() {
 
                 <div className="Subtitles"> 
                     {/* VersionA: FOR Github deployment & Canvas submission */}
-                    {/* <YourSubtitles state={current}/>  */}
+                    <YourSubtitles state={current}/> 
 
                     {/* Version B: FOR demo (on local cuz it cannot show on Github page) */}
-                    <UserSubtitles state={current}/> 
+                    {/* <UserSubtitles state={current}/>  */}
                 </div>
             
             </div>

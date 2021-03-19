@@ -1,7 +1,7 @@
 {
   "include": [
     "./src/*"
-, "src/game_codes/game.js"  ],
+  ],
   "compilerOptions": {
     "lib": [
       "dom",
