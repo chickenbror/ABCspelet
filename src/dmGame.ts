@@ -75,9 +75,9 @@ const rememberLetter: Action<SDSContext, SDSEvent> = assign((context) => {
 //Say the current random letter and a 'spelling/phonetic' alphabet
 function letterNow(context:SDSContext){
     let alphabet:any = {
-        'a':'Adam', 'b':'Benedikt', 'c':'Cecilia', 'd':'Daniel', 'e':'Eva', 'f':'Francesca', 'g':'Gustav', 'h':'Håkan',
-        'i':'Ida', 'j':'Julia', 'k':'Klara', 'l':'Lotta', 'm':'Markus', 'n':'Natalie', 'o':'Oscar', 'p':'Paula',
-        'q':'Queen', 'r':'Rebecka', 's':'Sven', 't':'Tina', 'u':'Ulla', 'v':'Viktoria', 'w':'Wanda', 'x':'Xavier',
+        'a':'Amanda', 'b':'Benedikt', 'c':'Cecilia', 'd':'Daniel', 'e':'Emma', 'f':'Filippa', 'g':'Gustav', 'h':'Håkan',
+        'i':'Ida', 'j':'Julia', 'k':'Klara', 'l':'Lotta', 'm':'Markus', 'n':'Natalie', 'o':'Olof', 'p':'Paula',
+        'q':'Queen', 'r':'Rebecka', 's':'Sven', 't':'Therese', 'u':'Ulla', 'v':'Viktoria', 'w':'Wanda', 'x':'Xavier',
         'y':'Ylva', 'z':'Zara', 'å':'Åsa','ä':'Ängel', 'ö':'Örebro', 
         }
     let letter:string = context.letter
@@ -92,7 +92,7 @@ function questionNow(context:SDSContext){
 function giveHint(context:SDSContext){
     let answers = context.questions[0].answers //answers to the question at front of array
     let anAns = randomChoice(answers)
-    if (anAns.length >= 3) {
+    if (anAns.length >= 2) {
         let hint = anAns.slice(0, 3).toUpperCase() //first 3 letters
         return `Stavas med ${hint[0]}, ${hint[1]}, ${hint[2]}.`
     }
@@ -162,7 +162,7 @@ function sayKeyword(reply: string){
     let hint=["hint", "tips", "ledtråd", "hjälp"]
     let whatletter=['bokstav', 'upprepa']
     let stop=['stop', 'avsluta', 'sluta', 'stopp']
-    let restart=['starta om', 'börja om', 'starta igen']
+    let restart=['starta om', 'börja om', 'starta igen',"omstarta","börja igen"]
     let shortcut=['short cut', 'shortcut'] //for testing
 
     reply=reply.toLowerCase()
@@ -199,7 +199,7 @@ export const dmMachine: MachineConfig<SDSContext, any, SDSEvent> = ({
             on: { ENDSPEECH: { target:"chooseNewLetter" } } 
         },
         restart: {
-            entry: say("Okej, vi startar om!"),
+            entry: say("Okej, vi börjar om!"),
             on: { ENDSPEECH: {target:"chooseNewLetter" } } 
         },
         chooseNewLetter :{

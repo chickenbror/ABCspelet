@@ -5,11 +5,11 @@
         {"category":"en frukt",
           "answers": ["äpple","avokado","aprikos","banan","cantaloup","körsbär","klementin",
               "grapefrukt","granatäpple","druva","honungsdagg","melon","citron","lime","mandarin","apelsin","mango",
-              "papaya","persika","päron","ananas","plantain","plommon","pomelo","vattenmelon","jordgubbe",
+              "papaya","persika","päron","ananas","plantain","plommon","pomelo","vattenmelon","jordgubbe","jordgubbar",
               "blåbär","lingon","tomat","pawpaw","lychee","kiwifrukt","kiwi","durian"]
         },
         {"category":"ett EU-land",
-          "answers": ["österrike","belgien","bulgarien","kroatien","cypern","tjeckien","tjeckien","danmark",
+          "answers": ["österrike","belgien","bulgarien","kroatien","cypern","tjeckien","danmark",
               "estland","finland","frankrike","tyskland","grekland","ungern","irland","italien",
               "lettland","litauen","luxemburg","malta","nederländerna","holland","polen","portugal",
               "rumänien","slovakien","slovenien","spanien","sverige"]
@@ -80,18 +80,18 @@
           "elfenbenskusten","kongo","komorerna","centralafrikanska republiken","kap verde","kamerun","burundi","burkina faso",
           "botswana","benin","angola","algeria","eswatini"]
     },
-    {"category":"ett yrke",
+    {"category":"ett vanligt yrke",
       "answers": ["läkare","polis","detektiv","bussförare","brevbärare","dansare","musiker","målare","programmerare","sjuksköterska","lärare","professor",
       "brandman","smed","arkitekt","bagare","designer","jurist","artist","skådespelare","regissör","modell","ingenjör",
       "fotograf","journalist","författare","sångare","sångerska","psykolog","översättare","tolk","personlig assistent","soldat","idrottsman","kemist","skräddare",
-      "pilot","dansare","lärare","advokat","domare","sekreterare","säljare","trädgårdsmästare","arkitekt","mailman","handyman","rörmokare","taxiförare","regissör","revisor","snickare",
+      "pilot","dansare","lärare","advokat","domare","sekreterare","säljare","trädgårdsmästare","arkitekt","rörmokare","taxiförare","regissör","revisor","snickare",
   "kock","handläggare","slaktare","servitör","servitris","piga","renare","tekniker","frisör","mekaniker","bonde","skådespelare","skådespelerska","ishockeyspelare"]
     },
     {"category":"en Disney-prinsessa",
           "answers": ["snövit","cinderella","aurora","ariel","belle","bell","jasmine","pocahontas","mulan","rapunzel","merida","moana","anna","elsa","vaiana"]
         },
     {"category":"en sak man köper från mataffären",
-      "answers": ["mjölk","bröd","toalettpapper","juice","sylt","frukt","ost","smör","grönsak","olja","läsk","sallad","flingor","kaka","kaffe","läsk","mat"]
+      "answers": ["mjölk","bröd","toalettpapper","jäst","sylt","frukt","ost","smör","grönsak","olja","läsk","sallad","flingor","kaka","kaffe","läsk","mat","pasta","ris"]
     },
     {"category":"ett spansktalande land",
       "answers": ["spanien","mexico","kuba","argentina","costa rica","chile","colombia","guatemala","peru","venezuela","ecuador","bolivia",
@@ -101,7 +101,7 @@
       "answers": ["sverige","norge","island","finland","ryssland","kanada"]
     },
     {"category":"en alkoholdryck",
-          "answers": ["vodka","rum","whisky","akvavit","gin","tequila","öl","vin","champagne","snaps"]
+          "answers": ["vodka","rom","whisky","akvavit","gin","tequila","öl","vin","champagne","snaps","brännvin","brandy"]
         },
     {"category":"en mejeriprodukt",
           "answers": ["mjölk","yoghurt","ost","grädde","smör","gräddfil","keso","glass","gräddost","kvarg","filmjölk"]
@@ -118,7 +118,7 @@
         },
     {"category":"en vanlig glasssmak",
           "answers": ["vanilj","vanilla","choklad","jordgubbe","karamell","kaffe","körsbär","fudge","kaka","mynta","kokosnöt","banan","mango","grönt te","bär","blåbär",
-  "matcha","te","tofu"]
+  "matcha","te","tofu","jordgubbar"]
         },
     {"category":"ett landskap",
        "answers": ["blekinge","bohuslän","dalarna","dalsland","gotland","gästrikland","halland","hälsingland","härjedalen","jämtland","lappland","medelpad","norrbotten","närke","skåne",
@@ -135,7 +135,7 @@
        "answers": ["tandkräm","tandborste","tvål","schampo","balsam","fuktkräm","fuktkräm","lotion","duschgel","munvatten","toalettpapper","deodorant",
            "tandtråd","rakhyvel","rengöringsmedel","rakkräm"]
     },
-    {"category":"en animerad film från Disney",
+    {"category":"en animerad Disney-film",
        "answers": ["frost","vaiana","törnrosa","snövit","askungen","mulan","aladdin","skönhet och odjuret","den lilla sjöjungfrun","lady och lufsen",
            "lejonkungen","trassel","prinsessa och grodan","peter pan","dumbo","tarzan","bambi","stitch","alice i underlandet","pocahontas",
        "herkules","djungelboken","pinocchio","zootropolis"]
@@ -146,7 +146,34 @@
     {"category":"en allmän helgdag",
       "answers": ["nyårsdag","trettondedag","långfredag","påskdag","annandag påsk","första maj","kristi himmelsfärdsdag","pingstdag","sveriges nationaldag","midsommarafton",
           "middsommardag","alla helgons dag","julafton","juldag","annandag jul","nationaldagen"]
-    }
+    },
+    {"category":"en maträtt eller dryck på julbordet",
+      "answers": ["köttbullar","lutfisk","skinka","julskinka","janssons frestelse","gravlax","kål","sill","ägghalvor","risgrynsgröt",
+          "ost","julmust","akvavit","snaps","rödbetssallad","glögg","prinskorv","brännvin"]
+    },
+    {"category":"en köksapparat",
+      "answers": ["brödrost","vattenkokare","kaffebryggare","kaffemaskin","mixer","matberedare","elvisp","köksmaskin","köksassistent","våffeljärn",
+          "espressomaskin","kylskåp","frys","snaps","ugn","mikrovågsugn","spis"]
+    },
+    { "category": "en streamingtjänst",
+      "answers": ["netflix", "viaplay", "disney plus", "disney", "apple tv", "amazon prime", "prime video", "youtube", "hbo","discovery plus","svt play"]
+    },
+    { "category": "en Pixar-film",
+      "answers": ["toy story", "hitta nemo", "bilar", "monsters","råttatouille", "upp", "modig","insidan ut", "hitta dory", "coco", "framåt","själen", "wall-e","superhjältarna"]
+    },
+    { "category": "en restaurang som säljer snabbmat",
+      "answers": ["mcdonald's", "subway", "kfc", "burger king", "max", "pizza hut","domino's","sibylla"]
+    },
+    { "category": "en film i Marvel Cinematic Universe",
+      "answers": ["iron man","hulk", "captain america", "thor", "avengers", "guardians of the galaxy", "ant man", "doctor strange", "spider-man", "spider man", "black panther", 
+        "captain marvel", "black widow"]
+    },
+	{ "category": "en kommun i Sverige",
+      "answers": ["ale","alingså","alvesta","aneby","arboga","arjeplog","arvidsjaur","arvika","askersund","avesta","bengtsfor","berg","bjurholm","bjuv","boden","bollebygd","bollnä","borgholm","borlänge","borå","botkyrka","boxholm","bromölla","bräcke","burlöv","båstad","dals-ed","danderyd","degerfor","dorotea","eda","ekerö","eksjö","emmaboda","enköping","eskilstuna","eslöv","essunga","fagersta","falkenberg","falköping","fal","filipstad","finspång","flen","forshaga","färgelanda","gagnef","gislaved","gnesta","gnosjö","gotland","grum","grästorp","gullspång","gällivare","gävle","göteborg","götene","hab","hagfor","hallsberg","hallstahammar","halmstad","hammarö","haninge","haparanda","heby","hedemora","helsingborg","herrljunga","hj","hofor","huddinge","hudiksvall","hultsfred","hylte","håb","hällefor","härjedalen","härnösand","härryda","hässleholm","höganä","högsby","hörby","höör","jokkmokk","järfälla","jönköping","kalix","kalmar","karlsborg","karlshamn","karlskoga","karlskrona","karlstad","katrineholm","kil","kinda","kiruna","klippan","knivsta","kramfor","kristianstad","kristinehamn","krokom","kumla","kungsbacka","kungsör","kungälv","kävlinge","köping","laholm","landskrona","laxå","lekeberg","leksand","lerum","lesseb","lidingö","lidköping","lilla edet","lindesberg","linköping","ljungby","ljusdal","ljusnarsberg","lomma","ludvika","luleå","lund","lycksele","lysekil","malmö","malung-sälen","malå","mariestad","mark","markaryd","mellerud","mjölby","mora","motala","mullsjö","munkedal","munkfor","mölndal","mönsterå","mörbylånga","nacka","nora","norberg","nordanstig","nordmaling","norrköping","norrtälje","norsjö","nybr","nykvarn","nyköping","nynäshamn","nässjö","ockelb","olofström","orsa","orust","osby","oskarshamn","ovanåker","oxelösund","pajala","partille","perstorp","piteå","ragunda","robertsfor","ronneby","rättvik","ala","alem","andviken","igtuna","imrishamn","jöb","kara","kellefteå","kinnskatteberg","kurup","kövde","medjebacken","ollefteå","ollentuna","olna","orsele","otenä","taffanstorp","tenungsund","tockholm","torfor","toruman","trängnä","trömstad","trömsund","undbyberg","undsvall","unne","urahammar","valöv","vedala","venljunga","äffle","äter","ävsjö","öderhamn","öderköping","ödertälje","ölvesborg","tanum","tibr","tidaholm","tierp","timrå","tingsryd","tjörn","tomelilla","torsby","torså","trane","tranå","trelleborg","trollhättan","trosa","tyresö","täby","töreboda","uddevalla","ulricehamn","umeå","upplands väsby","upplands-br","uppsala","uppvidinge","vadstena","vaggeryd","valdemarsvik","vallentuna","vansbr","vara","varberg","vaxholm","vellinge","vetlanda","vilhelmina","vimmerby","vindeln","vingåker","vårgårda","vänersborg","vännä","värmdö","värna","västervik","västerå","växjö","ydre","ystad","åmål","ånge","åre","årjäng","åsele","åstorp","åtvidaberg","älmhult","älvdalen","älvkarleby","älvsbyn","ängelholm","öckerö","ödeshög","örebr","örkelljunga","örnsköldsvik","östersund","österåker","östhammar","östra göinge","överkalix","övertorneå"]
+    },
+	{ "category": "ett namn some ingår i Sveriges namnsdagar",
+      "answers": ["svea","alfred","alfrida","rut","hanna","hannele","kasper","melker","baltsar","august","augusta","erland","gunnar","gunder","sigurd","sigbritt","jan","jannike","frideborg","fridolf","knut","felix","felicia","laura","lorentz","hjalmar","helmer","anton","tony","hilda","hildur","henrik","fabian","sebastian","agnes","agneta","vincent","viktor","frej","freja","erika","paul","pål","bodil","boel","göte","göta","karl","karla","diana","gunilla","gunhild","ivar","joar","max","maximilian","disa","hjördis","ansgar","anselm","agata","agda","dorotea","doris","rikard","dick","berta","bert","fanny","franciska","iris","yngve","inge","evelina","evy","agne","ove","valentin","sigfrid","julia","julius","alexandra","sandra","frida","fritiof","gabriella","ella","vivianne","hilding","pia","torsten","torun","mattias","mats","sigvard","sivert","torgny","torkel","lage","maria","albin","elvira","ernst","erna","gunborg","gunvor","adrian","adriana","tora","tove","ebba","ebbe","camilla","siv","saga","torbjörn","torleif","edla","ada","edvin","egon","viktoria","greger","matilda","maud","kristoffer","christel","herbert","gilbert","gertrud","edvard","edmund","josef","josefina","joakim","kim","bengt","kennet","kent","gerda","gerd","gabriel","rafael","emanuel","rudolf","ralf","malkolm","morgan","jonas","jens","holger","holmfrid","ester","harald","hervor","gudmund","ingemund","ferdinand","nanna","marianne","marlene","irene","irja","vilhelm","william","irma","irmelin","nadja","tanja","otto","ottilia","ingvar","ingvor","ulf","ylva","liv","artur","douglas","tiburtius","olivia","oliver","patrik","patricia","elias","elis","valdemar","volmar","olaus","ola","amalia","amelie","anneli","annika","allan","glenn","georg","göran","vega","markus","teresia","terese","engelbrekt","ture","tyra","tyko","mariana","valborg","filip","filippa","john","jane","monika","mona","gotthard","erhard","marit","rita","carina","carita","åke","reidar","reidun","esbjörn","styrbjörn","märta","märit","charlotta","lotta","linnea","linn","halvard","halvar","sofia","sonja","ronald","ronny","rebecka","ruben","erik","maj","majken","karolina","carola","konstantin","conny","hemming","henning","desideria","desirée","ivan","vanja","urban","vilhelmina","vilma","beda","blenda","ingeborg","borghild","yvonne","jeanette","vera","veronika","petronella","pernilla","gun","gunnel","rutger","roger","ingemar","gudmar","solbritt","solveig","bo","gustav","gösta","robert","robin","eivor","majvor","börje","birger","svante","boris","bertil","berthold","eskil","aina","aino","håkan","hakon","margit","margot","axel","axelina","torborg","torvald","björn","bjarne","germund","görel","linda","alf","alvar","paulina","paula","adolf","alice","david","salomon","rakel","lea","selma","fingal","leo","peter","petra","elof","leif","aron","mirjam","rosa","rosita","aurora","ulrika","ulla","laila","ritva","esaias","jessika","klas","kjell","jörgen","örjan","andré","andrea","eleonora","ellinor","herman","hermine","joel","judit","folke","ragnhild","ragnvald","reinhold","reine","bruno","fredrik","fritz","sara","margareta","greta","johanna","magdalena","madeleine","emma","emmy","kristina","kerstin","jakob","jesper","jasmine","marta","botvid","seved","olof","algot","helena","elin","per","karin","kajsa","tage","arne","arnold","ulrik","alrik","alfons","inez","dennis","denise","silvia","sylvia","roland","lars","susanna","klara","kaj","uno","stella","estelle","brynolf","verner","valter","ellen","lena","magnus","måns","bernhard","bernt","jon","jonna","henrietta","henrika","signe","signhild","bartolomeus","lovisa","louise","östen","rolf","raoul","fatima","leila","hans","hampus","albert","albertina","arvid","vidar","samuel","sam","justus","justina","alfhild","alva","gisela","adela","heidi","lilian","lilly","kevin","roy","alma","hulda","anita","annette","tord","turid","dagny","helny","åsa","åslög","sture","ida","ronja","sigrid","siri","dag","daga","hildegard","magnhild","orvar","fredrika","elise","lisa","matteus","maurits","moritz","tekla","tea","gerhard","gert","tryggve","enar","einar","dagmar","rigmor","lennart","leonard","mikael","mikaela","helge","ragnar","ragna","ludvig","love","evald","osvald","frans","frank","bror","jenny","jennifer","birgitta","britta","nils","ingrid","inger","harry","harriet","erling","jarl","valfrid","manfred","berit","birgit","stellan","hedvig","hillevi","finn","antonia","toini","lukas","tore","tor","sibylla","ursula","yrsa","marika","marita","severin","sören","evert","eilert","inga","ingalill","amanda","rasmus","sabina","simon","simone","viola","elsa","isabella","edit","edgar","tobias","hubert","hugo","sverker","eugen","eugenia","gustav adolf","ingegerd","ingela","vendela","teodor","teodora","martin","martina","mårten","konrad","kurt","kristian","krister","emil","emilia","leopold","vibeke","viveka","naemi","naima","lillemor","moa","elisabet","lisbet","pontus","marina","helga","olga","cecilia","sissela","klemens","gudrun","rune","katarina","katja","linus","astrid","asta","malte","sune","andreas","anders","oskar","ossian","beata","beatrice","lydia","barbara","barbro","sven","nikolaus","niklas","angela","angelika","virginia","anna","malin","malena","daniel","daniela","alexander","alexis","lucia","sten","sixten","gottfrid","assar","stig","abraham","isak","israel","moses","tomas","natanael","jonatan","adam","eva","stefan","staffan","johannes","johan","benjamin","natalia","natalie","abel","set","sylvester"]
+    },
 
 
 

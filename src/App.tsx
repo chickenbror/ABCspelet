@@ -274,7 +274,7 @@ export default function App() {
                     <YourSubtitles state={current}/> 
 
                     {/* Version B: FOR demo (on local cuz it cannot show on Github page) */}
-                    {/* <UserSubtitles state={current}/>  */}
+                    <UserSubtitles state={current}/> 
                 </div>
             
             </div>

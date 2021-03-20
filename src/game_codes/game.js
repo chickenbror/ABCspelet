@@ -18,6 +18,18 @@ function shuffleArray(array) {
     }
     return array;
 }
+
+function getRandomSubarray(arr, size) {
+    var shuffled = arr.slice(0), i = arr.length, temp, index;
+    while (i--) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(0, size);
+}
+
 export function randomChoice(items) {
     let choice = items[items.length * Math.random() | 0];
     return choice;
@@ -43,8 +55,8 @@ export function makeNewQuestions( obj ) {
         //Filter answer/answers that start with letter
         candidate.answers = candidate.answers.filter( ans => ans[0]===letter); 
     });
-    let ques = shuffleArray(candidates); //shuffle the order
-    ques = ques.slice(0,11) //Only return max 10 ques to save memory?
+    let ques = getRandomSubarray(candidates, 10); //shuffle and sample 10 ques; if candidates.length<10, return a shuffled array
+    //Only return max 10 ques to save memory?
     return {letter, ques}; //returns an object with 2 properties  
 }
 
