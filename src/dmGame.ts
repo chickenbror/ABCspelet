@@ -99,7 +99,7 @@ function giveHint(context:SDSContext){
     //in case word is too short>>hint only 2 letters
     else {
         let hint = anAns.slice(0, 2).toUpperCase() //first 2 letters
-        return `Stavas med ${hint[0]}, ${hint[1]}, ${hint[2]}.`
+        return `Stavas med ${hint[0]}, ${hint[1]}.`
     }
 }
 

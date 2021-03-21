@@ -171,7 +171,7 @@ export default function App() {
 
     //List the supported synthesis-voices on the browswer:
     const [voiceIndex, setVoiceIndex] = React.useState(null);
-    console.log(voices) //An array of available voices/languages ... varies depending on the computer/browser
+    // console.log(voices) //An array of available voices/languages ... varies depending on the computer/browser
     const voice =  voices[2] || null; // voices[idx]? voices[idx] : null *(browser default voice) //chrome on Mac:2, edge:8 bengt, edgeDev:32 bengt 
 
     const [current, send, service] = useMachine(machine, {
