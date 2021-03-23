@@ -2,12 +2,6 @@
         {"category":"en veckodag",
           "answers": ["måndag","tisdag","onsdag","torsdag","fredag","lördag","söndag"]
         },
-        {"category":"en frukt",
-          "answers": ["äpple","avokado","aprikos","banan","cantaloup","körsbär","klementin",
-              "grapefrukt","granatäpple","druva","stjärnfrikt","melon","citron","lime","mandarin","apelsin","mango",
-              "papaya","persika","päron","ananas","plantain","plommon","pomelo","vattenmelon","jordgubbe","jordgubbar",
-              "blåbär","lingon","tomat","vindruva","vindruvor","kiwifrukt","kiwi","durian"]
-        },
         {"category":"ett EU-land",
           "answers": ["österrike","belgien","bulgarien","kroatien","cypern","tjeckien","danmark",
               "estland","finland","frankrike","tyskland","grekland","ungern","irland","italien",
@@ -60,25 +54,8 @@
       "answers": ["bord","stol","skrivbord","soffa","bänk","garderob","matbord","hylla","garderob","fåtölj",
                   "soffbord","matta","bokhylla","skostativ","säng"]
     },
-    {"category":"ett bondgårdsdjur",
-      "answers": ["ko","får","get","lamm","gris","kyckling","anka","gås","åsna","häst","katt","hund"]
-    },
-    {"category":"en kroppsdel",
-      "answers": ["huvud","ansikte","öra","hals","panna","öga","ögon","näsa","läpp","haka","axel","armbåge",
-              "arm","armhåla","handled","rygg","bröst","midja","navel","mage","navel","mun",
-              "tå","fotled","spik","finger","buk","röv","röv","skinka","höft","ben","lår","bum","fot","tumme",
-              "hud","ögonbryn","hår","ögonfransar","tand","hand","bröst","öra","öron"]
-    },
     {"category":"en färg",
       "answers": ["vit","blå","röd","gul","grön","grå","brun","beige","lila","orange","rosa","violett"]
-    },
-    {"category":"ett afrikanskt land",
-      "answers": ["zimbabwe","zambia","uganda","tunisien","togo","tanzania","swaziland","sudan","sydafrika","somalia",
-          "sierra leone","seychellerna","senegal","sao tome och principe","rwanda","nigeria","niger","namibia","mozambique",
-          "marocko","mauritius","mauritania","mali","malawi","madagascar","libya","liberia","lesotho","kenya","guinea-bissau",
-          "guinea","ghana","gambia","gabon","etiopien","eritrea","ekvatorialguinea","egypten","djibouti","chad",
-          "elfenbenskusten","kongo","komorerna","centralafrikanska republiken","kap verde","kamerun","burundi","burkina faso",
-          "botswana","benin","angola","algeria","eswatini"]
     },
     {"category":"ett vanligt yrke",
       "answers": ["läkare","polis","detektiv","bussförare","brevbärare","dansare","musiker","målare","programmerare","sjuksköterska","lärare","professor",
@@ -90,9 +67,6 @@
     {"category":"en Disney-prinsessa",
           "answers": ["snövit","cinderella","aurora","ariel","belle","bell","jasmine","jasmin","pocahontas","mulan","rapunzel","merida","moana","anna","elsa","vaiana"]
         },
-    {"category":"en sak man köper från mataffären",
-      "answers": ["mjölk","mjöl","bröd","toalettpapper","jäst","juice","sylt","frukt","ost","smör","grönsak","olja","läsk","sallad","flingor","kaka","kaffe","läsk","mat","pasta","ris"]
-    },
     {"category":"ett spansktalande land",
       "answers": ["spanien","mexico","kuba","argentina","costa rica","chile","colombia","guatemala","peru","venezuela","ecuador","bolivia",
           "dominikanska republiken","honduras","paraguay","nicaragua","panama","dominika"]
@@ -131,10 +105,6 @@
     {"category":"en livsmedelsbutik",
        "answers": ["ica","hemköp","coop","willys","lidl","netto"]
     },
-    {"category":"en produkt i badrumet",
-       "answers": ["tandkräm","tandborste","tvål","schampo","duschgel","munvatten","toalettpapper","deodorant","handduk",
-           "tandtråd","rakhyvel","rengöringsmedel","rakkräm"]
-    },
     {"category":"en animerad Disney-film",
        "answers": ["frost","vaiana","törnrosa","snövit","askungen","mulan","aladdin","skönhet och odjuret","den lilla sjöjungfrun","lady och lufsen",
            "lejonkungen","trassel","prinsessa och grodan","peter pan","dumbo","tarzan","bambi","stitch","alice i underlandet","pocahontas",
@@ -151,18 +121,11 @@
       "answers": ["köttbullar","lutfisk","skinka","julskinka","janssons frestelse","gravlax","kål","sill","ägghalvor","risgrynsgröt",
           "ost","julmust","akvavit","snaps","rödbetssallad","glögg","prinskorv","brännvin"]
     },
-    {"category":"en köksapparat",
-      "answers": ["brödrost","vattenkokare","kaffebryggare","kaffemaskin","mixer","matberedare","elvisp","köksmaskin","köksassistent","våffeljärn",
-          "espressomaskin","kylskåp","ugn","mikrovågsugn","spis"]
-    },
     { "category": "en streamingtjänst",
       "answers": ["netflix", "viaplay", "disney plus", "disney", "apple tv", "amazon prime", "prime video", "youtube", "hbo","discovery plus","svt play"]
     },
     { "category": "en Pixar-film",
       "answers": ["toy story", "hitta nemo", "bilar", "monsters","råttatouille", "upp", "modig","insidan ut", "hitta doris", "coco", "framåt","själen", "wall-e","superhjältarna"]
-    },
-    { "category": "en restaurang som säljer snabbmat",
-      "answers": ["mcdonald's", "subway", "kfc", "burger king", "max", "pizza hut","domino's","sibylla"]
     },
     { "category": "en film i Marvel Cinematic Universe",
       "answers": ["iron man","hulk", "captain america", "thor", "avengers", "guardians of the galaxy", "ant man", "doctor strange", "spider-man", "spiderman", "black panther", 
